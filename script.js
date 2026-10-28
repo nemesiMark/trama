@@ -17,7 +17,9 @@ item.addEventListener('keydown',function(e){if(e.key==='Escape'){setOpen(false);
 nav.querySelectorAll('a[href]').forEach(function(a){a.addEventListener('click',function(){if(!a.matches('.dd > a')){nav.classList.remove('open');b.setAttribute('aria-expanded','false');dropdowns.forEach(function(item){item.classList.remove('open');item.querySelector(':scope > a, :scope > button').setAttribute('aria-expanded','false')})}})});
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
-document.querySelectorAll('.ph img').forEach(function(i){i.addEventListener('error',function(){i.style.display='none'})});
+/* Foto mancante: si mostra l'immagine provvisoria indicata in data-fallback, altrimenti si nasconde. */
+document.querySelectorAll('.ph img').forEach(function(i){function miss(){var fb=i.getAttribute('data-fallback');if(fb&&i.getAttribute('src')!==fb)i.src=fb;else i.style.display='none'}
+i.addEventListener('error',miss);if(i.complete&&!i.naturalWidth&&i.getAttribute('src'))miss()});
 /* Finestra di conferma con check verde. */
 function openThanks(title,text){
 var last=document.activeElement,m=document.createElement('div');

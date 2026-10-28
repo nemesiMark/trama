@@ -1489,6 +1489,79 @@ footer .footer-socials svg {
   color: var(--ink);
 }
 
+/* Citazione (album matrimoniali) */
+.quote {
+  max-width: 46ch;
+  margin: 4.5rem 0 0;
+  padding-left: 1.6rem;
+  border-left: 2px solid var(--wine);
+}
+
+.quote p {
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.quote cite {
+  display: block;
+  margin-top: .8rem;
+  font-style: normal;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--wine);
+}
+
+/* Foto con didascalia dentro le schede prodotto */
+.photo-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0 .5rem;
+}
+
+.photo .ph {
+  aspect-ratio: 4/3;
+}
+
+.photo figcaption {
+  margin-top: .6rem;
+  font-size: .82rem;
+  color: var(--mute);
+}
+
+/* Griglia di prodotti con foto (accessori, custodie) */
+.product-items {
+  border-top: 1px solid var(--line);
+  padding: 2.5rem 0;
+}
+
+.product-items h2 {
+  font-size: clamp(1.7rem, 2.6vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -.025em;
+}
+
+.product-items .grid {
+  margin-top: 2rem;
+}
+
+/* Su computer tre riquadri per riga; le altre misure seguono le collezioni */
+@media (min-width: 1101px) {
+  .items-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.items-grid .card .ph h3 {
+  font-size: 1.3rem;
+  padding: 3.5rem 1.3rem 1.1rem;
+}
+
 /* ======================================================
    GRAFICA & STAMPA
    ====================================================== */
