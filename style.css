@@ -460,8 +460,9 @@ nav a.on,
 .btn {
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 2.5rem;
+  justify-content: center;
+  text-align: center;
+  gap: 0;
   align-self: flex-start;
   min-height: 52px;
   padding: 1rem 1.5rem;
@@ -478,9 +479,8 @@ nav a.on,
 }
 
 .btn::after {
-  content: '↗';
-  font-size: 1.25rem;
-  font-weight: 400;
+  content: none;
+  display: none;
 }
 
 .btn:hover {
