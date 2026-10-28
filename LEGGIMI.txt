@@ -6,6 +6,6 @@ Le fotografie Unsplash sono illustrative. Non documentano il catalogo Olimp né 
 Il modulo mantiene il servizio FormSubmit e il destinatario originali; non sono stati inviati messaggi di prova.
 La mappa indica Canicattì, come nel sito originale; non è disponibile un indirizzo del laboratorio.
 
-Logo navbar: images/logo-olimp.svg, ricavato dal PDF originale incluso in images/Logo Olimp.pdf. Mantenere il file SVG nella cartella images: il solo PDF non sostituisce l’immagine usata dalla navbar.
+Logo navbar: images/logo-olimp.svg. Il PDF originale del logo non è più nella cartella images, ma resta recuperabile dalla storia git.
 
 Download: mantenere la cartella downloads con catalogo.pdf e guida.pdf. I pulsanti dell’Area download usano l’attributo download per scaricare i PDF.
