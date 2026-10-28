@@ -1553,10 +1553,6 @@ footer .footer-socials svg {
   justify-content: center;
 }
 
-.logo-mobile {
-  display: none;
-}
-
 .nav-logo {
   display: flex;
   align-items: center;
@@ -1596,15 +1592,14 @@ footer {
 
 @media (max-width: 1100px) {
   .bar {
-    justify-content: space-between;
-  }
-
-  .logo-mobile {
-    display: flex;
+    justify-content: flex-end;
   }
 
   .nav-logo {
-    display: none;
+    order: -1;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
   }
 
   .burger {
