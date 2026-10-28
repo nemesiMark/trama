@@ -49,7 +49,7 @@ var y=document.getElementById('y');if(y)y.textContent=new Date().getFullYear();
 /* Lightbox: clic su una foto = schermo intero */
 (function(){
 if(document.body.classList.contains('home-page'))return;
-var imgs=[].slice.call(document.querySelectorAll('.ph img')).filter(function(i){return !i.closest('a')});if(!imgs.length)return;
+var imgs=[].slice.call(document.querySelectorAll('.ph img')).filter(function(i){return !i.closest('a,.no-zoom')});if(!imgs.length)return;
 var lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label','Foto a schermo intero');
 lb.innerHTML='<button class="lb-x" aria-label="Chiudi">&times;</button><button class="lb-p" aria-label="Foto precedente">&#8249;</button><img alt=""><button class="lb-n" aria-label="Foto successiva">&#8250;</button>';
 document.body.appendChild(lb);
