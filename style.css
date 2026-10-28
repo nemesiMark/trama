@@ -166,7 +166,8 @@ header .logo img {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.8rem;
+  /* più spazio sugli schermi larghi, invariato sui portatili piccoli per non far andare a capo il menu */
+  gap: clamp(1.8rem, 3.2vw - .8rem, 3rem);
   align-items: center;
 }
 
@@ -232,33 +233,14 @@ nav a.on,
   text-transform: uppercase;
   line-height: 1.65;
   border: 0;
-  transition: padding-left .25s ease, color .25s ease, background-color .25s ease;
-}
-
-.dd > ul a::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: var(--brand);
-  transform: scaleY(0);
-  transition: transform .25s ease;
+  transition: color .25s ease, background-color .25s ease;
 }
 
 .dd > ul a:hover,
 .dd > ul a:focus-visible,
 .dd > ul a.on {
-  background: #f4f7fa;
-  color: var(--brand);
-  padding-left: 1.7rem;
-}
-
-.dd > ul a:hover::before,
-.dd > ul a:focus-visible::before,
-.dd > ul a.on::before {
-  transform: scaleY(1);
+  background: #aa372e;
+  color: #fff;
 }
 
 /* Burger */
