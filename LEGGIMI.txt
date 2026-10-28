@@ -81,3 +81,22 @@ DA COMPLETARE
   fotolibro-professionale.html, album-bambini.html, album-comunione.html,
   album-eventi.html e le due pagine linea-cuoio-amarcord-islandese*.
 - Pagine delle collezioni: aggiungere testi e foto reali.
+
+
+GOOGLE E CONDIVISIONI
+---------------------
+Ogni pagina ha un titolo e una descrizione propri, più l'anteprima (foto, titolo,
+testo) che compare quando il link viene condiviso su WhatsApp, Facebook, ecc.
+La home contiene anche la scheda dell'attività per Google (indirizzo, telefono,
+email, social). sitemap.xml e robots.txt aiutano Google a trovare tutte le pagine.
+
+DA FARE QUANDO IL SITO HA IL SUO INDIRIZZO DEFINITIVO
+Nei file compare il segnaposto https://DOMINIO-DEL-SITO: va sostituito con
+l'indirizzo vero (es. https://www.esempio.it, senza barra finale).
+Su Mac, dalla cartella del sito nel Terminale:
+
+  grep -rl 'https://DOMINIO-DEL-SITO' --include='*.html' --include='*.xml' --include='*.txt' . \
+    | xargs sed -i '' 's#https://DOMINIO-DEL-SITO#https://www.esempio.it#g'
+
+Poi inviare la sitemap da Google Search Console:
+https://www.esempio.it/sitemap.xml
