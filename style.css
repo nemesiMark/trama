@@ -1360,6 +1360,21 @@ footer .footer-socials svg {
   padding-top: 1rem;
 }
 
+.services-intro {
+  margin: 4.5rem 0 4rem;
+}
+
+.services-intro p {
+  max-width: 64ch;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--mute);
+}
+
+.services-intro p + p {
+  margin-top: .8rem;
+}
+
 .collection-back {
   margin-top: 1.5rem;
 }
