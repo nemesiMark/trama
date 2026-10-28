@@ -479,8 +479,8 @@ nav a.on,
 }
 
 .btn::after {
-  content: none;
-  display: none;
+  content: none !important;
+  display: none !important;
 }
 
 .btn:hover {
@@ -1761,8 +1761,8 @@ footer {
 
 /* Rimuove la freccia e centra il testo nel pulsante della modale di ringraziamento */
 .thanks-box .btn::after {
-  content: none;
-  display: none;
+  content: none !important;
+  display: none !important;
 }
 
 .thanks-box .btn {
