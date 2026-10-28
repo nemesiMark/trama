@@ -95,7 +95,7 @@ Nei file compare il segnaposto https://DOMINIO-DEL-SITO: va sostituito con
 l'indirizzo vero (es. https://www.esempio.it, senza barra finale).
 Su Mac, dalla cartella del sito nel Terminale:
 
-  grep -rl 'https://DOMINIO-DEL-SITO' --include='*.html' --include='*.xml' --include='*.txt' . \
+  grep -rl 'https://DOMINIO-DEL-SITO' --include='*.html' --include='*.xml' --include='robots.txt' . \
     | xargs sed -i '' 's#https://DOMINIO-DEL-SITO#https://www.esempio.it#g'
 
 Poi inviare la sitemap da Google Search Console:
