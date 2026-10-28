@@ -34,6 +34,8 @@ document.addEventListener('keydown',key);
 /* Invio senza lasciare la pagina: ringraziamento in italiano al posto del modulo. */
 f.addEventListener('submit',function(e){
 e.preventDefault();
+/* Finché non si sceglie nel banner dei cookie, l'invio resta in attesa: si evidenzia il banner. */
+if(document.documentElement.classList.contains('ck-pending')){var ck=document.getElementById('ck-banner');if(ck){ck.classList.remove('ck-attn');void ck.offsetWidth;ck.classList.add('ck-attn');var cb=ck.querySelector('button');if(cb)cb.focus()}return}
 sb.disabled=true;sb.textContent='Invio in corso…';msg.hidden=true;msg.classList.remove('err');
 fetch(f.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
 .then(function(r){return r.json().then(function(d){if(!r.ok||d.success===false)throw new Error('send')})})

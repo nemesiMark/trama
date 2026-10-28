@@ -1862,3 +1862,17 @@ footer .footer-legal {
 label.check a {
   text-decoration: underline;
 }
+
+/* Avviso sul modulo finché non si sceglie nel banner dei cookie */
+.ck-form-note {
+  display: none;
+  border-left: 3px solid #aa372e;
+  background: var(--paper);
+  padding: .8rem 1rem;
+  font-size: .85rem;
+  line-height: 1.6;
+}
+
+.ck-pending .ck-form-note {
+  display: block;
+}

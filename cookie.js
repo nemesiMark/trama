@@ -16,6 +16,8 @@
 .ck-btn:hover{background:#fff}\
 .ck-btn:focus-visible,#ck-banner a:focus-visible{outline:2px solid currentColor;outline-offset:3px}\
 #ck-banner a{color:#fff;text-decoration:underline}\
+#ck-banner.ck-attn{animation:ckAttn .9s ease 2}\
+@keyframes ckAttn{0%,100%{box-shadow:0 12px 40px rgba(0,0,0,.35)}50%{box-shadow:0 0 0 5px #aa372e,0 12px 40px rgba(0,0,0,.35)}}\
 .ck-map-ph{width:100%;height:100%;min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;text-align:center;padding:2rem;background:var(--paper,#f3f1ee);color:var(--ink,#051D34);box-sizing:border-box}\
 .ck-map-ph p{margin:0;max-width:38ch;font-size:.95rem}\
 .ck-map-ph .ck-btn{flex:none;background:var(--ink,#051D34);color:#fff}\
@@ -58,9 +60,13 @@
   function apply(){var c=getConsent();if(c&&c.maps)showMaps();else hideMaps()}
 
   /* --- banner --- */
-  function closeBanner(){var b=document.getElementById('ck-banner');if(b)b.remove()}
+  /* Spazio in fondo alla pagina pari al banner: così niente (es. il pulsante del modulo) resta nascosto sotto. */
+  function padBody(){var b=document.getElementById('ck-banner');document.body.style.paddingBottom=b?(b.offsetHeight+32)+'px':''}
+  window.addEventListener('resize',padBody);
 
-  function choose(maps){setConsent(maps);closeBanner();apply()}
+  function closeBanner(){var b=document.getElementById('ck-banner');if(b)b.remove();padBody()}
+
+  function choose(maps){setConsent(maps);closeBanner();apply();document.documentElement.classList.remove('ck-pending')}
 
   function openBanner(){
     if(document.getElementById('ck-banner'))return;
@@ -69,7 +75,7 @@
     b.innerHTML='<h2>Cookie</h2><p>Questo sito usa cookie tecnici, necessari al funzionamento. La mappa di Google Maps può installare cookie di terze parti: li carichiamo solo se accetti. Puoi cambiare scelta in qualsiasi momento da «Gestisci cookie» nella pagina <a href="privacy.html">Privacy e cookie</a>.</p><div class="ck-row"><button type="button" class="ck-btn" data-ck="no">Rifiuta</button><button type="button" class="ck-btn" data-ck="yes">Accetta</button></div>';
     b.querySelector('[data-ck=no]').addEventListener('click',function(){choose(false)});
     b.querySelector('[data-ck=yes]').addEventListener('click',function(){choose(true)});
-    document.body.appendChild(b);
+    document.body.appendChild(b);padBody();
   }
 
   /* --- pulsanti "Gestisci cookie" (pagina Privacy e cookie) --- */
@@ -78,6 +84,6 @@
     for(var i=0;i<bs.length;i++)bs[i].addEventListener('click',openBanner);
   }
 
-  function init(){bindOpeners();apply();if(!getConsent())openBanner()}
+  function init(){bindOpeners();apply();if(!getConsent()){document.documentElement.classList.add('ck-pending');openBanner()}}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
