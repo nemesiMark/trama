@@ -1,0 +1,11 @@
+Olimp — versione Studio
+
+Aprire index.html mantenendo tutti i file e la cartella images nella stessa cartella.
+Le immagini sono incluse e funzionano anche senza connessione. Google Fonts, Google Maps e il servizio di invio del modulo richiedono Internet.
+Le fotografie Unsplash sono illustrative. Non documentano il catalogo Olimp né il suo laboratorio. Sostituire con fotografie dei prodotti reali per una corrispondenza esatta con materiali e finiture.
+Il modulo mantiene il servizio FormSubmit e il destinatario originali; non sono stati inviati messaggi di prova.
+La mappa indica Canicattì, come nel sito originale; non è disponibile un indirizzo del laboratorio.
+
+Logo navbar: images/logo-olimp.svg, ricavato dal PDF originale incluso in images/Logo Olimp.pdf. Mantenere il file SVG nella cartella images: il solo PDF non sostituisce l’immagine usata dalla navbar.
+
+Download: mantenere la cartella downloads con catalogo.pdf e guida.pdf. I pulsanti dell’Area download usano l’attributo download per scaricare i PDF.
