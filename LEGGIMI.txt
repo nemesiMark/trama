@@ -1,11 +1,77 @@
-Olimp — versione Studio
+OLIMP — SITO WEB
+================
 
-Aprire index.html mantenendo tutti i file e la cartella images nella stessa cartella.
-Le immagini sono incluse e funzionano anche senza connessione. Google Fonts, Google Maps e il servizio di invio del modulo richiedono Internet.
-Le fotografie Unsplash sono illustrative. Non documentano il catalogo Olimp né il suo laboratorio. Sostituire con fotografie dei prodotti reali per una corrispondenza esatta con materiali e finiture.
-Il modulo mantiene il servizio FormSubmit e il destinatario originali; non sono stati inviati messaggi di prova.
-La mappa indica Canicattì, come nel sito originale; non è disponibile un indirizzo del laboratorio.
+Sito statico (solo HTML, CSS e JavaScript, nessun programma da installare).
+Codice su GitHub: https://github.com/nemesiMark/trama (branch main).
 
-Logo navbar: images/logo-olimp.svg. Il PDF originale del logo non è più nella cartella images, ma resta recuperabile dalla storia git.
 
-Download: mantenere la cartella downloads con catalogo.pdf e guida.pdf. I pulsanti dell’Area download usano l’attributo download per scaricare i PDF.
+COME APRIRLO
+------------
+Aprire index.html mantenendo tutti i file e le cartelle insieme.
+Le pagine e le immagini funzionano anche senza connessione; servono Internet
+i caratteri (Google Fonts), la mappa (Google Maps) e l'invio del modulo contatti.
+
+Il modulo contatti va provato sul sito pubblicato: aprendo i file dal computer
+(indirizzo che inizia con file://) l'invio potrebbe non riuscire.
+
+
+STRUTTURA
+---------
+index.html            Home: hero con foto a scorrimento, Collezioni, Grafica & Stampa,
+                      Chi siamo, Dove siamo (mappa), Contatti (modulo)
+servizi.html          Servizi -> sezione-sposi.html, sezione-fotografi.html
+prodotti.html         Prodotti -> fotolibro-professionale.html,
+                      album-tradizionale-professionale.html,
+                      prodotti-studio-fotografico.html, custodie-per-album.html
+collezioni.html       Collezioni -> album-matrimoniali.html, album-bambini.html,
+                      album-comunione.html, album-eventi.html
+grafica-stampa.html   Grafica & Stampa
+area-download.html    Download di catalogo e guida (cartella downloads)
+privacy.html          Informativa privacy e cookie, con il pulsante "Gestisci cookie"
+
+style.css             Tutti gli stili del sito
+script.js             Menu, foto a scorrimento della home, foto a schermo intero
+                      (pagine interne), invio del modulo contatti
+cookie.js             Banner dei cookie e blocco di Google Maps senza consenso
+
+images/               Fotografie e logo (images/logo-olimp.svg, usato anche come favicon)
+downloads/            catalogo.pdf e guida.pdf
+
+
+COLORI
+------
+Blu del sito:      #051D34  (variabili --brand, --ink, --wine in style.css)
+Bordeaux del logo: #aa372e  (etichette dei contatti, avvisi, sottomenu al passaggio del cursore)
+
+
+MODULO CONTATTI E COOKIE
+------------------------
+- Il modulo invia le richieste tramite il servizio Web3Forms (chiave nel campo
+  access_key di index.html).
+- Il modulo si può inviare solo dopo aver accettato i cookie: finché non si preme
+  "Accetta", sopra il pulsante compare un avviso rosso e il banner si riapre.
+  Questa scelta va confermata dal consulente privacy.
+- La scelta sui cookie è salvata nel browser (voce olimp_cookie_consent_v1).
+  Per rivedere il banner: pulsante "Gestisci cookie" nella pagina Privacy e cookie,
+  oppure finestra in incognito.
+- Google Maps si carica solo dopo il consenso.
+
+
+IMMAGINI
+--------
+Le fotografie sono illustrative (in gran parte di repertorio) e non mostrano
+i prodotti o il laboratorio Olimp: vanno sostituite con foto reali.
+Prima di aggiungerne di nuove conviene ridimensionarle (lato lungo max 2000 px)
+e salvarle in JPG, per non rallentare il sito.
+
+
+DA COMPLETARE
+-------------
+- privacy.html è una BOZZA: completare le parti evidenziate in giallo
+  (ragione sociale, Partita IVA, email, hosting, tempi di conservazione, data),
+  farla verificare e poi togliere il riquadro "Bozza da verificare".
+- Footer: aggiungere ragione sociale e Partita IVA.
+- downloads/catalogo.pdf e downloads/guida.pdf sono lo stesso file segnaposto:
+  sostituirli con i PDF reali mantenendo gli stessi nomi.
+- fotolibro-professionale.html: contenuti in preparazione.
+- Pagine delle collezioni: aggiungere testi e foto reali.
