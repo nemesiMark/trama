@@ -173,7 +173,7 @@ nav ul {
 
 nav a {
   font-size: 1.02rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0;
   padding: .4rem 0;
   border-bottom: 1px solid transparent;
@@ -188,6 +188,15 @@ nav a.on,
   color: var(--brand);
   border-color: var(--brand);
   border-bottom-color: var(--brand);
+}
+
+/* Al passaggio del cursore e sulla voce della pagina attuale: testo e sottolineatura bordeaux del logo */
+nav a:hover,
+nav a.on,
+.nav-toggle:hover {
+  color: #aa372e;
+  border-color: #aa372e;
+  border-bottom-color: #aa372e;
 }
 
 /* Dropdown */
@@ -839,7 +848,8 @@ label.check input {
    ====================================================== */
 
 .page-hero {
-  padding: 11rem 0 5rem;
+  padding: 8.5rem 0 3rem;
+  margin-bottom: 3.25rem;
   background: var(--brand);
   color: white;
   border: 0;
@@ -850,7 +860,7 @@ label.check input {
 }
 
 .page-hero h1 {
-  font-size: clamp(3rem, 6.8vw, 6.5rem);
+  font-size: clamp(2.2rem, 4.5vw, 4.2rem);
 }
 
 .page-hero p {
@@ -1306,7 +1316,7 @@ footer .footer-socials svg {
 
 .product-page .page-hero h1 {
   max-width: 1100px;
-  font-size: clamp(2.6rem, 5.5vw, 5.5rem);
+  font-size: clamp(2rem, 4vw, 3.6rem);
   overflow-wrap: break-word;
 }
 
@@ -1954,5 +1964,16 @@ label.check a {
   .page-intro {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+}
+
+/* Navbar su computer: voci distribuite su tutta la larghezza disponibile (massima distanza) */
+@media (min-width: 1101px) {
+  nav {
+    flex: 1;
+  }
+
+  nav > ul {
+    justify-content: space-between;
   }
 }
