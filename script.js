@@ -7,7 +7,7 @@ dropdowns.forEach(function(item){
 var toggle=item.querySelector(':scope > a, :scope > button');
 function setOpen(open){item.classList.toggle('open',open);toggle.setAttribute('aria-expanded',String(open))}
 toggle.setAttribute('aria-expanded','false');
-toggle.addEventListener('click',function(e){if(toggle.tagName==='BUTTON'||matchMedia('(max-width:900px)').matches||matchMedia('(hover:none)').matches){e.preventDefault();setOpen(!item.classList.contains('open'))}});
+toggle.addEventListener('click',function(e){if(toggle.tagName==='BUTTON'||matchMedia('(max-width:1100px)').matches||matchMedia('(hover:none)').matches){e.preventDefault();setOpen(!item.classList.contains('open'))}});
 item.addEventListener('keydown',function(e){if(e.key==='Escape'){setOpen(false);toggle.focus()}});
 });
 nav.querySelectorAll('a[href]').forEach(function(a){a.addEventListener('click',function(){if(!a.matches('.dd > a')){nav.classList.remove('open');b.setAttribute('aria-expanded','false');dropdowns.forEach(function(item){item.classList.remove('open');item.querySelector(':scope > a, :scope > button').setAttribute('aria-expanded','false')})}})});
