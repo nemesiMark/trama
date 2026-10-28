@@ -72,7 +72,7 @@ e salvarle in JPG, per non rallentare il sito.
 DA COMPLETARE
 -------------
 - privacy.html è una BOZZA: completare le parti evidenziate in giallo
-  (ragione sociale, Partita IVA, email, hosting, tempi di conservazione, data),
+  (ragione sociale, Partita IVA, hosting, tempi di conservazione, data),
   farla verificare e poi togliere il riquadro "Bozza da verificare".
 - Footer: aggiungere ragione sociale e Partita IVA.
 - downloads/catalogo.pdf e downloads/guida.pdf sono lo stesso file segnaposto:

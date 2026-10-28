@@ -3,6 +3,10 @@ var h=document.querySelector('header'),nav=document.getElementById('nav'),b=docu
 function sc(){h.classList.toggle('solid',window.scrollY>40)}sc();window.addEventListener('scroll',sc,{passive:true});
 b.addEventListener('click',function(){var o=nav.classList.toggle('open');b.setAttribute('aria-expanded',o)});
 var dropdowns=[].slice.call(nav.querySelectorAll('.dd'));
+/* Su computer le voci sono centrate in spazi uguali: il menu a tendina parte dall'inizio della scritta. */
+function alignDD(){var desk=matchMedia('(min-width:1101px)').matches,rem=parseFloat(getComputedStyle(document.documentElement).fontSize)||16;
+[].slice.call(nav.querySelectorAll(':scope > ul > li.dd')).forEach(function(li){var a=li.querySelector(':scope > a'),ul=li.querySelector(':scope > ul');if(a&&ul)ul.style.left=desk?(a.offsetLeft-1.2*rem)+'px':''})}
+alignDD();window.addEventListener('resize',alignDD);window.addEventListener('load',alignDD);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(alignDD);
 dropdowns.forEach(function(item){
 var toggle=item.querySelector(':scope > a, :scope > button');
 function setOpen(open){item.classList.toggle('open',open);toggle.setAttribute('aria-expanded',String(open))}
@@ -45,6 +49,14 @@ fetch(f.action,{method:'POST',headers:{'Accept':'application/json'},body:new For
 window.addEventListener('pageshow',function(){resetForm();setTimeout(resetForm,0)});
 }
 var y=document.getElementById('y');if(y)y.textContent=new Date().getFullYear();
+/* Home: la voce Chi siamo / Dove / Contatti diventa bordeaux mentre si è nella sua sezione. */
+if(document.body.classList.contains('home-page')){
+var spy=['azienda','dove','contatti'].map(function(id){return{sec:document.getElementById(id),link:nav.querySelector('a[href="index.html#'+id+'"]')}}).filter(function(o){return o.sec&&o.link});
+var spyTick=false;
+function spyUpdate(){spyTick=false;var mid=window.innerHeight*.4;spy.forEach(function(o){var r=o.sec.getBoundingClientRect();o.link.classList.toggle('on',r.top<=mid&&r.bottom>mid)})}
+window.addEventListener('scroll',function(){if(!spyTick){spyTick=true;requestAnimationFrame(spyUpdate)}},{passive:true});
+window.addEventListener('resize',spyUpdate);spyUpdate();
+}
 })();
 /* Lightbox: clic su una foto = schermo intero */
 (function(){

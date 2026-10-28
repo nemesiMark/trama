@@ -176,7 +176,7 @@ nav a {
   font-weight: 700;
   letter-spacing: 0;
   padding: .4rem 0;
-  border-bottom: 1px solid transparent;
+  border-bottom: 0;
   transition: .25s;
 }
 
@@ -188,6 +188,18 @@ nav a.on,
   color: var(--brand);
   border-color: var(--brand);
   border-bottom-color: var(--brand);
+}
+
+/* Voci principali della navbar: quando sono evidenziate in bordeaux il testo si ingrandisce un po'
+   (con transform, così le altre voci non si spostano) */
+nav > ul > li > a:not(.logo) {
+  display: inline-block;
+  transform-origin: center bottom;
+}
+
+nav > ul > li > a:not(.logo):hover,
+nav > ul > li > a:not(.logo).on {
+  transform: scale(1.14);
 }
 
 /* Al passaggio del cursore e sulla voce della pagina attuale: testo e sottolineatura bordeaux del logo */
@@ -235,10 +247,11 @@ nav a.on,
   position: relative;
   display: block;
   padding: .6rem 1.3rem;
-  font-family: 'Manrope', Arial, sans-serif;
-  font-size: .72rem;
-  font-weight: 600;
-  letter-spacing: .04em;
+  /* carattere unico per tutti i menu a tendina */
+  font-family: 'Jost', 'Manrope', Arial, sans-serif;
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: .1em;
   text-transform: uppercase;
   line-height: 1.65;
   border: 0;
@@ -270,7 +283,7 @@ nav a.on,
 .dd .sub-dd > ul {
   top: calc(-.5rem - 2px);
   left: 100%;
-  width: 300px;
+  width: 370px;
   transform: translateX(-8px);
 }
 
@@ -433,6 +446,14 @@ nav a.on,
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* fineart.jpg nello slideshow della home: album spostato verso destra
+   (ingrandita partendo dal bordo sinistro, così a sinistra non resta un vuoto) */
+.hero .hero-slide img[src$="fineart.jpg"] {
+  object-position: 0% 48%;
+  transform: scale(1.35);
+  transform-origin: left center;
 }
 
 .hero-controls {
@@ -1888,6 +1909,11 @@ footer {
   padding-left: 1.2rem;
 }
 
+.legal a {
+  color: #aa372e;
+  text-decoration: underline;
+}
+
 .legal mark {
   background: #fbe3c4;
   color: inherit;
@@ -1967,13 +1993,127 @@ label.check a {
   }
 }
 
-/* Navbar su computer: voci distribuite su tutta la larghezza disponibile (massima distanza) */
+/* Navbar su computer: le 8 voci occupano spazi uguali (4 a sinistra e 4 a destra),
+   testo centrato in ciascuno, logo esattamente al centro.
+   Se lo schermo è stretto una voce non scende mai sotto la larghezza del suo testo. */
 @media (min-width: 1101px) {
   nav {
     flex: 1;
   }
 
   nav > ul {
-    justify-content: space-between;
+    justify-content: center;
+  }
+
+  nav > ul > li:not(.nav-logo) {
+    flex: 1 1 0;
+    min-width: max-content;
+    text-align: center;
+  }
+
+  .nav-logo {
+    flex: none;
+    justify-content: center;
+  }
+}
+
+/* ======================================================
+   MENU A TENDINA (computer): fondo azzurro ghiaccio
+   Fondo che si srotola dall'alto, voci che compaiono a cascata,
+   voce bordeaux piena al passaggio del cursore.
+   ====================================================== */
+
+@media (min-width: 1101px) {
+  .dd > ul,
+  .dd .sub-dd > ul {
+    isolation: isolate;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: .7rem 0;
+    opacity: 1;
+    transform: none;
+    visibility: hidden;
+    transition: visibility 0s .4s;
+  }
+
+  /* sottomenu laterale delle linee allineato alla voce Album matrimoniali */
+  .dd .sub-dd > ul {
+    top: -.7rem;
+  }
+
+  /* il fondo è un livello a parte che si srotola, così il sottomenu laterale non viene tagliato */
+  .dd > ul::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--paper);
+    border-top: 2px solid #aa372e;
+    box-shadow: 0 18px 40px rgba(5, 29, 52, .15);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .4s cubic-bezier(.2, .7, .2, 1);
+  }
+
+  .dd:hover > ul,
+  .dd.open > ul,
+  .dd:focus-within > ul,
+  .dd .sub-dd:hover > ul,
+  .dd .sub-dd.open > ul,
+  .dd .sub-dd:focus-within > ul {
+    visibility: visible;
+    transform: none;
+    transition: visibility 0s;
+  }
+
+  .dd:hover > ul::before,
+  .dd.open > ul::before,
+  .dd:focus-within > ul::before {
+    transform: scaleY(1);
+  }
+
+  /* voci a cascata */
+  .dd > ul > li {
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: opacity .2s ease, transform .2s ease;
+  }
+
+  .dd:hover > ul > li,
+  .dd.open > ul > li,
+  .dd:focus-within > ul > li {
+    opacity: 1;
+    transform: none;
+    transition: opacity .3s ease, transform .3s ease;
+  }
+
+  .dd:hover > ul > li:nth-child(1), .dd.open > ul > li:nth-child(1), .dd:focus-within > ul > li:nth-child(1) { transition-delay: .1s; }
+  .dd:hover > ul > li:nth-child(2), .dd.open > ul > li:nth-child(2), .dd:focus-within > ul > li:nth-child(2) { transition-delay: .15s; }
+  .dd:hover > ul > li:nth-child(3), .dd.open > ul > li:nth-child(3), .dd:focus-within > ul > li:nth-child(3) { transition-delay: .2s; }
+  .dd:hover > ul > li:nth-child(4), .dd.open > ul > li:nth-child(4), .dd:focus-within > ul > li:nth-child(4) { transition-delay: .25s; }
+  .dd:hover > ul > li:nth-child(5), .dd.open > ul > li:nth-child(5), .dd:focus-within > ul > li:nth-child(5) { transition-delay: .3s; }
+  .dd:hover > ul > li:nth-child(6), .dd.open > ul > li:nth-child(6), .dd:focus-within > ul > li:nth-child(6) { transition-delay: .35s; }
+
+  /* voci */
+  .dd > ul a {
+    color: var(--ink);
+    transition: color .25s ease, background-color .25s ease;
+  }
+
+  .dd > ul a:hover,
+  .dd > ul a:focus-visible,
+  .dd > ul a.on,
+  .dd .sub-dd:hover > a,
+  .dd .sub-dd:focus-within > a {
+    background: #aa372e;
+    color: #fff;
+  }
+}
+
+@media (min-width: 1101px) and (prefers-reduced-motion: reduce) {
+  .dd > ul::before,
+  .dd > ul > li {
+    transition: none !important;
   }
 }
