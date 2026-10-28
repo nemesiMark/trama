@@ -18,23 +18,44 @@ nav.querySelectorAll('a[href]').forEach(function(a){a.addEventListener('click',f
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
 document.querySelectorAll('.ph img').forEach(function(i){i.addEventListener('error',function(){i.style.display='none'})});
-var f=document.getElementById('contact-form');
-if(f){
-var sb=f.querySelector('button[type=submit]'),sbText=sb.textContent;
-var msg=document.createElement('p');msg.className='form-msg';msg.setAttribute('role','status');msg.hidden=true;f.appendChild(msg);
-function resetForm(){f.reset();msg.hidden=true;sb.disabled=false;sb.textContent=sbText}
 /* Finestra di conferma con check verde. */
-var openThanks=function(){
+function openThanks(title,text){
 var last=document.activeElement,m=document.createElement('div');
 m.className='thanks';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');m.setAttribute('aria-labelledby','thanks-t');
-m.innerHTML='<div class="thanks-box"><div class="thanks-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><h2 id="thanks-t">Grazie!</h2><p>La tua richiesta è stata inviata, ti risponderemo il prima possibile.</p><button type="button" class="btn">Chiudi</button></div>';
+m.innerHTML='<div class="thanks-box"><div class="thanks-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><h2 id="thanks-t"></h2><p></p><button type="button" class="btn">Chiudi</button></div>';
+m.querySelector('h2').textContent=title;m.querySelector('p').textContent=text;
 document.body.appendChild(m);document.body.style.overflow='hidden';
 var b=m.querySelector('button');b.focus();
 function key(e){if(e.key==='Escape')close();else if(e.key==='Tab'){e.preventDefault();b.focus()}}
 function close(){document.removeEventListener('keydown',key);m.remove();document.body.style.overflow='';if(last&&last.focus)last.focus()}
 b.addEventListener('click',close);m.addEventListener('click',function(e){if(e.target===m)close()});
 document.addEventListener('keydown',key);
-};
+}
+/* Area download: il file viene scaricato dalla pagina, così si sa se è arrivato e si mostra la conferma. */
+document.querySelectorAll('a.btn[download]').forEach(function(a){
+var aText=a.textContent,st=document.createElement('p');st.className='form-msg';st.setAttribute('role','status');st.hidden=true;a.after(st);
+/* Avviso sotto il pulsante: verde se il download è riuscito, rosso se no. */
+function show(ok,text){st.textContent=text;st.classList.toggle('ok',ok);st.classList.toggle('err',!ok);st.hidden=false}
+a.addEventListener('click',function(e){
+var done=function(name){show(true,'Download completato: il file «'+name+'» è stato scaricato.');openThanks('Download completato','Il file «'+name+'» è stato scaricato sul tuo dispositivo.')};
+/* Sito aperto dal computer o browser vecchio: download normale, poi la conferma. */
+if(location.protocol==='file:'||!window.fetch||!window.URL){setTimeout(function(){done(a.getAttribute('download')||'')},300);return}
+e.preventDefault();if(a.getAttribute('aria-busy'))return;
+a.setAttribute('aria-busy','true');a.textContent='Download in corso…';st.hidden=true;
+fetch(a.href).then(function(r){if(!r.ok)throw new Error('dl');return r.blob()})
+.then(function(blob){
+var u=URL.createObjectURL(blob),t=document.createElement('a');t.href=u;t.download=a.getAttribute('download')||'';
+document.body.appendChild(t);t.click();t.remove();setTimeout(function(){URL.revokeObjectURL(u)},10000);
+done(t.download)})
+.catch(function(){show(false,'Download non riuscito: riprova tra poco oppure contattaci al telefono.')})
+.then(function(){a.removeAttribute('aria-busy');a.textContent=aText});
+});
+});
+var f=document.getElementById('contact-form');
+if(f){
+var sb=f.querySelector('button[type=submit]'),sbText=sb.textContent;
+var msg=document.createElement('p');msg.className='form-msg';msg.setAttribute('role','status');msg.hidden=true;f.appendChild(msg);
+function resetForm(){f.reset();msg.hidden=true;sb.disabled=false;sb.textContent=sbText}
 /* Invio senza lasciare la pagina: ringraziamento in italiano al posto del modulo. */
 f.addEventListener('submit',function(e){
 e.preventDefault();
@@ -43,7 +64,7 @@ if(document.documentElement.classList.contains('ck-pending')){if(window.olimpOpe
 sb.disabled=true;sb.textContent='Invio in corso…';msg.hidden=true;msg.classList.remove('err');
 fetch(f.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
 .then(function(r){return r.json().then(function(d){if(!r.ok||d.success===false)throw new Error('send')})})
-.then(function(){resetForm();openThanks()})
+.then(function(){resetForm();openThanks('Grazie!','La tua richiesta è stata inviata, ti risponderemo il prima possibile.')})
 .catch(function(){msg.textContent='Non è stato possibile inviare la richiesta. Riprova tra poco oppure contattaci al telefono.';msg.classList.add('err');msg.hidden=false;sb.disabled=false;sb.textContent=sbText});
 });
 window.addEventListener('pageshow',function(){resetForm();setTimeout(resetForm,0)});

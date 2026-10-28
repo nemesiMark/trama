@@ -1272,6 +1272,20 @@ footer .footer-socials svg {
   gap: 2rem;
 }
 
+.form-msg {
+  margin-top: 1rem;
+  font-size: .95rem;
+  font-weight: 600;
+}
+
+.form-msg.err {
+  color: #aa372e;
+}
+
+.form-msg.ok {
+  color: #2e7d32;
+}
+
 .download-card {
   display: flex;
   flex-direction: column;
