@@ -81,3 +81,24 @@ document.addEventListener('visibilitychange',start);
 reduced.addEventListener('change',function(e){paused=e.matches;label();start()});
 label();start();
 })();
+
+// ======================================================
+// Punto 1: Blocca Tasto Destro e Scorciatoie da Tastiera
+// ======================================================
+
+// Disabilita il menu contestuale (tasto destro) in tutta la pagina
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Disabilita combinazioni per DevTools e Salvataggio (F12, Ctrl+U, Ctrl+S, Ctrl+Shift+I/J/C)
+document.addEventListener('keydown', function (e) {
+  if (
+    e.key === 'F12' ||
+    ((e.ctrlKey || e.metaKey) && (e.key === 'u' || e.key === 'U')) ||
+    ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'S')) ||
+    ((e.ctrlKey || e.metaKey) && e.shiftKey && ['i', 'I', 'j', 'J', 'c', 'C'].includes(e.key))
+  ) {
+    e.preventDefault();
+  }
+});
