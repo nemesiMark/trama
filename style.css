@@ -2122,3 +2122,241 @@ label.check a {
     transition: none !important;
   }
 }
+
+/* ======================================================
+   RESPONSIVE: TABLET E TELEFONO
+   ====================================================== */
+
+/* Logo nella barra in alto: visibile solo quando c'è il menu a panino */
+.bar-logo {
+  display: none;
+}
+
+/* ---------- Tablet (fino a 1100px) ---------- */
+@media (max-width: 1100px) {
+  .bar {
+    justify-content: space-between;
+  }
+
+  .bar-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .bar-logo img {
+    height: 64px;
+    width: auto;
+  }
+
+  /* il logo dentro il menu non serve più: è già nella barra */
+  .nav-logo {
+    display: none;
+  }
+
+  .graphics-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .split,
+  .contact {
+    gap: 3rem;
+  }
+}
+
+/* ---------- Telefono e tablet piccoli (fino a 800px) ---------- */
+@media (max-width: 800px) {
+  /* margini e spazi */
+  .wrap {
+    padding: 0 1.25rem;
+  }
+
+  section {
+    padding: 4rem 0;
+  }
+
+  nav {
+    padding: 1rem 1.25rem 1.5rem;
+  }
+
+  /* tipografia */
+  h1 {
+    font-size: clamp(2.3rem, 10vw, 3rem);
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 7.5vw, 2.4rem);
+    margin-bottom: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .page-hero {
+    padding: 7.5rem 0 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .page-hero h1,
+  .product-page .page-hero h1 {
+    font-size: clamp(1.9rem, 8.5vw, 2.6rem);
+  }
+
+  .services-intro {
+    margin: 2rem 0 2.5rem;
+  }
+
+  .product-lead,
+  .service-copy p {
+    font-size: 1.05rem;
+  }
+
+  .product-body {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  /* hero della home: testo sopra la foto, sfumatura dall'alto al basso */
+  .hero {
+    min-height: 600px;
+    align-items: flex-end;
+  }
+
+  .hero .txt {
+    width: auto;
+    margin: 0 1.25rem;
+    padding: 3rem 0 6.5rem;
+    gap: 1.2rem;
+  }
+
+  .hero .ph::after {
+    background: linear-gradient(180deg, rgba(5, 29, 52, .35) 0%, rgba(5, 29, 52, .55) 45%, rgba(5, 29, 52, .92) 100%);
+  }
+
+  .hero .ph img,
+  .hero .hero-slide img[src$="fineart.jpg"] {
+    object-position: 50% 50%;
+    transform: none;
+  }
+
+  .hero-controls {
+    right: 1.25rem;
+    bottom: 1.25rem;
+  }
+
+  /* griglie a una colonna */
+  .grid,
+  .collections-grid,
+  .split,
+  .split.rev,
+  .contact,
+  .graphics-heading,
+  .graphics-visual,
+  .graphics-steps,
+  .product-detail,
+  .download-grid,
+  .pair {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    gap: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .split {
+    gap: 2rem;
+  }
+
+  .split.rev .ph,
+  .split.rev > div:first-child {
+    order: 0;
+  }
+
+  .product-detail {
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+
+  .collections-grid .card .ph h3 {
+    font-size: 1.4rem;
+    padding: 3.5rem 1.2rem 1.1rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+    gap: 1.2rem;
+  }
+
+  /* contatti */
+  .contact {
+    gap: 2.5rem;
+  }
+
+  .contact-form-col {
+    margin-top: 0;
+  }
+
+  .contact h2 {
+    max-width: none;
+  }
+
+  /* dove siamo: testo in colonna e mappa più bassa */
+  .location > div:first-child {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  .map {
+    height: 380px;
+  }
+
+  /* grafica & stampa */
+  .graphics-editorial {
+    padding: 4rem 0;
+  }
+
+  .inner .graphics-editorial {
+    padding-top: 7.5rem;
+  }
+
+  .graphics-heading {
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .graphics-heading h1,
+  .graphics-heading h2 {
+    font-size: clamp(2.4rem, 11vw, 3.4rem);
+  }
+
+  .graphics-visual,
+  .graphics-visual .ph {
+    min-height: 0;
+  }
+
+  .graphics-visual .ph {
+    aspect-ratio: 4/3;
+  }
+
+  .graphics-caption {
+    padding: 1.8rem;
+  }
+
+  .graphics-caption > p {
+    font-size: 1.7rem;
+  }
+
+  .graphics-steps {
+    gap: 1.5rem;
+  }
+
+  .graphics-services-heading {
+    flex-wrap: wrap;
+  }
+
+  /* pagina download */
+  .download-card {
+    padding: 1.8rem;
+  }
+}
