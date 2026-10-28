@@ -572,7 +572,7 @@ a.more {
 }
 
 a.more::after {
-  content: ' ↗';
+  content: none !important;
   margin-left: .7rem;
 }
 
@@ -1769,3 +1769,6 @@ footer {
   justify-content: center;
   gap: 0;
 }
+
+.btn::before,
+.btn::after { content: none !important; display: none !important; }
