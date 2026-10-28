@@ -1650,3 +1650,99 @@ footer {
     display: flex;
   }
 }
+
+/* ======================================================
+   FINESTRA DI CONFERMA / MODALE DI RINGRAZIAMENTO
+   ====================================================== */
+
+/* Sfondo scuro semitrasparente a tutto schermo */
+.thanks {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5, 29, 52, 0.7); /* Colore scuro coordinato col brand */
+  backdrop-filter: blur(5px);
+  padding: 1.5rem;
+  animation: thanksFadeIn 0.25s ease-out;
+}
+
+/* Box bianco centrato */
+.thanks-box {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  max-width: 440px;
+  width: 100%;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(5, 29, 52, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transform: translateY(0);
+  animation: thanksPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Cerchio e Check Verde */
+.thanks-ok {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background-color: #e6f4ea; /* Verde chiaro soft */
+  color: #1e8e3e; /* Verde per l'icona */
+  margin-bottom: 0.5rem;
+}
+
+.thanks-ok svg {
+  width: 36px;
+  height: 36px;
+}
+
+/* Titolo e Testo all'interno del Popup */
+.thanks-box h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0;
+}
+
+.thanks-box p {
+  font-size: 0.95rem;
+  color: var(--mute);
+  line-height: 1.6;
+  margin: 0;
+  max-width: none;
+}
+
+/* Pulsante di chiusura */
+.thanks-box .btn {
+  margin-top: 0.5rem;
+  align-self: center;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+  min-height: auto;
+  cursor: pointer;
+}
+
+/* Animazioni d'ingresso */
+@keyframes thanksFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes thanksPop {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
