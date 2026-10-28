@@ -23,7 +23,7 @@ function resetForm(){f.reset();msg.hidden=true;sb.disabled=false;sb.textContent=
 var openThanks=function(){
 var last=document.activeElement,m=document.createElement('div');
 m.className='thanks';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');m.setAttribute('aria-labelledby','thanks-t');
-m.innerHTML='<div class="thanks-box"><div class="thanks-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><h2 id="thanks-t">Grazie!</h2><p>La tua richiesta è stata inviata, ti risponderemo il prima possibile.</p><button type="button" class="btn no-arrow">Chiudi</button></div>';
+m.innerHTML='<div class="thanks-box"><div class="thanks-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><h2 id="thanks-t">Grazie!</h2><p>La tua richiesta è stata inviata, ti risponderemo il prima possibile.</p><button type="button" class="btn">Chiudi</button></div>';
 document.body.appendChild(m);document.body.style.overflow='hidden';
 var b=m.querySelector('button');b.focus();
 function key(e){if(e.key==='Escape')close();else if(e.key==='Tab'){e.preventDefault();b.focus()}}
