@@ -504,6 +504,10 @@ nav a.on,
   cursor: pointer;
 }
 
+.ph.no-zoom {
+  cursor: default;
+}
+
 .ph img {
   position: absolute;
   inset: 0;
