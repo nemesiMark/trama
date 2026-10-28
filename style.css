@@ -1339,6 +1339,13 @@ footer .footer-socials svg {
   pointer-events: none;
 }
 
+.collections-grid .card p {
+  font-size: .86rem;
+  line-height: 1.9;
+  margin-top: 1rem;
+  color: var(--text);
+}
+
 .collection-overview,
 .collection-story {
   padding-top: 1rem;
