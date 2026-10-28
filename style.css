@@ -1544,3 +1544,114 @@ footer .footer-socials svg {
       order: -1;
     }
   }
+
+/* ======================================================
+   LOGO AL CENTRO DELLA NAVBAR (tra Collezioni e Grafica & Stampa)
+   ====================================================== */
+
+.bar {
+  justify-content: center;
+}
+
+.logo-mobile {
+  display: none;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  margin: 0 .8rem;
+}
+
+nav .logo,
+nav .logo:hover {
+  padding: 0;
+  border: 0;
+  color: inherit;
+}
+
+/* ======================================================
+   FOOTER SEMPRE IN BASSO
+   ====================================================== */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+/* ======================================================
+   NAVBAR SU SCHERMI STRETTI: burger + pannello, logo a sinistra
+   ====================================================== */
+
+@media (max-width: 1100px) {
+  .bar {
+    justify-content: space-between;
+  }
+
+  .logo-mobile {
+    display: flex;
+  }
+
+  .nav-logo {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: fixed;
+    top: 88px;
+    left: 0;
+    right: 0;
+    max-height: calc(100vh - 88px);
+    overflow-y: auto;
+    background: #fff;
+    padding: 1rem 3.5rem 1.5rem;
+    box-shadow: 0 18px 30px #051D3426;
+  }
+
+  nav.open {
+    display: block;
+  }
+
+  nav > ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .9rem;
+  }
+
+  .dd > ul {
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: 0;
+    min-width: 0;
+    width: auto;
+    padding: .3rem 0 0 1rem;
+  }
+
+  .products-menu > ul {
+    width: auto;
+  }
+
+  .dd.open > ul {
+    display: flex;
+  }
+}
