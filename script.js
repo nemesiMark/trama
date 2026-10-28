@@ -17,6 +17,20 @@ item.addEventListener('keydown',function(e){if(e.key==='Escape'){setOpen(false);
 nav.querySelectorAll('a[href]').forEach(function(a){a.addEventListener('click',function(){if(!a.matches('.dd > a')){nav.classList.remove('open');b.setAttribute('aria-expanded','false');dropdowns.forEach(function(item){item.classList.remove('open');item.querySelector(':scope > a, :scope > button').setAttribute('aria-expanded','false')})}})});
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+/* Numeri di Chi siamo: salgono da zero quando la striscia entra nello schermo. */
+(function(){
+/* Anni di attività: calcolati dall'anno di fondazione. */
+[].slice.call(document.querySelectorAll('.stat-num[data-since]')).forEach(function(el){var y=new Date().getFullYear()-(+el.getAttribute('data-since'));el.setAttribute('data-count',y);el.textContent=y;var sr=el.parentNode.querySelector('.sr-only');if(sr)sr.textContent=y+' anni di attività'});
+var nums=[].slice.call(document.querySelectorAll('.stat-num[data-count]'));
+if(!nums.length||matchMedia('(prefers-reduced-motion: reduce)').matches||!window.requestAnimationFrame)return;
+function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.')}
+nums.forEach(function(el){el.textContent=fmt(0)});
+var so=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;so.unobserve(e.target);
+var el=e.target,to=+el.getAttribute('data-count'),t0=null,dur=2000;
+function step(t){if(!t0)t0=t;var k=Math.min((t-t0)/dur,1),v=1-Math.pow(1-k,3);el.textContent=fmt(Math.round(to*v));if(k<1)requestAnimationFrame(step)}
+requestAnimationFrame(step)})},{threshold:.5});
+nums.forEach(function(el){so.observe(el)});
+})();
 /* Foto mancante: si mostra l'immagine provvisoria indicata in data-fallback, altrimenti si nasconde. */
 document.querySelectorAll('.ph img').forEach(function(i){function miss(){var fb=i.getAttribute('data-fallback');if(fb&&i.getAttribute('src')!==fb)i.src=fb;else i.style.display='none'}
 i.addEventListener('error',miss);if(i.complete&&!i.naturalWidth&&i.getAttribute('src'))miss()});
