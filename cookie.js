@@ -66,7 +66,10 @@
 
   function closeBanner(){var b=document.getElementById('ck-banner');if(b)b.remove();padBody()}
 
-  function choose(maps){setConsent(maps);closeBanner();apply();document.documentElement.classList.remove('ck-pending')}
+  /* Il modulo contatti si può inviare solo dopo aver accettato i cookie. */
+  function syncPending(){var c=getConsent();document.documentElement.classList.toggle('ck-pending',!(c&&c.maps))}
+
+  function choose(maps){setConsent(maps);closeBanner();apply();syncPending()}
 
   function openBanner(){
     if(document.getElementById('ck-banner'))return;
@@ -84,6 +87,7 @@
     for(var i=0;i<bs.length;i++)bs[i].addEventListener('click',openBanner);
   }
 
-  function init(){bindOpeners();apply();if(!getConsent()){document.documentElement.classList.add('ck-pending');openBanner()}}
+  function init(){bindOpeners();apply();syncPending();if(!getConsent())openBanner()}
+  window.olimpOpenCookies=openBanner;
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();

@@ -1866,8 +1866,10 @@ label.check a {
 /* Avviso sul modulo finché non si sceglie nel banner dei cookie */
 .ck-form-note {
   display: none;
-  border-left: 3px solid #aa372e;
-  background: var(--paper);
+  max-width: none;
+  text-align: center;
+  background: #aa372e;
+  color: #fff;
   padding: .8rem 1rem;
   font-size: .85rem;
   line-height: 1.6;
