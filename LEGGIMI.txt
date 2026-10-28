@@ -25,6 +25,10 @@ prodotti.html         Prodotti -> fotolibro-professionale.html,
                       prodotti-studio-fotografico.html, custodie-per-album.html
 collezioni.html       Collezioni -> album-matrimoniali.html, album-bambini.html,
                       album-comunione.html, album-eventi.html
+album-matrimoniali.html  Riquadri delle linee -> linea-fashion.html, linea-glamour.html,
+                      linea-trendy.html, linea-cuoio-fiorentino.html,
+                      linea-cuoio-amarcord-islandese-personalizzato.html,
+                      linea-cuoio-amarcord-islandese.html
 grafica-stampa.html   Grafica & Stampa
 area-download.html    Download di catalogo e guida (cartella downloads)
 privacy.html          Informativa privacy e cookie, con il pulsante "Gestisci cookie"
@@ -73,5 +77,7 @@ DA COMPLETARE
 - Footer: aggiungere ragione sociale e Partita IVA.
 - downloads/catalogo.pdf e downloads/guida.pdf sono lo stesso file segnaposto:
   sostituirli con i PDF reali mantenendo gli stessi nomi.
-- fotolibro-professionale.html: contenuti in preparazione.
+- Testi provvisori scritti senza materiale del cliente, da far confermare:
+  fotolibro-professionale.html, album-bambini.html, album-comunione.html,
+  album-eventi.html e le due pagine linea-cuoio-amarcord-islandese*.
 - Pagine delle collezioni: aggiungere testi e foto reali.

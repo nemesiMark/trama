@@ -243,6 +243,44 @@ nav a.on,
   color: #fff;
 }
 
+/* Sottomenu di secondo livello (Album matrimoniali -> linee): si apre a destra */
+.sub-dd > a {
+  padding-right: 2.2rem;
+}
+
+.sub-dd > a::after {
+  content: '›';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-52%);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.dd .sub-dd > ul {
+  top: calc(-.5rem - 2px);
+  left: 100%;
+  width: 300px;
+  transform: translateX(-8px);
+}
+
+.dd .sub-dd:hover > ul,
+.dd .sub-dd.open > ul,
+.dd .sub-dd:focus-within > ul {
+  transform: none;
+}
+
+.dd .sub-dd > ul a {
+  white-space: normal;
+}
+
+.dd .sub-dd:hover > a,
+.dd .sub-dd:focus-within > a {
+  background: #aa372e;
+  color: #fff;
+}
+
 /* Burger */
 .burger {
   display: none;
@@ -1375,8 +1413,13 @@ footer .footer-socials svg {
   margin-top: .8rem;
 }
 
-.collection-back {
-  margin-top: 1.5rem;
+/* Pagine delle linee (album matrimoniali) */
+.line-story .product-lead {
+  margin-bottom: 1.5rem;
+}
+
+.line-story p {
+  margin-bottom: 1rem;
 }
 
 .album-gallery {
@@ -1698,6 +1741,14 @@ footer {
   .dd.open > ul {
     display: flex;
   }
+
+  .dd .sub-dd > ul {
+    width: auto;
+  }
+
+  .sub-dd > a::after {
+    content: '';
+  }
 }
 
 /* ======================================================
@@ -1874,4 +1925,34 @@ label.check a {
 
 .ck-pending .ck-form-note {
   display: block;
+}
+
+/* Testo introduttivo con foto a fianco (pagine di servizi e prodotti) */
+.page-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+.page-intro .product-lead,
+.page-intro .service-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.page-intro .ph {
+  aspect-ratio: 4/3;
+  margin: 0;
+}
+
+.service-section .page-intro {
+  margin-top: 4rem;
+}
+
+@media (max-width: 800px) {
+  .page-intro {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
