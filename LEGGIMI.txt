@@ -165,3 +165,5 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
 1.7  (29/10/2026)  Footer: «Gestione cookie» diventa bianco al passaggio del cursore
                    come gli altri elementi cliccabili (email, social, Privacy e cookie).
                    Aggiornato style.css?v=13 in tutte le pagine.
+1.8  (29/10/2026)  Footer di tutte le pagine: l'email va a capo sotto
+                   «© anno Olimp – Album fotografici» invece di stare sulla stessa riga.
