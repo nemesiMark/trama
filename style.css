@@ -1215,7 +1215,9 @@ footer .wrap {
   }
 }
 
-footer a:hover {
+/* Tutti gli elementi cliccabili del footer (link e pulsante Gestione cookie) diventano bianchi al passaggio del cursore. */
+footer a:hover,
+footer button:hover {
   color: white;
 }
 

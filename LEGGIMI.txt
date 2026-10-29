@@ -162,3 +162,6 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    ed email, social, Privacy e cookie, Gestione cookie) sono distribuiti
                    su tutta la larghezza; sotto i 1000px di larghezza vanno uno sotto
                    l'altro, centrati. Aggiornato style.css?v=12 in tutte le pagine.
+1.7  (29/10/2026)  Footer: «Gestione cookie» diventa bianco al passaggio del cursore
+                   come gli altri elementi cliccabili (email, social, Privacy e cookie).
+                   Aggiornato style.css?v=13 in tutte le pagine.
