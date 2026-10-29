@@ -171,3 +171,7 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    bianco con ombra morbida, testo più breve, «Rifiuta» con bordo blu e
                    «Accetta» blu pieno, stessa grandezza. Aggiornato cookie.js?v=3 in
                    tutte le pagine.
+1.10 (29/10/2026)  Footer di nuovo a fondo pagina anche con la finestra dei cookie
+                   aperta: lo spazio che evita che la finestra copra i contenuti ora è
+                   dentro il footer (che si allunga) invece che sotto di esso, dove
+                   lasciava una fascia bianca. Aggiornato cookie.js?v=4 in tutte le pagine.

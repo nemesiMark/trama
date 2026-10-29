@@ -65,8 +65,12 @@
   function apply(){var c=getConsent();if(c&&c.maps)showMaps();else hideMaps()}
 
   /* --- banner --- */
-  /* Spazio in fondo alla pagina pari al banner: così niente (es. il pulsante del modulo) resta nascosto sotto. */
-  function padBody(){var b=document.getElementById('ck-banner');document.body.style.paddingBottom=b?(b.offsetHeight+32)+'px':''}
+  /* Spazio in fondo alla pagina pari al banner, così niente (es. il pulsante del modulo) resta nascosto sotto.
+     Lo spazio va dentro il footer, che si allunga e resta attaccato al fondo della pagina. */
+  function padBody(){
+    var b=document.getElementById('ck-banner'),ft=document.querySelector('footer'),h=b?(b.offsetHeight+32)+'px':'';
+    if(ft)ft.style.paddingBottom=h;else document.body.style.paddingBottom=h;
+  }
   window.addEventListener('resize',padBody);
 
   function closeBanner(){var b=document.getElementById('ck-banner');if(b)b.remove();padBody()}
