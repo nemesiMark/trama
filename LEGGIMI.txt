@@ -198,3 +198,13 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
 1.15 (29/10/2026)  Finestra Gestione cookie: il primo dei due lampeggi rossi parte
                    1 secondo dopo l'apertura invece di 2. Aggiornato cookie.js?v=9 in
                    tutte le pagine.
+1.16 (29/10/2026)  Home, sezione Dove siamo: il testo ora è «La nostra sede si trova a
+                   Canicattì», con «Canicattì» in grassetto bordeaux sottolineato e
+                   cliccabile: apre in una nuova scheda Google Maps sull'indirizzo della
+                   sede (Viale della Vittoria 111, Canicattì). Tolta la frase sui
+                   professionisti in tutta Italia. Aggiornato style.css?v=14 in tutte le pagine.
+1.17 (29/10/2026)  Home, sezione Dove siamo: blocco di testo uniformato. La frase, l'indirizzo
+                   e «Riservato a professionisti con partita IVA» hanno ora stesso carattere,
+                   stessa dimensione e stesso colore grigio; resta in evidenza solo
+                   «Canicattì». L'indirizzo diventa blu scuro al passaggio del cursore.
+                   Aggiornato style.css?v=15 in tutte le pagine.
