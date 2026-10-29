@@ -167,3 +167,7 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    Aggiornato style.css?v=13 in tutte le pagine.
 1.8  (29/10/2026)  Footer di tutte le pagine: l'email va a capo sotto
                    «© anno Olimp – Album fotografici» invece di stare sulla stessa riga.
+1.9  (29/10/2026)  Finestra Gestione cookie con nuovo design (proposta B): riquadro
+                   bianco con ombra morbida, testo più breve, «Rifiuta» con bordo blu e
+                   «Accetta» blu pieno, stessa grandezza. Aggiornato cookie.js?v=3 in
+                   tutte le pagine.

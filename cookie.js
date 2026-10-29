@@ -8,16 +8,21 @@
 
   /* --- stile --- */
   var css='\
-#ck-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;z-index:9999;max-width:560px;background:var(--ink,#051D34);color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:1.2rem 1.3rem;box-shadow:0 12px 40px rgba(0,0,0,.35);font:400 .9rem/1.5 "Manrope",Arial,sans-serif}\
-#ck-banner h2{font:700 1rem "Manrope",Arial,sans-serif;margin:0 0 .4rem;color:#fff}\
-#ck-banner p{margin:0 0 1rem;color:#dbe4ef;font-size:.85rem}\
+#ck-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;z-index:9999;max-width:440px;background:#fff;color:var(--ink,#051D34);border:1px solid #d2dce6;border-radius:14px;padding:1.3rem 1.4rem;box-shadow:0 14px 40px rgba(5,29,52,.28);font:400 .9rem/1.5 "Manrope",Arial,sans-serif}\
+#ck-banner h2{font:700 1rem "Manrope",Arial,sans-serif;margin:0 0 .4rem;color:var(--ink,#051D34)}\
+#ck-banner p{margin:0 0 1rem;color:#3c4f63;font-size:.85rem}\
+#ck-banner .ck-btn{border:1.5px solid var(--ink,#051D34)}\
+#ck-banner [data-ck=no]{background:#fff;color:var(--ink,#051D34)}\
+#ck-banner [data-ck=no]:hover{background:var(--ice,#D5E3F2)}\
+#ck-banner [data-ck=yes]{background:var(--ink,#051D34);color:#fff}\
+#ck-banner [data-ck=yes]:hover{background:#1c3556;border-color:#1c3556}\
 #ck-banner .ck-row{display:flex;gap:.6rem;flex-wrap:wrap}\
 .ck-btn{flex:1 1 140px;border:0;border-radius:8px;padding:.75rem 1rem;font:700 .85rem "Manrope",Arial,sans-serif;cursor:pointer;background:var(--ice,#c9dcf5);color:var(--ink,#051D34)}\
 .ck-btn:hover{background:#fff}\
 .ck-btn:focus-visible,#ck-banner a:focus-visible{outline:2px solid currentColor;outline-offset:3px}\
-#ck-banner a{color:#fff;text-decoration:underline}\
+#ck-banner a{color:var(--ink,#051D34);text-decoration:underline;white-space:nowrap}\
 #ck-banner.ck-attn{animation:ckAttn .9s ease 2}\
-@keyframes ckAttn{0%,100%{box-shadow:0 12px 40px rgba(0,0,0,.35)}50%{box-shadow:0 0 0 5px #aa372e,0 12px 40px rgba(0,0,0,.35)}}\
+@keyframes ckAttn{0%,100%{box-shadow:0 14px 40px rgba(5,29,52,.28)}50%{box-shadow:0 0 0 5px #aa372e,0 14px 40px rgba(5,29,52,.28)}}\
 .ck-map-ph{width:100%;height:100%;min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;text-align:center;padding:2rem;background:var(--paper,#f3f1ee);color:var(--ink,#051D34);box-sizing:border-box}\
 .ck-map-ph p{margin:0;max-width:38ch;font-size:.95rem}\
 .ck-map-ph .ck-btn{flex:none;background:var(--ink,#051D34);color:#fff}\
@@ -78,7 +83,7 @@
     if(old){old.querySelector('h2').textContent=t;old.classList.remove('ck-attn');void old.offsetWidth;old.classList.add('ck-attn');return}
     var b=document.createElement('div');
     b.id='ck-banner';b.setAttribute('role','region');b.setAttribute('aria-label','Cookie');
-    b.innerHTML='<h2></h2><p>Questo sito usa cookie tecnici, necessari al funzionamento. La mappa di Google Maps può installare cookie di terze parti: li carichiamo solo se accetti. Puoi cambiare scelta in qualsiasi momento da «Gestione cookie» in fondo a ogni pagina. Maggiori dettagli nella pagina <a href="privacy.html">Privacy e cookie</a>.</p><div class="ck-row"><button type="button" class="ck-btn" data-ck="no">Rifiuta</button><button type="button" class="ck-btn" data-ck="yes">Accetta</button></div>';
+    b.innerHTML='<h2></h2><p>Usiamo solo cookie tecnici. La mappa di Google Maps ne aggiunge di terze parti: la carichiamo solo se accetti. <a href="privacy.html">Privacy e cookie</a></p><div class="ck-row"><button type="button" class="ck-btn" data-ck="no">Rifiuta</button><button type="button" class="ck-btn" data-ck="yes">Accetta</button></div>';
     b.querySelector('h2').textContent=t;
     b.querySelector('[data-ck=no]').addEventListener('click',function(){choose(false)});
     b.querySelector('[data-ck=yes]').addEventListener('click',function(){choose(true)});
