@@ -143,3 +143,5 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    download con un piccolo server locale (python3 -m http.server).
 1.3  (29/10/2026)  Area download: l'avviso verde sotto il pulsante ora dice
                    «Download completato.». Script aggiornato a script.js?v=9 in tutte le pagine.
+1.4  (29/10/2026)  Home, sezione Chi siamo: la frase tra virgolette «Custodire il
+                   tempo…» ora è in grassetto (resta in corsivo).
