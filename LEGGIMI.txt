@@ -67,6 +67,12 @@ Le fotografie sono illustrative (in gran parte di repertorio) e non mostrano
 i prodotti o il laboratorio Olimp: vanno sostituite con foto reali.
 Prima di aggiungerne di nuove conviene ridimensionarle (lato lungo max 2000 px)
 e salvarle in JPG, per non rallentare il sito.
+Fonti e licenza delle foto di repertorio: images/FONTI-E-LICENZA.txt.
+
+Foto dei riquadri prodotto: alcune pagine cercano già una foto con un nome preciso
+(es. images/custodie-box.jpg). Finché quel file non c'è, il sito mostra al suo posto
+un'immagine provvisoria (indicata in data-fallback nel codice). Per mettere la foto
+vera basta salvarla in images/ con quel nome esatto, senza toccare le pagine.
 
 
 DA COMPLETARE
@@ -78,9 +84,22 @@ DA COMPLETARE
 - downloads/catalogo.pdf e downloads/guida.pdf sono lo stesso file segnaposto:
   sostituirli con i PDF reali mantenendo gli stessi nomi.
 - Testi provvisori scritti senza materiale del cliente, da far confermare:
-  fotolibro-professionale.html, album-bambini.html, album-comunione.html,
-  album-eventi.html e le due pagine linea-cuoio-amarcord-islandese*.
-- Pagine delle collezioni: aggiungere testi e foto reali.
+  fotolibro-professionale.html e le due pagine linea-cuoio-amarcord-islandese*.
+  (Album bambini, comunione, eventi e tradizionale hanno già i testi del cliente.)
+- Foto reali dei riquadri prodotto, da salvare in images/ con questi nomi:
+  album-eventi.html                      eventi-1.jpg ... eventi-6.jpg
+  linea-cuoio-fiorentino.html            cuoio-fiorentino-1.jpg ... cuoio-fiorentino-6.jpg
+  album-tradizionale-professionale.html  tradizionale-album.jpg, tradizionale-blocchi-colorati.jpg,
+                                         tradizionale-velina.jpg, tradizionale-blocco-bianco.jpg,
+                                         tradizionale-velina-gsk.jpg
+  custodie-per-album.html                custodie-valigia-classica.jpg, custodie-valigia-personalizzata.jpg,
+                                         custodie-cofanetti.jpg, custodie-box.jpg, custodie-teca-plex.jpg,
+                                         custodie-valigia-bambini.jpg, custodie-valigia-scrigno.jpg
+  prodotti-studio-fotografico.html       studio-raccoglitori.jpg, studio-albumini.jpg, studio-portafoto.jpg,
+                                         studio-porta-tessera.jpg, studio-porta-carta-di-credito.jpg,
+                                         studio-nastro-biadesivo.jpg, studio-porta-dvd.jpg
+- Tutte le altre foto del sito sono di repertorio: sostituirle con foto reali
+  dei prodotti e del laboratorio quando disponibili.
 
 
 GOOGLE E CONDIVISIONI
