@@ -66,10 +66,12 @@ MODULO CONTATTI E COOKIE
   devi prima accettare i cookie") con il pulsantino "Gestisci cookie".
   Questa scelta va confermata dal consulente privacy.
 - La scelta sui cookie è salvata nel browser (voce olimp_cookie_consent_v1).
+  Il footer di ogni pagina ha quattro elementi distribuiti su tutta la larghezza:
+  copyright ed email, social, "Privacy e cookie", "Gestione cookie".
   Per rivedere la finestra dei cookie: "Gestione cookie" nel footer di ogni pagina,
   "Gestisci cookie" sotto l'avviso del modulo o nella pagina Privacy e cookie.
   La finestra prende il nome del pulsante che la apre. La pagina Privacy e cookie
-  resta raggiungibile dal link nella finestra e da quello nel modulo contatti.
+  si apre dal footer, dal link nella finestra e da quello nel modulo contatti.
 - Google Maps si carica solo dopo il consenso.
 
 
@@ -155,3 +157,8 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    apre la finestra omonima. Il testo della finestra rimanda a
                    «Gestione cookie» e alla pagina Privacy e cookie. Aggiornati
                    style.css?v=11 e cookie.js?v=2 in tutte le pagine.
+1.6  (29/10/2026)  Footer di tutte le pagine: aggiunto di nuovo il link «Privacy e
+                   cookie» accanto a «Gestione cookie». I quattro elementi (copyright
+                   ed email, social, Privacy e cookie, Gestione cookie) sono distribuiti
+                   su tutta la larghezza; sotto i 1000px di larghezza vanno uno sotto
+                   l'altro, centrati. Aggiornato style.css?v=12 in tutte le pagine.

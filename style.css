@@ -1193,26 +1193,25 @@ footer {
   font-size: .72rem;
 }
 
+/* Quattro elementi distribuiti su tutta la larghezza: copyright ed email, social,
+   Privacy e cookie, Gestione cookie. */
 footer .wrap {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 1rem 3rem;
 }
 
-footer .wrap > :last-child {
-  justify-self: end;
-}
-
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   footer .wrap {
-    grid-template-columns: 1fr;
-    justify-items: center;
+    flex-direction: column;
+    gap: .6rem;
     text-align: center;
   }
 
-  footer .wrap > :last-child {
-    justify-self: center;
+  footer .wrap > * {
+    max-width: 100%;
   }
 }
 
