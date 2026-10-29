@@ -71,17 +71,21 @@
 
   function choose(maps){setConsent(maps);closeBanner();apply();syncPending()}
 
-  function openBanner(){
-    if(document.getElementById('ck-banner'))return;
+  /* La finestra prende il nome del pulsante che la apre (es. «Gestisci cookie», «Gestione cookie»). */
+  function openBanner(e){
+    var t=(e&&e.currentTarget&&e.currentTarget.textContent.trim())||'Gestione cookie';
+    var old=document.getElementById('ck-banner');
+    if(old){old.querySelector('h2').textContent=t;old.classList.remove('ck-attn');void old.offsetWidth;old.classList.add('ck-attn');return}
     var b=document.createElement('div');
     b.id='ck-banner';b.setAttribute('role','region');b.setAttribute('aria-label','Cookie');
-    b.innerHTML='<h2>Cookie</h2><p>Questo sito usa cookie tecnici, necessari al funzionamento. La mappa di Google Maps può installare cookie di terze parti: li carichiamo solo se accetti. Puoi cambiare scelta in qualsiasi momento da «Gestisci cookie» nella pagina <a href="privacy.html">Privacy e cookie</a>.</p><div class="ck-row"><button type="button" class="ck-btn" data-ck="no">Rifiuta</button><button type="button" class="ck-btn" data-ck="yes">Accetta</button></div>';
+    b.innerHTML='<h2></h2><p>Questo sito usa cookie tecnici, necessari al funzionamento. La mappa di Google Maps può installare cookie di terze parti: li carichiamo solo se accetti. Puoi cambiare scelta in qualsiasi momento da «Gestione cookie» in fondo a ogni pagina. Maggiori dettagli nella pagina <a href="privacy.html">Privacy e cookie</a>.</p><div class="ck-row"><button type="button" class="ck-btn" data-ck="no">Rifiuta</button><button type="button" class="ck-btn" data-ck="yes">Accetta</button></div>';
+    b.querySelector('h2').textContent=t;
     b.querySelector('[data-ck=no]').addEventListener('click',function(){choose(false)});
     b.querySelector('[data-ck=yes]').addEventListener('click',function(){choose(true)});
     document.body.appendChild(b);padBody();
   }
 
-  /* --- pulsanti "Gestisci cookie" (pagina Privacy e cookie) --- */
+  /* --- pulsanti che aprono la finestra: footer, avviso del modulo, pagina Privacy e cookie --- */
   function bindOpeners(){
     var bs=document.querySelectorAll('.ck-open');
     for(var i=0;i<bs.length;i++)bs[i].addEventListener('click',openBanner);

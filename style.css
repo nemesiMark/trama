@@ -2123,8 +2123,13 @@ footer {
 }
 
 footer .footer-legal {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
   color: inherit;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 label.check a {
@@ -2145,6 +2150,36 @@ label.check a {
 
 .ck-pending .ck-form-note {
   display: block;
+}
+
+.ck-form-note p {
+  margin: 0 0 .6rem;
+  max-width: none;
+  color: #fff;
+}
+
+/* Piccolo pulsante «Gestisci cookie» sotto l'avviso rosso */
+.ck-note-btn {
+  display: block;
+  margin: 0 auto;
+  background: #fff;
+  color: #aa372e;
+  border: 0;
+  border-radius: 6px;
+  padding: .4rem 1rem;
+  font: 700 .8rem 'Manrope', Arial, sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ck-note-btn:hover {
+  background: var(--ice, #c9dcf5);
+  color: var(--ink, #051D34);
+}
+
+.ck-note-btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
 }
 
 /* Testo introduttivo con foto a fianco (pagine di servizi e prodotti) */

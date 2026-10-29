@@ -62,11 +62,14 @@ MODULO CONTATTI E COOKIE
 - Il modulo invia le richieste tramite il servizio Web3Forms (chiave nel campo
   access_key di index.html).
 - Il modulo si può inviare solo dopo aver accettato i cookie: finché non si preme
-  "Accetta", sopra il pulsante compare un avviso rosso e il banner si riapre.
+  "Accetta", sopra il pulsante compare un avviso rosso ("Per inviare la richiesta
+  devi prima accettare i cookie") con il pulsantino "Gestisci cookie".
   Questa scelta va confermata dal consulente privacy.
 - La scelta sui cookie è salvata nel browser (voce olimp_cookie_consent_v1).
-  Per rivedere il banner: pulsante "Gestisci cookie" nella pagina Privacy e cookie,
-  oppure finestra in incognito.
+  Per rivedere la finestra dei cookie: "Gestione cookie" nel footer di ogni pagina,
+  "Gestisci cookie" sotto l'avviso del modulo o nella pagina Privacy e cookie.
+  La finestra prende il nome del pulsante che la apre. La pagina Privacy e cookie
+  resta raggiungibile dal link nella finestra e da quello nel modulo contatti.
 - Google Maps si carica solo dopo il consenso.
 
 
@@ -145,3 +148,10 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    «Download completato.». Script aggiornato a script.js?v=9 in tutte le pagine.
 1.4  (29/10/2026)  Home, sezione Chi siamo: la frase tra virgolette «Custodire il
                    tempo…» ora è in grassetto (resta in corsivo).
+1.5  (29/10/2026)  Cookie: nel modulo contatti l'avviso rosso ora dice «Per inviare la
+                   richiesta devi prima accettare i cookie» con sotto il pulsantino
+                   «Gestisci cookie» che apre la finestra omonima. Nel footer di tutte
+                   le pagine «Privacy e cookie» è sostituito da «Gestione cookie», che
+                   apre la finestra omonima. Il testo della finestra rimanda a
+                   «Gestione cookie» e alla pagina Privacy e cookie. Aggiornati
+                   style.css?v=11 e cookie.js?v=2 in tutte le pagine.
