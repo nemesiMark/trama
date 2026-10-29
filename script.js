@@ -75,8 +75,8 @@ function resetForm(){f.reset();msg.hidden=true;sb.disabled=false;sb.textContent=
 /* Invio senza lasciare la pagina: ringraziamento in italiano al posto del modulo. */
 f.addEventListener('submit',function(e){
 e.preventDefault();
-/* Finché non si accettano i cookie l'invio resta bloccato: si apre ed evidenzia il banner. */
-if(document.documentElement.classList.contains('ck-pending')){if(window.olimpOpenCookies)window.olimpOpenCookies();var ck=document.getElementById('ck-banner');if(ck){ck.classList.remove('ck-attn');void ck.offsetWidth;ck.classList.add('ck-attn');var cb=ck.querySelector('button');if(cb)cb.focus()}return}
+/* Finché non si accettano i cookie l'invio resta bloccato: si apre la finestra dei cookie (che lampeggia). */
+if(document.documentElement.classList.contains('ck-pending')){if(window.olimpOpenCookies)window.olimpOpenCookies();var ck=document.getElementById('ck-banner');if(ck){var cb=ck.querySelector('button');if(cb)cb.focus()}return}
 sb.disabled=true;sb.textContent='Invio in corso…';msg.hidden=true;msg.classList.remove('err');
 fetch(f.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
 .then(function(r){return r.json().then(function(d){if(!r.ok||d.success===false)throw new Error('send')})})

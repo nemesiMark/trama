@@ -175,3 +175,26 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    aperta: lo spazio che evita che la finestra copra i contenuti ora è
                    dentro il footer (che si allunga) invece che sotto di esso, dove
                    lasciava una fascia bianca. Aggiornato cookie.js?v=4 in tutte le pagine.
+1.11 (29/10/2026)  Finestra Gestione cookie con nuovo design (proposta C): barra blu
+                   a tutta larghezza in fondo alla pagina, con linea bordeaux sopra,
+                   testo a sinistra e pulsanti «Rifiuta» (bordo bianco) e «Accetta»
+                   (azzurro) a destra; su telefono i pulsanti vanno sotto il testo.
+                   Se si prova a inviare il modulo senza aver accettato, la barra
+                   lampeggia di bordeaux. Corretta la grossa fascia blu nel footer che
+                   compariva con la finestra aperta (es. in incognito): ora il footer
+                   resta della sua altezza normale e lo spazio sotto di esso è alto
+                   esattamente quanto la barra, che lo copre. Aggiornato cookie.js?v=5
+                   in tutte le pagine.
+1.12 (29/10/2026)  Finestra Gestione cookie: lampeggia due volte di rosso ogni volta
+                   che si apre (alla prima visita, da «Gestione cookie» nel footer, da
+                   «Gestisci cookie» nel modulo o nella pagina Privacy e cookie, e se si
+                   prova a inviare il modulo senza aver accettato). Aggiornati
+                   cookie.js?v=6 e script.js?v=10 in tutte le pagine.
+1.13 (29/10/2026)  Finestra Gestione cookie: ogni volta che si apre lampeggia tre
+                   volte di rosso invece di due. Aggiornato cookie.js?v=7 in tutte le pagine.
+1.14 (29/10/2026)  Finestra Gestione cookie: ogni volta che si apre lampeggia due
+                   volte di rosso, a partire da 2 secondi dopo l'apertura. Aggiornato
+                   cookie.js?v=8 in tutte le pagine.
+1.15 (29/10/2026)  Finestra Gestione cookie: il primo dei due lampeggi rossi parte
+                   1 secondo dopo l'apertura invece di 2. Aggiornato cookie.js?v=9 in
+                   tutte le pagine.
