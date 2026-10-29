@@ -208,3 +208,17 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    stessa dimensione e stesso colore grigio; resta in evidenza solo
                    «Canicattì». L'indirizzo diventa blu scuro al passaggio del cursore.
                    Aggiornato style.css?v=15 in tutte le pagine.
+1.18 (29/10/2026)  Home, sezione Chi siamo rifatta come la proposta 09 bis: in alto
+                   «03 / Il laboratorio» e il titolo; sotto la foto panoramica che sfuma
+                   nel blu, con la citazione «Custodire il tempo…» scritta dentro, centrata
+                   in bianco corsivo; poi il testo diviso in quattro tappe con un titoletto
+                   ciascuna (Dal 1969, Materiali e dettagli, Ispirati dalla moda, Maestri
+                   artigiani) e una linea bordeaux sopra. Su tablet le tappe vanno su due
+                   colonne, su telefono una sotto l'altra. Nel testo «uptodate» è diventato
+                   «aggiornate» e sono stati tolti due spazi doppi. Il titolo «Un po' di
+                   numeri» è ora allineato a sinistra. Aggiornato style.css?v=16 in tutte
+                   le pagine.
+1.19 (29/10/2026)  Home, sezione Chi siamo: «Un po' di numeri» e i numeri sotto sono
+                   stati spostati più in alto, più vicini alle quattro tappe (spazio
+                   sopra il titolo ridotto da 5,5 a 3 su computer e da 3,5 a 2,2 su
+                   telefono). Aggiornato style.css?v=17 in tutte le pagine.
