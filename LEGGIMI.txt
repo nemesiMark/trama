@@ -16,7 +16,7 @@ Il modulo contatti va provato sul sito pubblicato: aprendo i file dal computer
 
 Lo stesso vale per l'Area download: aprendo i file dal computer il browser
 mostra il PDF in una scheda invece di scaricarlo, e non compaiono l'avviso
-«File scaricato.» né la finestra di conferma. Per provarla come sul sito
+«Download completato.» né la finestra di conferma. Per provarla come sul sito
 pubblicato, dalla cartella del sito nel Terminale:
 
   python3 -m http.server 8000
@@ -141,3 +141,5 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
 1.2  (29/10/2026)  LEGGIMI: spiegato perché aprendo il sito dal computer il PDF si
                    apre in una scheda invece di scaricarsi, e come provare l'Area
                    download con un piccolo server locale (python3 -m http.server).
+1.3  (29/10/2026)  Area download: l'avviso verde sotto il pulsante ora dice
+                   «Download completato.». Script aggiornato a script.js?v=9 in tutte le pagine.

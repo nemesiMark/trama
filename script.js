@@ -53,7 +53,7 @@ var aText=a.textContent,st=document.createElement('p');st.className='form-msg';s
 /* Avviso sotto il pulsante: verde se il download è riuscito, rosso se no. */
 function show(ok,text){st.textContent=text;st.classList.toggle('ok',ok);st.classList.toggle('err',!ok);st.hidden=false}
 a.addEventListener('click',function(e){
-var done=function(name){show(true,'File scaricato.');openThanks('Download completato','Il file «'+name+'» è stato scaricato sul tuo dispositivo.')};
+var done=function(name){show(true,'Download completato.');openThanks('Download completato','Il file «'+name+'» è stato scaricato sul tuo dispositivo.')};
 /* Sito aperto dal computer o browser vecchio: download normale, poi la conferma. */
 if(location.protocol==='file:'||!window.fetch||!window.URL){setTimeout(function(){done(a.getAttribute('download')||'')},300);return}
 e.preventDefault();if(a.getAttribute('aria-busy'))return;
