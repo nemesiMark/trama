@@ -14,6 +14,15 @@ i caratteri (Google Fonts), la mappa (Google Maps) e l'invio del modulo contatti
 Il modulo contatti va provato sul sito pubblicato: aprendo i file dal computer
 (indirizzo che inizia con file://) l'invio potrebbe non riuscire.
 
+Lo stesso vale per l'Area download: aprendo i file dal computer il browser
+mostra il PDF in una scheda invece di scaricarlo, e non compaiono l'avviso
+«File scaricato.» né la finestra di conferma. Per provarla come sul sito
+pubblicato, dalla cartella del sito nel Terminale:
+
+  python3 -m http.server 8000
+
+poi aprire http://localhost:8000/area-download.html (Ctrl+C per fermare).
+
 
 STRUTTURA
 ---------
@@ -119,3 +128,16 @@ Su Mac, dalla cartella del sito nel Terminale:
 
 Poi inviare la sitemap da Google Search Console:
 https://www.esempio.it/sitemap.xml
+
+
+VERSIONI
+--------
+Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
+
+1.0  (29/10/2026)  Stato del sito fino alla revisione di coerenza e all'aggiornamento
+                   del LEGGIMI (vedi la cronologia su GitHub per i passaggi precedenti).
+1.1  (29/10/2026)  Area download: l'avviso verde sotto il pulsante ora dice solo
+                   «File scaricato.». Script aggiornato a script.js?v=8 in tutte le pagine.
+1.2  (29/10/2026)  LEGGIMI: spiegato perché aprendo il sito dal computer il PDF si
+                   apre in una scheda invece di scaricarsi, e come provare l'Area
+                   download con un piccolo server locale (python3 -m http.server).
