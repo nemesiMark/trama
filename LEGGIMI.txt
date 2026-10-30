@@ -410,3 +410,13 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    prima. Chi ha attivato «riduci movimento» vede il cambio di colore
                    senza animazione. Aggiornati css/style.css?v=37 e js/cookie.js?v=10
                    in tutte le pagine.
+1.44 (30/10/2026)  iPhone, gallerie ancora invisibili: la causa vera era nel CSS. Il
+                   riquadro di ogni foto della galleria prende l'altezza solo dalla
+                   proporzione 4:3 (foto e nome sono sovrapposti e non occupano
+                   spazio) e aveva anche «align-self: stretch». Safari dà la
+                   precedenza a «stretch», la riga era alta 0 e quindi le foto
+                   sparivano; Chrome invece usava la proporzione. Tolto «stretch» (ora
+                   «start») e aggiunta un'altezza 4:3 di riserva per i Safari più
+                   vecchi di iOS 15. Vale per tutte le gallerie (linee e album
+                   bambini, comunione, eventi). Aggiornato css/style.css?v=38 in tutte
+                   le pagine.

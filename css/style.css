@@ -681,9 +681,11 @@ a.more.no-arrow::after {
   grid-auto-flow: dense;
 }
 
+/* Niente «align-self: stretch»: su Safari (iPhone) vince sulla proporzione 4:3 e, siccome
+   foto e nome sono sovrapposti (non occupano spazio), il riquadro risultava alto 0. */
 .gallery .ph {
   aspect-ratio: 4/3;
-  align-self: stretch;
+  align-self: start;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(5, 29, 52, 0.08);
@@ -701,6 +703,14 @@ a.more.no-arrow::after {
 
 .gallery .ph:hover img {
   transform: scale(1.06);
+}
+
+/* Safari più vecchi (prima di iOS 15) non conoscono aspect-ratio: altezza 4:3 data dallo spazio interno. */
+@supports not (aspect-ratio: 4 / 3) {
+  .gallery .ph {
+    height: 0;
+    padding-top: 75%;
+  }
 }
 
 /* Nome del modello sopra la foto (es. Linea Fashion) */
