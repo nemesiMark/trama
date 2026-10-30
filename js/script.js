@@ -48,13 +48,15 @@ function check(){
     var r=e.getBoundingClientRect();
     if(r.top<(end?vh:vh*0.92)&&r.bottom>0){
       var delay=first?120+Math.min(k++,10)*100:Math.min(k++,8)*80;e.style.setProperty('--fx-d',delay+'ms');e.classList.add('in');
+      /* Safari (iPhone) non carica le foto «lazy» finché sono nascoste dal Sipario: le carica subito quando l'elemento parte. */
+      [].forEach.call(e.querySelectorAll('img[loading="lazy"]'),function(i){i.loading='eager'});
       setTimeout(function(){e.classList.add('fx-done');if(!e.classList.contains('fxw')){e.classList.remove('fx','fxb','in','fx-done');e.style.removeProperty('--fx-d')}},delay+1100);return false}
     return true});
   first=false;
-  if(!pending.length){window.removeEventListener('scroll',onScroll);window.removeEventListener('resize',onScroll)}
+  if(!pending.length){document.removeEventListener('scroll',onScroll,true);window.removeEventListener('resize',onScroll)}
 }
 function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(check)}}
-window.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('resize',onScroll);
+document.addEventListener('scroll',onScroll,{passive:true,capture:true});window.addEventListener('resize',onScroll);window.addEventListener('orientationchange',onScroll);
 requestAnimationFrame(function(){requestAnimationFrame(check)});setTimeout(check,60);window.addEventListener('load',check);
 })();
 /* Numeri di Chi siamo: salgono da zero quando la striscia entra nello schermo. */

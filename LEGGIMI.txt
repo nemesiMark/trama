@@ -388,3 +388,25 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    ingrandita e sale al suo posto in 1,6 s, riempiendo sempre tutto il
                    riquadro (lo sfondo blu non si vede mai). Aggiornati
                    css/style.css?v=34 e js/script.js?v=25 in tutte le pagine.
+1.42 (30/10/2026)  iPhone: le foto delle gallerie («Gli album della linea», «Le
+                   fotografie», card di collezioni e prodotti) non comparivano. Sono
+                   foto a caricamento ritardato («lazy») e Safari non le caricava
+                   perché, prima di salire, sono nascoste dall'effetto Sipario. Ora
+                   ogni foto viene caricata nel momento in cui il suo riquadro inizia a
+                   salire. Inoltre: lo scorrimento viene rilevato anche dentro gli
+                   elementi della pagina e alla rotazione del telefono; la galleria si
+                   adatta anche agli schermi più stretti di 320 px (iPhone piccoli).
+                   Vale per tutte le pagine. Aggiornati css/style.css?v=35 e
+                   js/script.js?v=26 in tutte le pagine.
+1.43 (30/10/2026)  Pulsanti con effetto come leecougan.com: al passaggio del mouse (o
+                   con la tastiera) un blocco di colore bordeaux del logo (#aa372e)
+                   sale dal basso e riempie il pulsante in 0,4 s, il testo diventa
+                   bianco; togliendo il mouse il colore riscende. Vale per tutti i
+                   pulsanti: «Scopri le collezioni» in home, Scarica il catalogo /
+                   la guida, Invia del modulo contatti, Gestisci cookie della pagina
+                   privacy, Accetta / Rifiuta della barra dei cookie e «Accetta e
+                   mostra la mappa». Il pulsantino bianco sull'avviso rosso si riempie
+                   di blu scuro. Tolto il piccolo sollevamento che i pulsanti avevano
+                   prima. Chi ha attivato «riduci movimento» vede il cambio di colore
+                   senza animazione. Aggiornati css/style.css?v=37 e js/cookie.js?v=10
+                   in tutte le pagine.

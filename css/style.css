@@ -417,8 +417,8 @@ nav a.on,
 }
 
 .hero .btn:hover {
-  background: #fff;
-  border-color: #fff;
+  border-color: #aa372e;
+  color: #fff;
 }
 
 /* Slideshow hero */
@@ -538,9 +538,8 @@ nav a.on,
 }
 
 .btn:hover {
-  background: #0d3558;
-  border-color: #0d3558;
-  transform: translateY(-2px);
+  border-color: #aa372e;
+  color: #fff;
 }
 
 /* ======================================================
@@ -676,7 +675,7 @@ a.more.no-arrow::after {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
   gap: 2rem;
   margin-top: 3.2rem;
   grid-auto-flow: dense;
@@ -1713,8 +1712,9 @@ footer .footer-socials svg {
 }
 
 .download-card .btn:disabled:hover {
-  background: var(--wine);
+  background-size: 100% 0%;
   border-color: var(--wine);
+  color: var(--white);
 }
 
 .title-icon {
@@ -2481,8 +2481,7 @@ label.check a {
 }
 
 .ck-note-btn:hover {
-  background: var(--ice, #c9dcf5);
-  color: var(--ink, #051D34);
+  color: #fff;
 }
 
 .ck-note-btn:focus-visible {
@@ -2887,3 +2886,53 @@ label.check a {
     padding: 1.8rem;
   }
 }
+
+/* ======================================================
+   PULSANTI: RIEMPIMENTO DAL BASSO AL PASSAGGIO DEL MOUSE
+   Un blocco di colore bordeaux (come il logo) sale dal basso e riempie il pulsante,
+   il testo diventa bianco. Fatto con uno sfondo (non con ::before/::after) così vale
+   per tutti i pulsanti, anche quelli della barra dei cookie (js/cookie.js).
+   ====================================================== */
+
+/* !important: altre regole (es. .hero .btn) usano «background:» che altrimenti cancellerebbe l'effetto. */
+.btn,
+.ck-note-btn {
+  background-image: linear-gradient(#aa372e, #aa372e) !important;
+  background-repeat: no-repeat !important;
+  background-position: 0 100% !important;
+  background-size: 100% 0% !important;
+  transition: background-size .4s ease-in-out, color .4s ease-in-out, border-color .4s ease-in-out !important;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background-size: 100% 100% !important;
+  border-color: #aa372e !important;
+  color: #fff !important;
+}
+
+/* Il pulsantino bianco sull'avviso rosso si riempie di blu scuro. */
+.ck-note-btn {
+  background-image: linear-gradient(var(--ink, #051D34), var(--ink, #051D34)) !important;
+}
+
+.ck-note-btn:hover,
+.ck-note-btn:focus-visible {
+  background-size: 100% 100% !important;
+  color: #fff !important;
+}
+
+.btn:disabled,
+.btn:disabled:hover {
+  background-size: 100% 0% !important;
+  border-color: var(--wine) !important;
+  color: var(--white) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .ck-note-btn {
+    transition: none;
+  }
+}
+
