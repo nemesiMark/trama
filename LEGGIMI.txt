@@ -353,3 +353,38 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    circa il 40% (tolto il margine superiore della galleria). Vale in
                    tutte le pagine con la galleria. Aggiornato css/style.css?v=29 in
                    tutte le pagine.
+1.37 (30/10/2026)  Effetto Sipario anche per gli elementi di inizio pagina: prima
+                   comparivano subito tutti insieme all'apertura. Ora restano nascosti
+                   finché l'effetto è pronto e poi salgono uno dopo l'altro (partenza
+                   dopo 0,25 s, uno ogni 0,16 s); scorrendo la pagina resta tutto come
+                   prima. In ogni pagina è stata aggiunta nel <head> una riga che li
+                   nasconde all'apertura, con sicurezza: dopo 2,5 s ricompaiono comunque.
+                   Chi ha attivato «riduci movimento» vede la pagina senza effetto.
+                   Aggiornati css/style.css?v=30 e js/script.js?v=21 in tutte le pagine.
+1.38 (30/10/2026)  Effetto Sipario più dinamico: anche i riquadri (schede di Area
+                   download, card di collezioni, prodotti e custodie, formati) salgono
+                   dal basso, e subito dopo il loro contenuto compare un elemento alla
+                   volta (titolo, testo, pulsante, foto). Prima i riquadri erano già
+                   visibili e si muoveva solo il contenuto. A fine animazione i
+                   riquadri tornano normali (resta l'effetto al passaggio del mouse).
+                   Vale per tutte le pagine. Aggiornati css/style.css?v=31 e
+                   js/script.js?v=22 in tutte le pagine.
+1.39 (30/10/2026)  Effetto Sipario corretto e più veloce. Correzione: all'apertura della
+                   pagina gli elementi scendevano lentamente nella posizione nascosta
+                   (1 s) e quelli in alto ripartivano verso l'alto quando erano ancora
+                   quasi al loro posto, per cui sembravano fermi (es. Linea Fashion).
+                   Ora vengono nascosti all'istante e l'animazione c'è solo in salita.
+                   Più veloce: salita del testo da 1,1 a 0,9 s, riquadri e pulsanti da
+                   1 a 0,8 s; all'apertura partenza dopo 0,12 s e un elemento ogni
+                   0,1 s (prima 0,25 e 0,16); scorrendo uno ogni 0,08 s (prima 0,09).
+                   Aggiornati css/style.css?v=32 e js/script.js?v=23 in tutte le pagine.
+1.40 (30/10/2026)  Home: la foto grande in alto (immagini che scorrono) non ha più
+                   l'effetto Sipario, quindi all'apertura del sito si vede subito senza
+                   lo sfondo blu che compariva prima che la foto salisse. Titolo, testo
+                   e pulsante accanto continuano a salire. Aggiornati
+                   css/style.css?v=33 e js/script.js?v=24 in tutte le pagine.
+1.41 (30/10/2026)  Home: ripristinato l'effetto di salita sulla foto grande in alto, ma
+                   senza sfondo blu. La foto parte un po' più in basso e leggermente
+                   ingrandita e sale al suo posto in 1,6 s, riempiendo sempre tutto il
+                   riquadro (lo sfondo blu non si vede mai). Aggiornati
+                   css/style.css?v=34 e js/script.js?v=25 in tutte le pagine.

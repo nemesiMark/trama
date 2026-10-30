@@ -1388,6 +1388,22 @@ footer .footer-socials svg {
 
 /* Effetto «Sipario» (js/script.js): il contenuto sale da sotto un bordo invisibile.
    Senza JavaScript o con «riduci movimento» attivo tutto resta visibile e fermo. */
+/* Prima che parta l'effetto: elementi nascosti, così non compaiono tutti insieme all'apertura (in head c'è un limite di sicurezza di 2,5 s). */
+.fx-pre main :is(h1, h2, h3, .eyebrow, p, figure, article, .card, .download-card, li, form, .btn, .stat, .map):not(.hero-slideshow) {
+  opacity: 0;
+}
+
+/* Foto della home: parte più in basso e ingrandita e sale al suo posto, sempre a riempire il riquadro. */
+.fx-pre .hero-slideshow .hero-slides,
+.hero-slides.hs-pre {
+  transform: translateY(10%) scale(1.22);
+}
+
+.hero-slides.hs-pre.hs-in {
+  transform: none;
+  transition: transform 1.6s cubic-bezier(.77, 0, .18, 1) .1s;
+}
+
 .fxi {
   display: block;
   height: 100%;
@@ -1404,22 +1420,24 @@ footer .footer-socials svg {
 
 .fx-on .fx.fxw > .fxi {
   transform: translateY(105%);
-  transition: transform 1.1s cubic-bezier(.77, 0, .18, 1) var(--fx-d, 0s);
 }
 
+/* La transizione c'è solo in salita: nascondere gli elementi all'apertura è istantaneo
+   (se scorresse anche quella, gli elementi in alto partirebbero già quasi arrivati). */
 .fx-on .fx.fxw.in > .fxi {
   transform: none;
+  transition: transform .9s cubic-bezier(.77, 0, .18, 1) var(--fx-d, 0s);
 }
 
 .fx-on .fx:not(.fxw) {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 1s cubic-bezier(.77, 0, .18, 1) var(--fx-d, 0s), transform 1s cubic-bezier(.77, 0, .18, 1) var(--fx-d, 0s);
 }
 
 .fx-on .fx:not(.fxw).in {
   opacity: 1;
   transform: none;
+  transition: opacity .8s cubic-bezier(.77, 0, .18, 1) var(--fx-d, 0s), transform .8s cubic-bezier(.77, 0, .18, 1) var(--fx-d, 0s);
 }
 
 /* Sicurezza: a fine animazione l'elemento è comunque al suo posto. */

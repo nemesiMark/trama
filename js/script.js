@@ -17,27 +17,40 @@ item.addEventListener('keydown',function(e){if(e.key==='Escape'){setOpen(false);
 nav.querySelectorAll('a[href]').forEach(function(a){a.addEventListener('click',function(){if(!a.matches('.dd > a')){nav.classList.remove('open');b.setAttribute('aria-expanded','false');dropdowns.forEach(function(item){item.classList.remove('open');item.querySelector(':scope > a, :scope > button').setAttribute('aria-expanded','false')})}})});
 /* Effetto «Sipario» (escluso il footer): titoli, testi, foto e riquadri salgono dal basso, come da dietro un bordo, quando entrano nello schermo. */
 (function(){
-if(matchMedia('(prefers-reduced-motion: reduce)').matches||!window.requestAnimationFrame)return;
-var sel='main h1, main h2, main h3, main .eyebrow, main p, main figure, main .card, main li, main form, main .btn, main .stat, main .map';
-var els=[].slice.call(document.querySelectorAll(sel)).filter(function(e){return !e.parentElement.closest(sel)&&!e.closest('.hero-slides,.hero-controls')});
-if(!els.length)return;
-els.forEach(function(e){
+var R=document.documentElement;function unpre(){R.classList.remove('fx-pre')}
+if(matchMedia('(prefers-reduced-motion: reduce)').matches||!window.requestAnimationFrame)return unpre();
+var sel='main h1, main h2, main h3, main .eyebrow, main p, main figure, main li, main form, main .btn, main .stat, main .map';
+/* Riquadri (schede, card, formati): salgono per primi, poi il loro contenuto elemento per elemento. */
+var boxSel='main article, main .card, main .download-card';
+/* La foto della home (immagini che scorrono) resta ferma: si vede subito, senza sfondo blu. */
+var skip=function(e){return e.closest('.hero-slideshow,.hero-slides,.hero-controls')};
+var boxes=[].slice.call(document.querySelectorAll(boxSel)).filter(function(e){return !skip(e)&&!e.parentElement.closest(boxSel)});
+var items=[].slice.call(document.querySelectorAll(sel)).filter(function(e){return !e.parentElement.closest(sel)&&!skip(e)});
+var els=boxes.concat(items).sort(function(a,b){return a===b?0:(a.compareDocumentPosition(b)&4?-1:1)});
+if(!els.length)return unpre();
+boxes.forEach(function(e){e.classList.add('fx','fxb')});
+items.forEach(function(e){
   e.classList.add('fx');
   var d=getComputedStyle(e).display;if(/flex|grid|none/.test(d))return;
   var w=document.createElement('span');w.className='fxi';
   if(e.matches('.ph'))w.classList.add('fxi-ph');else if(/inline/.test(d))w.style.display='inline-block';
   while(e.firstChild)w.appendChild(e.firstChild);e.appendChild(w);e.classList.add('fxw');
 });
-document.documentElement.classList.add('fx-on');
-var pending=els.slice(),ticking=false;
+/* Foto della home: sale al suo posto partendo un po' più in basso e ingrandita, così riempie sempre il riquadro (niente sfondo blu). */
+var hs=document.querySelector('.hero-slideshow .hero-slides');
+if(hs){hs.classList.add('hs-pre');requestAnimationFrame(function(){requestAnimationFrame(function(){hs.classList.add('hs-in')})})}
+R.classList.add('fx-on');unpre();
+/* Elementi già visibili all'apertura: partono dopo un attimo, uno dopo l'altro, più distanziati. */
+var pending=els.slice(),ticking=false,first=true;
 function check(){
   ticking=false;var vh=window.innerHeight,k=0,end=window.scrollY+vh>=document.documentElement.scrollHeight-4;
   pending=pending.filter(function(e){
     var r=e.getBoundingClientRect();
     if(r.top<(end?vh:vh*0.92)&&r.bottom>0){
-      var delay=Math.min(k++,8)*90;e.style.setProperty('--fx-d',delay+'ms');e.classList.add('in');
-      setTimeout(function(){e.classList.add('fx-done')},delay+1300);return false}
+      var delay=first?120+Math.min(k++,10)*100:Math.min(k++,8)*80;e.style.setProperty('--fx-d',delay+'ms');e.classList.add('in');
+      setTimeout(function(){e.classList.add('fx-done');if(!e.classList.contains('fxw')){e.classList.remove('fx','fxb','in','fx-done');e.style.removeProperty('--fx-d')}},delay+1100);return false}
     return true});
+  first=false;
   if(!pending.length){window.removeEventListener('scroll',onScroll);window.removeEventListener('resize',onScroll)}
 }
 function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(check)}}
