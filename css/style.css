@@ -448,12 +448,26 @@ nav a.on,
   object-fit: cover;
 }
 
-/* fineart.jpg nello slideshow della home: album spostato verso destra
-   (ingrandita partendo dal bordo sinistro, così a sinistra non resta un vuoto) */
-.hero .hero-slide img[src$="fineart.jpg"] {
-  object-position: 0% 48%;
-  transform: scale(1.35);
-  transform-origin: left center;
+/* Modello Orione nello slideshow della home: la foto (4:3) sta a destra a tutta altezza,
+   con l'album intero; il bordo sinistro sfuma nei colori del muro e del ripiano. */
+.hero .hs-orione {
+  background: linear-gradient(180deg, #c4c0bd 0%, #bcb5b1 68%, #ab9d8f 72%, #b9a897 100%);
+}
+
+.hero .hero-slide.hs-orione img {
+  top: auto;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  width: auto;
+  max-width: none;
+  height: 86%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 22%), linear-gradient(180deg, transparent 0, #000 14%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(90deg, transparent 0, #000 22%), linear-gradient(180deg, transparent 0, #000 14%);
+  mask-composite: intersect;
 }
 
 .hero-controls {
@@ -2769,10 +2783,20 @@ label.check a {
     background: linear-gradient(180deg, rgba(5, 29, 52, .35) 0%, rgba(5, 29, 52, .55) 45%, rgba(5, 29, 52, .92) 100%);
   }
 
-  .hero .ph img,
-  .hero .hero-slide img[src$="fineart.jpg"] {
+  .hero .ph img {
     object-position: 50% 50%;
     transform: none;
+  }
+
+  /* Su telefono la foto Orione riempie tutto il riquadro come le altre. */
+  .hero .hero-slide.hs-orione img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
   }
 
   .hero-controls {

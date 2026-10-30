@@ -420,3 +420,20 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    vecchi di iOS 15. Vale per tutte le gallerie (linee e album
                    bambini, comunione, eventi). Aggiornato css/style.css?v=38 in tutte
                    le pagine.
+1.45 (30/10/2026)  Home: la prima foto dello slideshow in alto è ora il Modello Orione
+                   della Linea Trendy (copia in images/index/modello-orione.jpg) al
+                   posto di fineart.jpg. Su computer la foto sta a destra, appoggiata
+                   in basso e un po' più piccola del riquadro, con l'album intero
+                   accanto al testo; i bordi sinistro e superiore sfumano nei colori
+                   del muro e del ripiano. Su telefono riempie tutto il riquadro come
+                   le altre. fineart.jpg resta nel riquadro «Album matrimoniali» più in
+                   basso nella home. Tolte le regole CSS che spostavano fineart.jpg.
+                   Aggiornato css/style.css?v=39 in tutte le pagine.
+1.46 (30/10/2026)  Home: invertito l'ordine delle tre foto che scorrono in alto. Ora:
+                   1) tradizionale.jpg (montaggio di un album tradizionale), 2)
+                   album1.jpg (album aperto su doppia pagina), 3) Modello Orione.
+1.47 (30/10/2026)  Album matrimoniali: il riquadro della Linea Trendy mostra ora il
+                   Modello Orione (images/album-matrimoniali/modello-orione.jpg) al
+                   posto del Modello Frame. Eliminata la copia non più usata
+                   images/album-matrimoniali/modello-frame.jpg (l'originale resta in
+                   images/linea-trendy/).
