@@ -15,8 +15,35 @@ toggle.addEventListener('click',function(e){if(toggle.tagName==='BUTTON'||matchM
 item.addEventListener('keydown',function(e){if(e.key==='Escape'){setOpen(false);toggle.focus()}});
 });
 nav.querySelectorAll('a[href]').forEach(function(a){a.addEventListener('click',function(){if(!a.matches('.dd > a')){nav.classList.remove('open');b.setAttribute('aria-expanded','false');dropdowns.forEach(function(item){item.classList.remove('open');item.querySelector(':scope > a, :scope > button').setAttribute('aria-expanded','false')})}})});
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+/* Effetto «Sipario» (escluso il footer): titoli, testi, foto e riquadri salgono dal basso, come da dietro un bordo, quando entrano nello schermo. */
+(function(){
+if(matchMedia('(prefers-reduced-motion: reduce)').matches||!window.requestAnimationFrame)return;
+var sel='main h1, main h2, main h3, main .eyebrow, main p, main figure, main .card, main li, main form, main .btn, main .stat, main .map';
+var els=[].slice.call(document.querySelectorAll(sel)).filter(function(e){return !e.parentElement.closest(sel)&&!e.closest('.hero-slides,.hero-controls')});
+if(!els.length)return;
+els.forEach(function(e){
+  e.classList.add('fx');
+  var d=getComputedStyle(e).display;if(/flex|grid|none/.test(d))return;
+  var w=document.createElement('span');w.className='fxi';
+  if(e.matches('.ph'))w.classList.add('fxi-ph');else if(/inline/.test(d))w.style.display='inline-block';
+  while(e.firstChild)w.appendChild(e.firstChild);e.appendChild(w);e.classList.add('fxw');
+});
+document.documentElement.classList.add('fx-on');
+var pending=els.slice(),ticking=false;
+function check(){
+  ticking=false;var vh=window.innerHeight,k=0,end=window.scrollY+vh>=document.documentElement.scrollHeight-4;
+  pending=pending.filter(function(e){
+    var r=e.getBoundingClientRect();
+    if(r.top<(end?vh:vh*0.92)&&r.bottom>0){
+      var delay=Math.min(k++,8)*90;e.style.setProperty('--fx-d',delay+'ms');e.classList.add('in');
+      setTimeout(function(){e.classList.add('fx-done')},delay+1300);return false}
+    return true});
+  if(!pending.length){window.removeEventListener('scroll',onScroll);window.removeEventListener('resize',onScroll)}
+}
+function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(check)}}
+window.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('resize',onScroll);
+requestAnimationFrame(function(){requestAnimationFrame(check)});setTimeout(check,60);window.addEventListener('load',check);
+})();
 /* Numeri di Chi siamo: salgono da zero quando la striscia entra nello schermo. */
 (function(){
 /* Anni di attività: calcolati dall'anno di fondazione. */
@@ -110,7 +137,7 @@ function open(i){last=document.activeElement;show(i,1);lb.classList.add('on');do
 function close(){lb.classList.remove('on');document.body.style.overflow='';im.removeAttribute('src');if(last&&last.focus)last.focus()}
 imgs.forEach(function(el,i){
 el.addEventListener('click',function(e){e.preventDefault();open(i)});
-var f=el.parentNode;if(!f.closest('a')){f.tabIndex=0;f.setAttribute('role','button');f.setAttribute('aria-label','Apri la foto a schermo intero: '+el.alt);f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(i)}})}
+var f=el.closest('figure')||el.parentNode;if(!f.closest('a')){f.tabIndex=0;f.setAttribute('role','button');f.setAttribute('aria-label','Apri la foto a schermo intero: '+el.alt);f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(i)}})}
 });
 lb.addEventListener('click',function(e){if(e.target.classList.contains('lb-p')){show(cur-1,-1)}else if(e.target.classList.contains('lb-n')){show(cur+1,1)}else{close()}});
 document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Tab'){var buttons=[].slice.call(lb.querySelectorAll('button')).filter(function(b){return b.style.display!=='none'});var first=buttons[0],end=buttons[buttons.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();end.focus()}else if(!e.shiftKey&&document.activeElement===end){e.preventDefault();first.focus()}}else if(e.key==='Escape')close();else if(e.key==='ArrowLeft')show(cur-1,-1);else if(e.key==='ArrowRight')show(cur+1,1)});

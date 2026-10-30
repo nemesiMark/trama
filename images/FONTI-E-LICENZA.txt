@@ -1,4 +1,5 @@
-50 foto illustrative per Olimp, salvate in questa cartella (images) in versione ridotta per il web.
+50 foto illustrative per Olimp, salvate in versione ridotta per il web. Dalla versione 1.21 i file si trovano nelle
+sottocartelle di images (una per pagina) o in images/non-usate.
 Per ogni file è indicata la pagina originale su Pexels.
 Licenza: https://www.pexels.com/license/
 
@@ -151,3 +152,11 @@ https://www.pexels.com/photo/wedding-reception-venue-16120237/
 
 sala-fiori.jpg
 https://www.pexels.com/photo/floral-decor-of-wedding-reception-venue-16120230/
+
+
+FOTO DEL CLIENTE (non da Pexels)
+--------------------------------
+linea-fashion/modello-*.jpg (Flower, Curve, Fun, Mood, Vision, Onda, Split, Parigi, Vienna)
+linea-glamour/modello-*.jpg (Ice, Unique, Tex, Tex Wooden, Clear, Notch, Madrid, Londra, Happy)
+linea-trendy/modello-*.jpg (Frame, Orione, Ailanto)
+Foto degli album delle linee Fashion, Glamour e Trendy fornite dal cliente Olimp (30/10/2026).

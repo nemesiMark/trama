@@ -42,13 +42,22 @@ grafica-stampa.html   Grafica & Stampa
 area-download.html    Download di catalogo e guida (cartella downloads)
 privacy.html          Informativa privacy e cookie, con il pulsante "Gestisci cookie"
 
-style.css             Tutti gli stili del sito
-script.js             Menu, foto a scorrimento della home, foto a schermo intero
+css/style.css         Tutti gli stili del sito
+js/script.js          Menu, foto a scorrimento della home, foto a schermo intero
                       (pagine interne), invio del modulo contatti
-cookie.js             Banner dei cookie e blocco di Google Maps senza consenso
+js/cookie.js          Banner dei cookie e blocco di Google Maps senza consenso
 
-images/               Fotografie e logo (images/logo-olimp.svg, usato anche come favicon)
+images/               Fotografie, una sottocartella per ogni pagina con lo stesso
+                      nome del file html (es. images/linea-fashion/ per
+                      linea-fashion.html). Se una foto compare in più pagine, ne
+                      esiste una copia in ciascuna cartella: per cambiarla vanno
+                      sostituite tutte le copie.
+images/comune/        Logo (logo-olimp.svg, usato in tutte le pagine e come favicon)
+images/non-usate/     Foto presenti ma non usate da nessuna pagina
 downloads/            catalogo.pdf e guida.pdf
+
+Le nuove foto vanno messe nella cartella della pagina in cui compaiono, con il
+nome già indicato nella pagina (es. images/album-eventi/eventi-1.jpg).
 
 
 COLORI
@@ -222,3 +231,67 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    stati spostati più in alto, più vicini alle quattro tappe (spazio
                    sopra il titolo ridotto da 5,5 a 3 su computer e da 3,5 a 2,2 su
                    telefono). Aggiornato style.css?v=17 in tutte le pagine.
+1.20 (30/10/2026)  Linea Fashion: sostituita la foto illustrativa con le foto vere degli
+                   album inviate dal cliente. In alto a destra ora c'è l'album
+                   «Elisa & Andrea»; sotto è stata aggiunta la sezione «Gli album della
+                   linea» con tutti e 9 gli album (si aprono a schermo intero con un
+                   clic). Le foto sono in images/linea-fashion-1.jpg … linea-fashion-9.jpg,
+                   ridotte a 1600×1200 per il web. Aggiornati anche il riquadro Linea
+                   Fashion nella pagina Album matrimoniali e l'anteprima per i social
+                   della pagina Linea Fashion.
+1.21 (30/10/2026)  Riordino di file e cartelle. Lo stile è ora in css/style.css, gli
+                   script in js/script.js e js/cookie.js. Le foto sono divise in
+                   sottocartelle di images/, una per ogni pagina con lo stesso nome
+                   del file html; il logo è in images/comune/, le foto non usate in
+                   images/non-usate/. Le foto usate da più pagine sono state copiate
+                   nella cartella di ciascuna pagina. Aggiornati tutti i percorsi
+                   nelle pagine. Pagine html, LEGGIMI e cartella downloads restano
+                   dove erano.
+1.22 (30/10/2026)  Linea Fashion: le foto hanno ora il nome del modello, preso dai file
+                   originali del cliente (Flower, Curve, Fun, Mood, Vision, Onda, Split,
+                   Parigi, Vienna), es. images/linea-fashion/modello-flower.jpg. Tolti
+                   i vecchi file linea-fashion-1…9.jpg. Nella galleria il nome del
+                   modello compare in bianco in basso su ogni foto; anche le
+                   descrizioni delle foto lo riportano. Il riquadro Linea Fashion in
+                   Album matrimoniali usa il modello Curve. Gli originali a piena
+                   dimensione sono fuori dal sito, in Desktop/olimp-originali-linea-fashion.
+                   Aggiornato css/style.css?v=18 in tutte le pagine.
+1.23 (30/10/2026)  Linea Glamour: sostituita la foto illustrativa con le foto vere del
+                   cliente, rinominate con il nome del modello (es.
+                   images/linea-glamour/modello-ice.jpg; gli scatti in più dello
+                   stesso modello sono modello-ice-2.jpg, modello-ice-3.jpg). Modelli:
+                   Ice, Unique, Tex, Tex Wooden, Clear, Notch, Madrid, Londra, Happy.
+                   In alto a destra il modello Ice; sotto, nuova sezione «Gli album
+                   della linea» con 15 foto, il nome del modello su ogni foto e le
+                   descrizioni. Il riquadro Linea Glamour in Album matrimoniali usa ora
+                   il modello Ice; la vecchia foto album-tessuto.jpg è in
+                   images/non-usate. Originali a piena dimensione in
+                   Desktop/olimp-originali-linea-glamour.
+1.24 (30/10/2026)  Effetto di comparsa «Sipario» su tutte le pagine: quando entrano
+                   nello schermo, titoli, testi, foto, riquadri, elenchi, pulsanti e
+                   footer salgono dal basso come da dietro un bordo invisibile (1,1
+                   secondi), uno dopo l'altro se arrivano insieme. Gli elementi sono
+                   scelti in automatico da js/script.js, non serve aggiungere classi
+                   nelle pagine. Sostituisce la vecchia comparsa della home (classe
+                   «rv», tolta da index.html e da style.css). Con «riduci movimento»
+                   attivo nel sistema o senza JavaScript il sito resta fermo e
+                   visibile. Aggiornati css/style.css?v=19 e js/script.js?v=11 in
+                   tutte le pagine.
+1.25 (30/10/2026)  Correzioni all'effetto Sipario. Il footer non si anima più: torna
+                   fermo e sempre visibile, con le icone social (prima restavano
+                   nascoste) e di nuovo esattamente a fondo pagina, senza spazio
+                   bianco sotto. Arrivando in fondo alla pagina compaiono comunque gli
+                   ultimi elementi. A fine animazione ogni elemento viene messo al suo
+                   posto in ogni caso, così nessun testo o foto può restare nascosto.
+                   Le foto si aprono di nuovo a schermo intero anche da tastiera
+                   (Invio) come prima. Aggiornati css/style.css?v=21 e
+                   js/script.js?v=13 in tutte le pagine.
+1.26 (30/10/2026)  Linea Trendy: eliminata la foto illustrativa album-divano.jpg e
+                   aggiunte le foto vere del cliente, rinominate con il nome del
+                   modello: images/linea-trendy/modello-frame.jpg, modello-orione.jpg,
+                   modello-ailanto.jpg. In alto a destra il modello Frame; sotto, nuova
+                   sezione «Gli album della linea» con le 3 foto e il nome del modello
+                   su ciascuna. Il riquadro Linea Trendy in Album matrimoniali usa ora
+                   il modello Frame (la sua vecchia copia di album-divano.jpg è in
+                   images/non-usate). Originali a piena dimensione in
+                   Desktop/olimp-originali-linea-trendy.
