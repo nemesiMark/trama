@@ -19,9 +19,9 @@ nav.querySelectorAll('a[href]').forEach(function(a){a.addEventListener('click',f
 (function(){
 var R=document.documentElement;function unpre(){R.classList.remove('fx-pre')}
 if(matchMedia('(prefers-reduced-motion: reduce)').matches||!window.requestAnimationFrame)return unpre();
-var sel='main h1, main h2, main h3, main .eyebrow, main p, main figure, main li, main form, main .btn, main .stat, main .map';
+var sel='main h1, main h2, main h3, main .eyebrow, main p, main figure, main li, main form, main .btn, main .cta-go, main .stat, main .map';
 /* Riquadri (schede, card, formati): salgono per primi, poi il loro contenuto elemento per elemento. */
-var boxSel='main article, main .card, main .download-card';
+var boxSel='main article, main .card, main .download-card, main .sec-head';
 /* La foto della home (immagini che scorrono) resta ferma: si vede subito, senza sfondo blu. */
 var skip=function(e){return e.closest('.hero-slideshow,.hero-slides,.hero-controls')};
 var boxes=[].slice.call(document.querySelectorAll(boxSel)).filter(function(e){return !skip(e)&&!e.parentElement.closest(boxSel)});

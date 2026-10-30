@@ -832,18 +832,53 @@ label.check input {
    CONTATTI
    ====================================================== */
 
+/* Contatti: titolo e testo sopra, poi recapiti a sinistra e modulo a destra alla stessa
+   altezza. Il primo blocco usa «display: contents», così i suoi elementi entrano
+   direttamente nella griglia a due colonne. */
 .contact {
   display: grid;
   grid-template-columns: minmax(0, .8fr) minmax(0, 1fr);
-  gap: 3rem;
+  column-gap: 4rem;
+  row-gap: 0;
 }
 
 .contact h2 {
   max-width: 10ch;
 }
 
+.contact > div:first-child {
+  display: contents;
+}
+
+.contact > div:first-child > .sec-head,
+.contact > div:first-child > p {
+  grid-column: 1 / -1;
+  max-width: none;
+}
+
+.contact > div:first-child > .contact-info {
+  grid-column: 1;
+  grid-row: 5;
+  align-self: start;
+  margin-top: 2.5rem;
+}
+
 .contact-form-col {
-  margin-top: 7rem;
+  grid-column: 2;
+  grid-row: 5;
+  margin-top: 2.5rem;
+}
+
+#contact-form {
+  max-width: none;
+}
+
+@media (max-width: 800px) {
+  .contact > div:first-child > .contact-info,
+  .contact-form-col {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
 }
 
 .contact-info {
@@ -910,51 +945,116 @@ label.check input {
    PAGE HERO
    ====================================================== */
 
-/* Fascia in alto delle pagine interne (proposta 06): blu, bassa, titolo a sinistra,
-   percorso a destra e filo bordeaux del logo sotto. */
+/* Fascia in alto delle pagine interne (proposta 20 «accento verticale»): fondo azzurro
+   chiaro del sito, percorso sopra e titolo blu scuro, barra verticale bordeaux del logo
+   a sinistra del testo. La barra è disegnata con ::before allineata al bordo del testo. */
 .page-hero {
-  padding: 7.4rem 0 1.8rem;
+  padding: 7.6rem 0 2rem;
   margin-bottom: 3.25rem;
-  background: var(--brand);
-  color: white;
+  background: var(--ice);
+  color: var(--ink);
   border: 0;
-  border-bottom: 4px solid #aa372e;
 }
 
 .page-hero .wrap {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: .5rem 2rem;
+  position: relative;
+  padding-left: calc(3.5rem + 6px + 1.6rem);
+}
+
+.page-hero .wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 3.5rem;
+  width: 6px;
+  background: #aa372e;
 }
 
 .page-hero .eyebrow {
-  order: 2;
-  margin: 0;
-  color: var(--ice);
+  display: block;
+  margin: 0 0 .5rem;
+  color: var(--brand);
 }
 
 .page-hero h1 {
-  flex: 1 1 auto;
-  min-width: 0;
   margin: 0;
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: var(--ink);
+  font-size: clamp(1.9rem, 3.4vw, 3rem);
 }
 
-/* Sottotitolo (Collezioni, Prodotti, Servizi, Privacy): riga a sé sotto il titolo. */
+/* Sottotitolo (Collezioni, Prodotti, Servizi, Privacy). */
 .page-hero p {
-  order: 3;
-  flex: 0 0 100%;
-  max-width: none;
-  margin: .2rem 0 0;
-  color: #dbe4ef;
+  margin: .6rem 0 0;
+  color: var(--mute);
   font-size: 1rem;
+  max-width: 60ch;
 }
 
 .page-hero a.more {
-  color: var(--ice);
-  border-color: #7990a6;
+  color: var(--brand);
+  border-color: var(--brand);
+}
+
+/* Inizio delle sezioni della home: stessa barra verticale bordeaux della fascia in alto
+   delle pagine interne, accanto a percorso, titolo ed eventuale sottotitolo. */
+.sec-head {
+  border-left: 6px solid #aa372e;
+  padding-left: 1.6rem;
+}
+
+.sec-head > :last-child {
+  margin-bottom: 0;
+}
+
+.sec-head + * {
+  margin-top: 1.6rem;
+}
+
+@media (max-width: 800px) {
+  .sec-head {
+    border-left-width: 5px;
+    padding-left: 1.1rem;
+  }
+}
+
+/* Invito al contatto in fondo a Sezione sposi e Sezione fotografi (proposta 07):
+   domanda grande e collegamento bordeaux con freccia al modulo Contatti della home. */
+.cta-ask {
+  padding: 5rem 0 7rem;
+}
+
+.cta-ask h2 {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  letter-spacing: -.06em;
+}
+
+.cta-go {
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  margin-top: 1.6rem;
+  padding-bottom: .3rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #aa372e;
+  border-bottom: 2px solid #aa372e;
+}
+
+.cta-go span {
+  transition: transform .3s ease;
+}
+
+.cta-go:hover span,
+.cta-go:focus-visible span {
+  transform: translateX(8px);
+}
+
+@media (max-width: 800px) {
+  .cta-ask {
+    padding: 3.5rem 0 4.5rem;
+  }
 }
 
 /* ======================================================
@@ -1304,6 +1404,22 @@ label.check input {
   grid-row: 1 / 3;
 }
 
+/* Percorso e titolo raccolti nel blocco con la barra bordeaux (sec-head): a sinistra
+   su due righe; a destra frase e indirizzo uno sotto l'altro, senza vuoti. */
+.location .sec-head {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.location .sec-head + p {
+  grid-row: 1;
+  margin-top: 0;
+}
+
+.location .sec-head ~ .list {
+  grid-row: 2;
+}
+
 /* Testo, indirizzo e nota sulla partita IVA: stesso carattere, dimensione e colore della frase sopra */
 .location .list {
   grid-column: 2;
@@ -1432,7 +1548,7 @@ footer .footer-socials svg {
 /* Effetto «Sipario» (js/script.js): il contenuto sale da sotto un bordo invisibile.
    Senza JavaScript o con «riduci movimento» attivo tutto resta visibile e fermo. */
 /* Prima che parta l'effetto: elementi nascosti, così non compaiono tutti insieme all'apertura (in head c'è un limite di sicurezza di 2,5 s). */
-.fx-pre main :is(h1, h2, h3, .eyebrow, p, figure, article, .card, .download-card, li, form, .btn, .stat, .map):not(.hero-slideshow) {
+.fx-pre main :is(h1, h2, h3, .eyebrow, p, figure, article, .card, .download-card, .sec-head, li, form, .btn, .cta-go, .stat, .map):not(.hero-slideshow) {
   opacity: 0;
 }
 
@@ -1775,7 +1891,8 @@ footer .footer-socials svg {
 
 .service-section {
   padding-top: 1rem;
-  min-height: 35vh;
+  padding-bottom: 0;
+  min-height: 0;
 }
 
 .service-copy {
@@ -2553,7 +2670,8 @@ label.check a {
 }
 
 .service-section .page-intro {
-  margin-top: 4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 @media (max-width: 800px) {
@@ -2727,9 +2845,12 @@ label.check a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .split,
-  .contact {
+  .split {
     gap: 3rem;
+  }
+
+  .contact {
+    column-gap: 3rem;
   }
 }
 
@@ -2763,14 +2884,17 @@ label.check a {
   }
 
   .page-hero {
-    padding: 6.6rem 0 1.4rem;
+    padding: 6.6rem 0 1.5rem;
     margin-bottom: 2rem;
   }
 
-  /* Su telefono il percorso torna sopra il titolo. */
-  .page-hero .eyebrow {
-    order: 0;
-    flex-basis: 100%;
+  .page-hero .wrap {
+    padding-left: calc(1.25rem + 5px + 1.1rem);
+  }
+
+  .page-hero .wrap::before {
+    left: 1.25rem;
+    width: 5px;
   }
 
   .page-hero h1,
@@ -2874,13 +2998,13 @@ label.check a {
     gap: 1.2rem;
   }
 
-  /* contatti */
+  /* contatti (i paragrafi sono elementi della griglia: niente spazio extra tra le righe) */
   .contact {
-    gap: 2.5rem;
+    gap: 0 2.5rem;
   }
 
   .contact-form-col {
-    margin-top: 0;
+    margin-top: 2.5rem;
   }
 
   .contact h2 {

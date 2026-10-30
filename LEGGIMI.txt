@@ -447,3 +447,63 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    titolo. Su telefono il percorso torna sopra il titolo. La pagina di
                    prova con le 10 alternative (prova-testate.html) è stata eliminata.
                    Aggiornato css/style.css?v=41 in tutte le pagine.
+1.49 (30/10/2026)  Fascia in alto delle pagine interne (21 pagine) rifatta come
+                   proposta 20 «accento verticale»: niente più blu scuro, fondo
+                   azzurro chiaro del sito (--ice), percorso blu sopra e titolo blu
+                   scuro sotto (max 3 rem), sottotitolo grigio dove c'è (Collezioni,
+                   Prodotti, Servizi, Privacy) e una barra verticale bordeaux del logo
+                   (#aa372e, 6 px; 5 px su telefono) a sinistra del testo, allineata al
+                   bordo della pagina. Tolto il filo bordeaux orizzontale della 1.48.
+                   Eliminata la pagina di prova con le 20 alternative. Aggiornato
+                   css/style.css?v=42 in tutte le pagine.
+1.50 (30/10/2026)  Home: all'inizio di ogni sezione (Collezioni, Grafica & Stampa, Chi
+                   siamo, Dove siamo, Contatti) c'è la stessa barra verticale bordeaux
+                   della fascia delle pagine interne, accanto a percorso, titolo ed
+                   eventuale sottotitolo. Nell'index percorso e titolo sono stati
+                   raccolti in un contenitore «sec-head»; la barra sale con l'effetto
+                   Sipario prima del testo. Aggiornati css/style.css?v=43 e
+                   js/script.js?v=27 in tutte le pagine.
+1.51 (30/10/2026)  Home, Dove siamo: tolto lo spazio bianco comparso tra «La nostra sede
+                   si trova a Canicattì» e l'indirizzo dopo la 1.50 (il blocco con la
+                   barra bordeaux occupava una sola riga della griglia a due colonne).
+                   Ora percorso e titolo stanno a sinistra su due righe e frase e
+                   indirizzo a destra uno sotto l'altro, come prima. Aggiornato
+                   css/style.css?v=44 in tutte le pagine.
+1.52 (31/10/2026)  Home, Contatti: il modulo non è più nella colonna di destra ma sotto
+                   testo e recapiti, a tutta larghezza della pagina. Nome ed Email sono
+                   affiancati sulla stessa riga; messaggio, consenso privacy, avviso
+                   cookie, pulsante «Invia richiesta» (a sinistra, largo almeno 280 px)
+                   e nota sotto. Su telefono tutto in colonna come prima. Aggiornato
+                   css/style.css?v=45 in tutte le pagine.
+1.53 (31/10/2026)  Home, Contatti (corregge la 1.52): titolo e testo in alto; sotto, a
+                   sinistra i recapiti (Referente, Email, Cellulare, Indirizzo,
+                   Telefono) e a destra, alla stessa altezza, il modulo con i campi uno
+                   sotto l'altro come in origine. Su telefono recapiti e poi modulo in
+                   colonna. Aggiornato css/style.css?v=47 in tutte le pagine.
+1.54 (31/10/2026)  Home, Contatti: il testo introduttivo («Olimp oggi è presente…») ora
+                   occupa tutta la larghezza della sezione e arriva fino al bordo destro
+                   del modulo (prima si fermava a circa metà pagina). Aggiornato
+                   css/style.css?v=48 in tutte le pagine.
+1.55 (31/10/2026)  Sezione sposi e Sezione fotografi: in fondo alla pagina un invito al
+                   contatto (proposta 07): domanda grande e, sotto, un collegamento
+                   bordeaux con freccia che si sposta al passaggio del mouse e porta al
+                   modulo Contatti della home (index.html#contatti). Sposi: «Pronti a
+                   creare il vostro album?» → «Scrivici». Fotografi: «Vuoi vedere il
+                   nostro campionario?» → «Richiedi una visita». Sale con l'effetto
+                   Sipario. Eliminata la pagina di prova prova-cta.html. Aggiornati
+                   css/style.css?v=49 e js/script.js?v=28 in tutte le pagine.
+1.56 (31/10/2026)  Sezione sposi e Sezione fotografi: meno spazio bianco tra testo/foto e
+                   la domanda finale (margine sotto la parte con testo e foto da 7 a 2,5
+                   rem, tolta l'altezza minima; margine sopra la domanda da 2 a 1,5 rem).
+                   Aggiornato css/style.css?v=50 in tutte le pagine.
+1.57 (31/10/2026)  Sezione sposi e Sezione fotografi: spazio tra testo/foto e domanda
+                   finale ridotto ancora (in tutto 3 rem su computer, 2,5 su telefono:
+                   tolti i margini sotto la parte con testo e foto). Aggiornato
+                   css/style.css?v=51 in tutte le pagine.
+1.58 (31/10/2026)  Sezione sposi e Sezione fotografi: spazio tra testo/foto e domanda
+                   finale leggermente aumentato rispetto alla 1.57 (5 rem su computer
+                   invece di 3; 3,5 su telefono invece di 2,5). Aggiornato
+                   css/style.css?v=52 in tutte le pagine.
+1.59 (31/10/2026)  Sezione sposi e Sezione fotografi: meno spazio bianco tra la fascia in
+                   alto e testo/foto (margine sopra la parte con testo e foto da 4 a 1,5
+                   rem). Aggiornato css/style.css?v=53 in tutte le pagine.
