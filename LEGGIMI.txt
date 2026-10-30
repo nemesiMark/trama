@@ -295,3 +295,10 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    il modello Frame (la sua vecchia copia di album-divano.jpg è in
                    images/non-usate). Originali a piena dimensione in
                    Desktop/olimp-originali-linea-trendy.
+1.27 (30/10/2026)  Effetto Sipario sulle foto (gallerie Fashion, Glamour, Trendy e
+                   tutte le altre): mentre la foto sale il riquadro resta trasparente
+                   e senza ombra, così non si vede più il rettangolo grigio chiaro
+                   vuoto; a foto arrivata l'ombra ricompare con una breve dissolvenza.
+                   Ripristinato anche il piccolo sollevamento delle foto della galleria
+                   al passaggio del mouse. Aggiornato css/style.css?v=22 in tutte le
+                   pagine.

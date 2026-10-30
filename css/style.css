@@ -1423,11 +1423,18 @@ footer .footer-socials svg {
 }
 
 /* Sicurezza: a fine animazione l'elemento è comunque al suo posto. */
-.fx-on .fx.fx-done,
+.fx-on .fx:not(.fxw).fx-done,
 .fx-on .fx.fx-done > .fxi {
   opacity: 1;
   transform: none;
   transition: none;
+}
+
+/* Foto: finché la foto sale il riquadro è trasparente e senza ombra (niente
+   rettangolo grigio vuoto); a foto arrivata l'ombra ricompare. */
+.fx-on .ph.fx:not(.fx-done) {
+  background-color: transparent;
+  box-shadow: none;
 }
 
 /* ======================================================
