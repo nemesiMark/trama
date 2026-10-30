@@ -1057,6 +1057,17 @@ label.check input {
   }
 }
 
+/* Home: meno spazio tra la foto grande in alto e la sezione Collezioni. */
+#collezioni {
+  padding-top: 4rem;
+}
+
+@media (max-width: 800px) {
+  #collezioni {
+    padding-top: 2.5rem;
+  }
+}
+
 /* ======================================================
    SEZIONE AZIENDA
    ====================================================== */
@@ -2141,22 +2152,12 @@ footer .footer-socials svg {
 }
 
 .graphics-heading h1,
+/* «Grafica & Stampa»: stesso carattere e stessa dimensione degli altri titoli della home
+   (es. «Collezioni»). Tolta la «&» in corsivo Georgia: la regola su «h2 span» colpiva
+   anche il contenitore dell'effetto Sipario e metteva in corsivo tutto il titolo. */
 .graphics-heading h2 {
-  font-family: 'Manrope', Arial, sans-serif;
-  font-weight: 500;
-  font-size: clamp(3.5rem, 6.5vw, 6.5rem);
-  line-height: .98;
-  letter-spacing: -.065em;
   text-transform: none;
   margin: 0;
-}
-
-.graphics-heading h1 span,
-.graphics-heading h2 span {
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-weight: 400;
-  color: var(--wine);
 }
 
 .graphics-heading .eyebrow {
@@ -3036,10 +3037,6 @@ label.check a {
   }
 
   .graphics-heading h1,
-  .graphics-heading h2 {
-    font-size: clamp(2.4rem, 11vw, 3.4rem);
-  }
-
   .graphics-visual,
   .graphics-visual .ph {
     min-height: 0;

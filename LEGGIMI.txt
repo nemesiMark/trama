@@ -507,3 +507,19 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
 1.59 (31/10/2026)  Sezione sposi e Sezione fotografi: meno spazio bianco tra la fascia in
                    alto e testo/foto (margine sopra la parte con testo e foto da 4 a 1,5
                    rem). Aggiornato css/style.css?v=53 in tutte le pagine.
+1.60 (31/10/2026)  Home: il titolo «Grafica & Stampa» ha ora lo stesso carattere (Manrope)
+                   e la stessa dimensione degli altri titoli di sezione (es.
+                   «Collezioni»). Corretto un errore nato con l'effetto Sipario: la
+                   regola che metteva solo la «&» in corsivo Georgia colpiva anche il
+                   contenitore dell'effetto e rendeva corsivo tutto il titolo (anche
+                   nel titolo grande della pagina grafica-stampa.html, che ora è in
+                   Manrope dritto). Aggiornato css/style.css?v=54 in tutte le pagine.
+1.61 (31/10/2026)  Home, Contatti: unite in un solo paragrafo le prime due frasi («Olimp
+                   oggi è presente…» e «Contattando direttamente la nostra Sede…»), così
+                   la seconda continua sulla stessa riga invece di andare a capo.
+1.62 (31/10/2026)  Home, Contatti: unita anche la terza frase («Se sei possessore di
+                   Partita Iva…»): ora il testo introduttivo è un unico paragrafo senza
+                   a capo.
+1.63 (31/10/2026)  Home: meno spazio bianco tra la foto grande in alto e la sezione
+                   Collezioni (margine sopra la sezione da 7 a 4 rem; su telefono da 4
+                   a 2,5). Aggiornato css/style.css?v=55 in tutte le pagine.
