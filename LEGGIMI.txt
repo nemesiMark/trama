@@ -437,3 +437,13 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    posto del Modello Frame. Eliminata la copia non più usata
                    images/album-matrimoniali/modello-frame.jpg (l'originale resta in
                    images/linea-trendy/).
+1.48 (30/10/2026)  Fascia in alto delle pagine interne (21 pagine con «page-hero»)
+                   rifatta come proposta 06: resta blu ma è molto più bassa (spazio
+                   sotto il menu ridotto, da 8,5 a 7,4 rem sopra e da 3 a 1,8 sotto),
+                   titolo più piccolo a sinistra (max 2,8 rem invece di 4,2), percorso
+                   (es. «Olimp / Prodotti») a destra sulla stessa riga e un filo
+                   bordeaux del logo (4 px, #aa372e) sotto la fascia. Il sottotitolo di
+                   Collezioni, Prodotti, Servizi e Privacy va su una riga a sé sotto il
+                   titolo. Su telefono il percorso torna sopra il titolo. La pagina di
+                   prova con le 10 alternative (prova-testate.html) è stata eliminata.
+                   Aggiornato css/style.css?v=41 in tutte le pagine.
