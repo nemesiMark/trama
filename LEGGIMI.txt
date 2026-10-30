@@ -302,3 +302,54 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    Ripristinato anche il piccolo sollevamento delle foto della galleria
                    al passaggio del mouse. Aggiornato css/style.css?v=22 in tutte le
                    pagine.
+1.28 (30/10/2026)  Foto a schermo intero: in basso a sinistra compare una didascalia
+                   con il nome della pagina (es. «LINEA GLAMOUR»), il nome del modello
+                   (es. «Modello Clear», preso dalla scritta sulla foto o dalla sua
+                   descrizione) e il numero della foto (es. «11 / 16»). Vale anche per
+                   le foto che verranno aggiunte. La foto a schermo intero è un po'
+                   più bassa (78% dello schermo) per lasciare spazio alla didascalia,
+                   e ora resta sopra la barra dei cookie anche quando questa è aperta.
+                   Aggiornati css/style.css?v=23 e js/script.js?v=14 in tutte le pagine.
+1.29 (30/10/2026)  Foto a schermo intero: la didascalia (pagina, modello, numero) è ora
+                   a destra della foto, allineata al bordo superiore della foto. La
+                   posizione si adatta alla dimensione della foto; se a destra non c'è
+                   spazio (schermi stretti, telefono) va subito sotto la foto, allineata
+                   a sinistra. Aggiornati css/style.css?v=24 e js/script.js?v=15 in
+                   tutte le pagine.
+1.30 (30/10/2026)  Foto a schermo intero: didascalia più grande (nome del modello da
+                   1,6 a 2,4; nome della pagina da 0,72 a 0,95) e tolta la numerazione
+                   delle foto (es. «6 / 16»). Aggiornati css/style.css?v=25 e
+                   js/script.js?v=16 in tutte le pagine.
+1.31 (30/10/2026)  Foto a schermo intero: in basso una fascia con le miniature di tutte
+                   le foto della pagina. Si scorre in orizzontale (trackpad, dito o
+                   rotellina del mouse); la miniatura della foto aperta è evidenziata
+                   con un bordo bianco e portata al centro; cliccando una miniatura si
+                   apre quella foto. La foto grande è un po' più bassa per lasciare
+                   spazio alla fascia. Nelle pagine con una sola foto la fascia non
+                   compare. Aggiornati css/style.css?v=26 e js/script.js?v=18 in tutte
+                   le pagine.
+1.32 (30/10/2026)  Foto a schermo intero: le miniature della fascia in basso sono
+                   centrate quando ci stanno tutte (se sono tante si scorrono come
+                   prima). Su schermi medi e stretti, dove il nome del modello va sotto
+                   la foto, la foto si riduce quel tanto che basta perché il nome non
+                   finisca coperto dalla fascia. Aggiornati css/style.css?v=27 e
+                   js/script.js?v=19 in tutte le pagine.
+1.33 (30/10/2026)  La foto accanto alla descrizione (in alto nelle pagine delle linee,
+                   degli album, dei prodotti e delle sezioni sposi/fotografi) non è più
+                   cliccabile né ingrandibile: niente manina al passaggio del mouse e
+                   non compare tra le miniature della foto a schermo intero. Le foto
+                   delle gallerie e dei riquadri restano ingrandibili. Vale anche per
+                   le pagine future con la stessa impaginazione. Aggiornato
+                   js/script.js?v=20 in tutte le pagine.
+1.34 (30/10/2026)  Linea Trendy: la foto accanto alla descrizione è ora il Modello
+                   Orione (prima Frame); aggiornata anche l'immagine di anteprima per
+                   la condivisione (og:image). La galleria resta invariata.
+1.35 (30/10/2026)  Titolo sopra le gallerie («Gli album della linea» nelle pagine delle
+                   linee, «Le fotografie» negli album bambini, comunione ed eventi):
+                   più grande (da 2 a 3, un po' meno su telefono) e in grassetto.
+                   Aggiornato css/style.css?v=28 in tutte le pagine.
+1.36 (30/10/2026)  Spazio bianco tra la foto accanto alla descrizione e il titolo della
+                   galleria («Gli album della linea» / «Le fotografie») ridotto di
+                   circa il 40% (tolto il margine superiore della galleria). Vale in
+                   tutte le pagine con la galleria. Aggiornato css/style.css?v=29 in
+                   tutte le pagine.

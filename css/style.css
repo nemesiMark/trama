@@ -1444,7 +1444,7 @@ footer .footer-socials svg {
 .lb {
   position: fixed;
   inset: 0;
-  z-index: 100;
+  z-index: 10000;
   display: none;
   align-items: center;
   justify-content: center;
@@ -1458,7 +1458,7 @@ footer .footer-socials svg {
 
 .lb img {
   max-width: 92vw;
-  max-height: 90vh;
+  max-height: 78vh;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -1500,6 +1500,135 @@ footer .footer-socials svg {
 
 .lb-n {
   right: .6rem;
+}
+
+/* Didascalia della foto a schermo intero (pagina e modello): a destra della foto, in alto
+   (posizione calcolata in js/script.js; sotto la foto se lo spazio non basta) */
+.lb-cap {
+  position: absolute;
+  left: 2rem;
+  bottom: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  color: #fff;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.lb-line {
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ice);
+}
+
+.lb-name {
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: -.01em;
+  line-height: 1.2;
+}
+
+@media (max-width: 700px) {
+  .lb-name {
+    font-size: 1.7rem;
+  }
+
+  .lb-line {
+    font-size: .8rem;
+  }
+}
+
+/* Fascia con tutte le foto, in basso */
+.lb.has-strip {
+  padding-bottom: 118px;
+}
+
+.lb.has-strip img {
+  max-height: calc(100vh - 118px - 120px);
+}
+
+.lb .lb-strip {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  gap: 10px;
+  padding: 16px 24px 20px;
+  overflow-x: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, .25) transparent;
+  background: rgba(0, 0, 0, .25);
+}
+
+.lb:not(.has-strip) .lb-strip {
+  display: none;
+}
+
+.lb .lb-strip .lb-th {
+  position: static;
+  flex: none;
+  width: 108px;
+  height: 81px;
+  padding: 0;
+  margin: 0;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  overflow: hidden;
+  opacity: .45;
+  transition: opacity .25s ease, border-color .25s ease;
+}
+
+/* Miniature centrate; se non ci stanno tutte si scorre normalmente */
+.lb .lb-strip .lb-th:first-child {
+  margin-left: auto;
+}
+
+.lb .lb-strip .lb-th:last-child {
+  margin-right: auto;
+}
+
+.lb .lb-strip .lb-th:hover,
+.lb .lb-strip .lb-th:focus-visible {
+  opacity: .85;
+}
+
+.lb .lb-strip .lb-th.on {
+  opacity: 1;
+  border-color: #fff;
+}
+
+.lb .lb-strip .lb-th img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .lb.has-strip {
+    padding-bottom: 92px;
+  }
+
+  .lb.has-strip img {
+    max-height: calc(100vh - 92px - 150px);
+  }
+
+  .lb .lb-strip {
+    gap: 8px;
+    padding: 12px 16px 14px;
+  }
+
+  .lb .lb-strip .lb-th {
+    width: 84px;
+    height: 63px;
+  }
 }
 
 @keyframes lbin {
@@ -1726,12 +1855,12 @@ footer .footer-socials svg {
 }
 
 .album-gallery {
-  padding: 5rem 0 7rem 0;
+  padding: 0 0 7rem 0;
 }
 
 .album-gallery h2 {
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: clamp(2.3rem, 3.4vw, 3rem);
+  font-weight: 700;
   letter-spacing: -.03em;
   margin-bottom: 2rem;
   color: var(--ink);
