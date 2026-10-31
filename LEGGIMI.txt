@@ -672,3 +672,6 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    del Modello Unique, seconda del Modello Clear e seconda del Modello
                    Notch. I file (modello-ice-2/3, modello-unique-2/3, modello-clear-2,
                    modello-notch-2) restano in images/linea-glamour ma non sono più usati.
+2.05 (31/10/2026)  Piè di pagina: icone social (Facebook, Instagram, WhatsApp) più spente da
+                   ferme; al passaggio del cursore si accendono di bianco e salgono appena,
+                   così l'effetto si vede. Aggiornato css/style.css?v=100 in tutte le pagine.
