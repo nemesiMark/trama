@@ -523,3 +523,12 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
 1.63 (31/10/2026)  Home: meno spazio bianco tra la foto grande in alto e la sezione
                    Collezioni (margine sopra la sezione da 7 a 4 rem; su telefono da 4
                    a 2,5). Aggiornato css/style.css?v=55 in tutte le pagine.
+1.64 (31/10/2026)  Home, sezione Collezioni: i quattro riquadri diventano quattro strisce
+                   verticali affiancate (proposta 17); passando col mouse su una, si
+                   allarga e mostra la frase. Su telefono le strisce sono una sotto
+                   l'altra con la frase sempre visibile. Le altre pagine non cambiano.
+                   Aggiornato css/style.css?v=56 in tutte le pagine.
+1.65 (31/10/2026)  Home, Contatti: la scritta «Servizio riservato a professionisti…» è
+                   subito sotto il pulsante Invia richiesta, e c'è meno spazio tra il
+                   modulo e il piè di pagina (margine in fondo alla sezione da 7 a 3 rem).
+                   Aggiornato css/style.css?v=57 in tutte le pagine.

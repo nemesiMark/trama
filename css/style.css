@@ -873,6 +873,16 @@ label.check input {
   max-width: none;
 }
 
+/* Scritta «Servizio riservato…» subito sotto il pulsante e poco spazio prima del piè di pagina. */
+#contact-form .note {
+  margin: -.9rem 0 0;
+  line-height: 1.5;
+}
+
+#contatti {
+  padding-bottom: 3rem;
+}
+
 @media (max-width: 800px) {
   .contact > div:first-child > .contact-info,
   .contact-form-col {
@@ -3117,3 +3127,108 @@ label.check a {
   }
 }
 
+
+/* ======================================================
+   HOME · COLLEZIONI: quattro strisce affiancate; quella sotto il mouse
+   si allarga e mostra la frase (su telefono una sotto l'altra).
+   ====================================================== */
+
+.strips {
+  display: flex;
+  gap: 6px;
+  height: 460px;
+  margin-top: 3.5rem;
+}
+
+.strip {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--paper);
+  transition: flex .6s cubic-bezier(.77, 0, .18, 1);
+}
+
+.strip:hover,
+.strip:focus-within {
+  flex: 3;
+}
+
+.strip a {
+  position: absolute;
+  inset: 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+.strip img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .8s cubic-bezier(.77, 0, .18, 1);
+}
+
+.strip:hover img {
+  transform: scale(1.04);
+}
+
+.strip-cap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 4rem 1.4rem 1.4rem;
+  background: linear-gradient(to top, rgba(5, 29, 52, .88), rgba(5, 29, 52, .45) 60%, rgba(5, 29, 52, 0));
+}
+
+.strip-cap h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1.15;
+  text-shadow: 0 1px 12px rgba(5, 29, 52, .5);
+}
+
+.strip-cap p {
+  margin: .5rem 0 0;
+  max-width: 34rem;
+  color: #dbe4ef;
+  font-size: .9rem;
+  line-height: 1.6;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+.strip:hover .strip-cap p,
+.strip:focus-within .strip-cap p {
+  opacity: 1;
+  transition-delay: .25s;
+}
+
+@media (max-width: 900px) {
+  .strips {
+    flex-direction: column;
+    height: auto;
+    margin-top: 2rem;
+  }
+
+  .strip,
+  .strip:hover,
+  .strip:focus-within {
+    flex: none;
+    height: 210px;
+  }
+
+  .strip-cap h3 {
+    font-size: 1.3rem;
+    white-space: normal;
+  }
+
+  .strip-cap p {
+    opacity: 1;
+    white-space: normal;
+  }
+}
