@@ -635,3 +635,26 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
 1.95 (31/10/2026)  Home, foto di apertura: tolta la capsula grigia dietro i pallini e
                    «Pausa» (proposta 01), restano solo pallini e scritta bianchi.
                    Aggiornato css/style.css?v=87 in tutte le pagine.
+1.96 (31/10/2026)  Home, Dove siamo: tolta la riga «Riservato a professionisti con partita
+                   IVA» sotto l'indirizzo.
+1.97 (31/10/2026)  Home, Chi siamo: sfondo avorio (#f3eee6) al posto del caramello, senza
+                   cornice; titoli, tappe e numeri in blu scuro, testi grigio-blu. La
+                   citazione sulla foto resta bianca. Aggiornato css/style.css?v=91 in tutte
+                   le pagine.
+1.98 (31/10/2026)  Fascia in alto delle pagine interne (titolo, percorso e barra bordeaux):
+                   sfondo grigio-azzurro chiaro (--paper, #edf2f7), lo stesso dei riquadri
+                   dell'Area download, al posto dell'azzurro ghiaccio. Aggiornato
+                   css/style.css?v=92 in tutte le pagine.
+1.99 (31/10/2026)  Finestra che si apre cliccando una foto (lightbox), in tutte le pagine:
+                   sfondo grigio-azzurro chiaro come la fascia in alto (--paper) invece del
+                   blu notte; nome della linea, nome del modello, X, frecce e bordo della
+                   miniatura attiva in blu scuro; striscia delle miniature leggermente più
+                   scura. Aggiornato css/style.css?v=93 in tutte le pagine.
+2.00 (31/10/2026)  Home, Dove siamo: accanto all'indirizzo, allineate a destra, due scritte
+                   cliccabili in bordeaux, «Apri Google Maps» (apre la sede su Google Maps)
+                   e «Ottieni indicazioni» (apre il percorso fino alla sede); si aprono in
+                   una nuova scheda, la freccia scorre al passaggio del mouse. Aggiornato
+                   css/style.css?v=96 in tutte le pagine.
+2.01 (31/10/2026)  Home, Dove siamo: «Canicattì» nella frase «La nostra sede si trova a…» non
+                   è più cliccabile, resta solo in grassetto (blu scuro). Aggiornato
+                   css/style.css?v=97 in tutte le pagine.

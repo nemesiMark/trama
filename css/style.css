@@ -968,7 +968,8 @@ label.check input {
 .page-hero {
   padding: 7.6rem 0 2rem;
   margin-bottom: 3.25rem;
-  background: var(--ice);
+  /* Stesso grigio-azzurro chiaro dei riquadri dell'Area download. */
+  background: var(--paper);
   color: var(--ink);
   border: 0;
 }
@@ -1089,22 +1090,22 @@ label.check input {
    SEZIONE AZIENDA
    ====================================================== */
 
-/* Chi siamo su fondo caramello bruciato, tutte le scritte bianche. */
+/* Chi siamo su fondo avorio; testi blu scuri. */
 #azienda {
-  background: #917261;
-  color: #fff;
+  background: #f3eee6;
+  color: var(--ink);
 }
 
 #azienda h2 {
-  color: #fff;
+  color: var(--ink);
 }
 
 #azienda p {
-  color: #fff;
+  color: var(--mute);
 }
 
 #azienda .eyebrow {
-  color: #fff;
+  color: var(--ink);
 }
 
 #azienda .ph img {
@@ -1165,7 +1166,7 @@ label.check input {
   font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: -.02em;
-  color: #fff;
+  color: var(--ink);
 }
 
 #azienda .about-steps p {
@@ -1204,7 +1205,7 @@ label.check input {
   font-size: clamp(1.5rem, 2.4vw, 2rem);
   font-weight: 500;
   letter-spacing: -.03em;
-  color: #fff;
+  color: var(--ink);
 }
 
 .stats {
@@ -1213,7 +1214,7 @@ label.check input {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 1.6rem 0 0;
   padding: 2.8rem 0 0;
-  border-top: 1px solid rgba(255, 240, 225, .22);
+  border-top: 1px solid rgba(5, 29, 52, .15);
 }
 
 .stats li {
@@ -1222,7 +1223,7 @@ label.check input {
 }
 
 .stats li + li {
-  border-left: 1px solid rgba(255, 240, 225, .22);
+  border-left: 1px solid rgba(5, 29, 52, .15);
 }
 
 .stat-pre {
@@ -1232,7 +1233,7 @@ label.check input {
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--ink);
 }
 
 .stat-num {
@@ -1241,7 +1242,7 @@ label.check input {
   font-weight: 500;
   line-height: 1;
   letter-spacing: -.04em;
-  color: #fff;
+  color: var(--ink);
   font-variant-numeric: tabular-nums;
 }
 
@@ -1252,7 +1253,7 @@ label.check input {
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--ink);
 }
 
 .sr-only {
@@ -1280,7 +1281,7 @@ label.check input {
 
   .stats li + li {
     border-left: 0;
-    border-top: 1px solid rgba(255, 240, 225, .22);
+    border-top: 1px solid rgba(5, 29, 52, .15);
     padding-top: 2rem;
   }
 }
@@ -1484,21 +1485,51 @@ label.check input {
   color: var(--ink);
 }
 
+/* Accanto all'indirizzo, allineati a destra: «Apri Google Maps» e «Ottieni indicazioni» (percorso fino alla sede). */
+.location .list li:has(.map-actions) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: .8rem 2rem;
+}
+
+.location .map-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .3rem;
+}
+
+.location .map-actions a {
+  color: #aa372e;
+  font-weight: 700;
+  font-size: .9rem;
+  line-height: 1.6;
+  transition: color .25s;
+}
+
+.location .map-actions a span {
+  display: inline-block;
+  transition: transform .3s;
+}
+
+.location .map-actions a:hover {
+  color: var(--ink);
+}
+
+.location .map-actions a:hover span {
+  transform: translateX(5px);
+}
+
 .location .map-link:hover {
   border-color: var(--wine);
 }
 
-/* «Canicattì» nel testo di Dove siamo: in evidenza, apre la sede su Google Maps */
-.location .place-link {
-  color: #aa372e;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: .2em;
-  transition: color .25s;
-}
-
-.location .place-link:hover {
+/* «Canicattì» nel testo di Dove siamo: in grassetto, non cliccabile. */
+.location .place-name {
   color: var(--ink);
+  font-weight: 700;
 }
 
 .location .more {
@@ -1666,7 +1697,7 @@ footer .footer-socials svg {
   display: none;
   align-items: center;
   justify-content: center;
-  background: rgba(7, 20, 37, .97);
+  background: var(--paper);
   animation: lbin .25s ease;
 }
 
@@ -1687,7 +1718,7 @@ footer .footer-socials svg {
   position: absolute;
   background: none;
   border: 0;
-  color: #fff;
+  color: var(--ink);
   font-family: Arial, sans-serif;
   font-size: 2.8rem;
   line-height: 1;
@@ -1729,7 +1760,7 @@ footer .footer-socials svg {
   display: flex;
   flex-direction: column;
   gap: .4rem;
-  color: #fff;
+  color: var(--ink);
   pointer-events: none;
   visibility: hidden;
 }
@@ -1739,7 +1770,7 @@ footer .footer-socials svg {
   font-weight: 600;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--ice);
+  color: var(--ink);
 }
 
 .lb-name {
@@ -1779,8 +1810,8 @@ footer .footer-socials svg {
   overflow-x: auto;
   overscroll-behavior: contain;
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, .25) transparent;
-  background: rgba(0, 0, 0, .25);
+  scrollbar-color: rgba(5, 29, 52, .25) transparent;
+  background: rgba(5, 29, 52, .06);
 }
 
 .lb:not(.has-strip) .lb-strip {
@@ -1817,7 +1848,7 @@ footer .footer-socials svg {
 
 .lb .lb-strip .lb-th.on {
   opacity: 1;
-  border-color: #fff;
+  border-color: var(--ink);
 }
 
 .lb .lb-strip .lb-th img {
