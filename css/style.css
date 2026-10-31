@@ -411,9 +411,10 @@ nav a.on,
 }
 
 .hero .btn {
-  background: var(--ice);
-  color: var(--brand);
-  border-color: var(--ice);
+  /* Blu scuro; al passaggio si riempie di bordeaux dal basso come gli altri pulsanti. */
+  background-color: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
   margin-top: .5rem;
 }
 

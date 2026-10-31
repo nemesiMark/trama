@@ -587,3 +587,11 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    css/style.css?v=76 in tutte le pagine.
 1.82 (31/10/2026)  Piè di pagina di tutte le pagine di nuovo blu scuro (annullata la 1.79).
                    Aggiornato css/style.css?v=77 in tutte le pagine.
+1.83 (31/10/2026)  Home, foto di apertura: pulsante «Scopri le collezioni» blu scuro con
+                   scritta bianca (prima azzurro); al passaggio resta l'effetto di
+                   riempimento bordeaux dal basso. Aggiornato css/style.css?v=78 in tutte
+                   le pagine.
+1.84 (31/10/2026)  Pagina Collezioni: i quattro riquadri diventano le stesse strisce della
+                   home (foto in bianco e nero con sfumatura nera in basso; al passaggio la
+                   striscia si allarga, la foto si colora e compare la frase). Usate le foto
+                   della cartella images/collezioni. Nessuna modifica al CSS.
