@@ -592,6 +592,13 @@ nav a.on,
   transform: scale(1.045);
 }
 
+/* Foto che non si aprono a schermo intero (non cliccabili): niente ingrandimento al passaggio del cursore. */
+.ph.no-zoom:hover img,
+.split > .ph:hover img,
+.page-intro > .ph:hover img {
+  transform: none;
+}
+
 .ph:focus-visible {
   outline-offset: 5px;
 }

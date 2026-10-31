@@ -662,3 +662,13 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    senza colore con effetto vetro (la pagina dietro si vede sfocata, velo
                    bianco al 25%) al posto del grigio-azzurro pieno; scritte e comandi
                    restano blu scuro. Aggiornato css/style.css?v=98 in tutte le pagine.
+2.03 (31/10/2026)  Foto che non si aprono a schermo intero (foto accanto alla descrizione
+                   nelle pagine delle linee, Grafica & Stampa, Chi siamo, foto di apertura
+                   ecc.): tolto il leggero ingrandimento al passaggio del cursore. Restano
+                   l'ingrandimento delle foto cliccabili (gallerie) e le strisce delle
+                   Collezioni. Aggiornato css/style.css?v=99 in tutte le pagine.
+2.04 (31/10/2026)  Linea Glamour: tolte dalla galleria le foto di dettaglio, così resta una
+                   sola foto per modello: seconda e terza del Modello Ice, seconda e terza
+                   del Modello Unique, seconda del Modello Clear e seconda del Modello
+                   Notch. I file (modello-ice-2/3, modello-unique-2/3, modello-clear-2,
+                   modello-notch-2) restano in images/linea-glamour ma non sono più usati.
