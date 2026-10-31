@@ -658,3 +658,7 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
 2.01 (31/10/2026)  Home, Dove siamo: «Canicattì» nella frase «La nostra sede si trova a…» non
                    è più cliccabile, resta solo in grassetto (blu scuro). Aggiornato
                    css/style.css?v=97 in tutte le pagine.
+2.02 (31/10/2026)  Finestra delle foto ingrandite (lightbox), in tutte le pagine: sfondo
+                   senza colore con effetto vetro (la pagina dietro si vede sfocata, velo
+                   bianco al 25%) al posto del grigio-azzurro pieno; scritte e comandi
+                   restano blu scuro. Aggiornato css/style.css?v=98 in tutte le pagine.

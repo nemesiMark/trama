@@ -1697,7 +1697,10 @@ footer .footer-socials svg {
   display: none;
   align-items: center;
   justify-content: center;
-  background: var(--paper);
+  /* Effetto vetro: la pagina dietro si vede sfocata, quasi senza colore. */
+  background: rgba(255, 255, 255, .25);
+  -webkit-backdrop-filter: blur(22px) saturate(1.1);
+  backdrop-filter: blur(22px) saturate(1.1);
   animation: lbin .25s ease;
 }
 
