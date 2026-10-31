@@ -532,3 +532,58 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    subito sotto il pulsante Invia richiesta, e c'è meno spazio tra il
                    modulo e il piè di pagina (margine in fondo alla sezione da 7 a 3 rem).
                    Aggiornato css/style.css?v=57 in tutte le pagine.
+1.66 (31/10/2026)  Home, Collezioni: le foto delle quattro strisce sono in bianco e nero e
+                   si colorano passandoci sopra col mouse (su telefono e tablet restano a
+                   colori). Aggiornato css/style.css?v=58 in tutte le pagine.
+1.67 (31/10/2026)  Home, Chi siamo: la foto grande è sempre in bianco e nero (anche al
+                   passaggio del mouse e su telefono). Aggiornato css/style.css?v=60 in
+                   tutte le pagine.
+1.68 (31/10/2026)  Home, Chi siamo: sfondo avorio caldo (proposta 09) al posto del blu
+                   notte; titoli, tappe e numeri in blu scuro, sopratitolo in bordeaux.
+                   La parte bassa della foto con la citazione resta blu notte.
+                   Aggiornato css/style.css?v=61 in tutte le pagine.
+1.69 (31/10/2026)  Home, Chi siamo: tolta la sfumatura blu dalla foto grande; la citazione
+                   bianca ha un'ombra più decisa per restare leggibile sulla foto.
+                   Aggiornato css/style.css?v=62 in tutte le pagine.
+1.70 (31/10/2026)  Home, Collezioni: tolta la sfumatura blu in fondo alle quattro foto;
+                   titoli e frasi bianchi con un'ombra più decisa per restare leggibili.
+                   Aggiornato css/style.css?v=63 in tutte le pagine.
+1.71 (31/10/2026)  Home, Chi siamo: sfondo testa di moro scuro (#2a1f19) al posto
+                   dell'avorio; titoli, tappe e numeri bianchi, testi e sopratitolo color
+                   crema. Aggiornato css/style.css?v=64 in tutte le pagine.
+1.72 (31/10/2026)  Home, Chi siamo: sfondo caramello bruciato (#917261) al posto del testa
+                   di moro scuro; tutte le scritte della sezione in bianco (titoli, testi,
+                   sopratitolo, numeri ed etichette). Aggiornato css/style.css?v=65 in
+                   tutte le pagine.
+1.73 (31/10/2026)  Home, Chi siamo: foto grande scurita (luminosità al 60%, contrasto un
+                   po' più alto) perché la citazione bianca si legga meglio; nessuna
+                   sfumatura colorata. Aggiornato css/style.css?v=66 in tutte le pagine.
+1.74 (31/10/2026)  Home, Collezioni: titoli e frasi dentro le quattro foto con un contorno
+                   blu scuro attorno alle lettere, per leggerli anche sulle parti chiare.
+                   Aggiornato css/style.css?v=67 in tutte le pagine.
+1.75 (31/10/2026)  Home, Collezioni: tolto il contorno blu dalle scritte; al suo posto una
+                   sfumatura nera in fondo alle quattro foto (proposta 05: nero all'80% che
+                   sale fino a metà foto, il resto resta intatto; su telefono più bassa).
+                   Aggiornato css/style.css?v=68 in tutte le pagine.
+1.76 (31/10/2026)  Home, Chi siamo: la citazione dentro la foto grande è spostata in basso a
+                   destra e allineata a destra (prima era centrata). Aggiornato
+                   css/style.css?v=70 in tutte le pagine.
+1.77 (31/10/2026)  Home, foto di apertura: provata la sfumatura color caramello al posto del
+                   blu notte, poi annullata: resta tutto come nella 1.76 (sfumatura blu
+                   notte). Aggiornato css/style.css?v=72 in tutte le pagine.
+1.78 (31/10/2026)  Riquadro «Ogni dettaglio, la vostra firma.» (home, sezione Grafica &
+                   Stampa, e pagina Grafica & Stampa): sfondo caramello come Chi siamo
+                   (#917261) al posto del blu notte, tutte le scritte bianche. Aggiornato
+                   css/style.css?v=73 in tutte le pagine.
+1.79 (31/10/2026)  Piè di pagina di tutte le pagine color caramello come Chi siamo (#917261)
+                   al posto del blu notte, scritte bianche. Aggiornato css/style.css?v=74 in
+                   tutte le pagine.
+1.80 (31/10/2026)  Home, foto di apertura: sfumatura sopra le foto color caramello come Chi
+                   siamo (#917261) invece che blu notte, su computer (da sinistra) e su
+                   telefono (dal basso); anche il fondo dietro le foto è caramello.
+                   Aggiornato css/style.css?v=75 in tutte le pagine.
+1.81 (31/10/2026)  Home, foto di apertura: sfumatura caramello più leggera (su computer dal
+                   94% al 75% a sinistra, su telefono dal 92% al 75% in basso). Aggiornato
+                   css/style.css?v=76 in tutte le pagine.
+1.82 (31/10/2026)  Piè di pagina di tutte le pagine di nuovo blu scuro (annullata la 1.79).
+                   Aggiornato css/style.css?v=77 in tutte le pagine.

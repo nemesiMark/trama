@@ -350,7 +350,7 @@ nav a.on,
   max-height: 1080px;
   padding: 88px 0 0;
   box-sizing: border-box;
-  background: var(--ink);
+  background: #917261;
   isolation: isolate;
 }
 
@@ -361,7 +361,7 @@ nav a.on,
   height: auto;
   z-index: -1;
   margin: 0;
-  background: var(--ink);
+  background: #917261;
 }
 
 .hero .ph img {
@@ -373,7 +373,8 @@ nav a.on,
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(5, 29, 52, .94) 0%, rgba(5, 29, 52, .82) 25%, rgba(5, 29, 52, .32) 50%, rgba(5, 29, 52, 0) 75%);
+  /* Sfumatura color caramello, come lo sfondo di Chi siamo. */
+  background: linear-gradient(90deg, rgba(145, 114, 97, .75) 0%, rgba(145, 114, 97, .6) 25%, rgba(145, 114, 97, .2) 50%, rgba(145, 114, 97, 0) 75%);
   pointer-events: none;
 }
 
@@ -1082,21 +1083,31 @@ label.check input {
    SEZIONE AZIENDA
    ====================================================== */
 
+/* Chi siamo su fondo caramello bruciato, tutte le scritte bianche. */
 #azienda {
-  background: var(--brand);
-  color: white;
+  background: #917261;
+  color: #fff;
+}
+
+#azienda h2 {
+  color: #fff;
 }
 
 #azienda p {
-  color: #c0cddd;
+  color: #fff;
 }
 
 #azienda .eyebrow {
-  color: var(--ice);
+  color: #fff;
 }
 
 #azienda .ph img {
   object-position: 50% 55%;
+}
+
+/* Chi siamo: foto sempre in bianco e nero e scurita, così la citazione bianca risalta. */
+.about-pano img {
+  filter: grayscale(1) brightness(.6) contrast(1.1);
 }
 
 /* Chi siamo (proposta 09 bis): titolo, foto panoramica con la citazione dentro, quattro tappe */
@@ -1107,16 +1118,9 @@ label.check input {
 .about-pano {
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-end;
   aspect-ratio: 21 / 8.5;
   margin: 3rem 0 4rem;
-}
-
-.about-pano::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(5, 29, 52, .95) 18%, rgba(5, 29, 52, .55) 50%, rgba(5, 29, 52, 0) 80%);
 }
 
 .about-pano blockquote {
@@ -1128,13 +1132,14 @@ label.check input {
 
 #azienda .about-pano blockquote p {
   max-width: none;
-  text-align: center;
+  text-align: right;
   font-size: clamp(1.05rem, 1.9vw, 1.5rem);
   font-style: italic;
   font-weight: 500;
   line-height: 1.5;
   color: #fff;
-  text-shadow: 0 1px 12px rgba(5, 29, 52, .5);
+  /* Senza sfumatura sulla foto: ombra più decisa per leggere la citazione. */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .6), 0 2px 18px rgba(0, 0, 0, .55);
 }
 
 .about-steps {
@@ -1202,7 +1207,7 @@ label.check input {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 1.6rem 0 0;
   padding: 2.8rem 0 0;
-  border-top: 1px solid rgba(213, 227, 242, .25);
+  border-top: 1px solid rgba(255, 240, 225, .22);
 }
 
 .stats li {
@@ -1211,7 +1216,7 @@ label.check input {
 }
 
 .stats li + li {
-  border-left: 1px solid rgba(213, 227, 242, .25);
+  border-left: 1px solid rgba(255, 240, 225, .22);
 }
 
 .stat-pre {
@@ -1221,7 +1226,7 @@ label.check input {
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--ice);
+  color: #fff;
 }
 
 .stat-num {
@@ -1241,7 +1246,7 @@ label.check input {
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--ice);
+  color: #fff;
 }
 
 .sr-only {
@@ -1269,7 +1274,7 @@ label.check input {
 
   .stats li + li {
     border-left: 0;
-    border-top: 1px solid rgba(213, 227, 242, .25);
+    border-top: 1px solid rgba(255, 240, 225, .22);
     padding-top: 2rem;
   }
 }
@@ -2214,7 +2219,8 @@ footer .footer-socials svg {
   justify-content: space-between;
   gap: 1.5rem;
   padding: 2.5rem;
-  background: var(--brand);
+  /* Stesso caramello dello sfondo di Chi siamo, scritte bianche. */
+  background: #917261;
   color: #fff;
 }
 
@@ -2222,7 +2228,7 @@ footer .footer-socials svg {
   font-size: .58rem;
   letter-spacing: .17em;
   line-height: 1.7;
-  color: var(--ice);
+  color: #fff;
 }
 
 .graphics-caption > p {
@@ -2941,7 +2947,7 @@ label.check a {
   }
 
   .hero .ph::after {
-    background: linear-gradient(180deg, rgba(5, 29, 52, .35) 0%, rgba(5, 29, 52, .55) 45%, rgba(5, 29, 52, .92) 100%);
+    background: linear-gradient(180deg, rgba(145, 114, 97, .2) 0%, rgba(145, 114, 97, .38) 45%, rgba(145, 114, 97, .75) 100%);
   }
 
   .hero .ph img {
@@ -3174,13 +3180,28 @@ label.check a {
   transform: scale(1.04);
 }
 
+/* Con il mouse: foto in bianco e nero che si colorano al passaggio
+   (su telefono e tablet restano a colori, lì il passaggio non c'è). */
+@media (hover: hover) {
+  .strip img {
+    filter: grayscale(1);
+    transition: transform .8s cubic-bezier(.77, 0, .18, 1), filter .6s ease;
+  }
+
+  .strip:hover img,
+  .strip:focus-within img {
+    filter: none;
+  }
+}
+
 .strip-cap {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 4rem 1.4rem 1.4rem;
-  background: linear-gradient(to top, rgba(5, 29, 52, .88), rgba(5, 29, 52, .45) 60%, rgba(5, 29, 52, 0));
+  padding: 12rem 1.4rem 1.4rem;
+  /* Sfumatura nera in basso (proposta 05): sale fino a metà foto, il resto resta intatto. */
+  background: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .35) 50%, rgba(0, 0, 0, 0));
 }
 
 .strip-cap h3 {
@@ -3188,13 +3209,12 @@ label.check a {
   color: #fff;
   font-size: 1.4rem;
   line-height: 1.15;
-  text-shadow: 0 1px 12px rgba(5, 29, 52, .5);
 }
 
 .strip-cap p {
   margin: .5rem 0 0;
   max-width: 34rem;
-  color: #dbe4ef;
+  color: #fff;
   font-size: .9rem;
   line-height: 1.6;
   white-space: nowrap;
@@ -3220,6 +3240,10 @@ label.check a {
   .strip:focus-within {
     flex: none;
     height: 210px;
+  }
+
+  .strip-cap {
+    padding-top: 6rem;
   }
 
   .strip-cap h3 {
