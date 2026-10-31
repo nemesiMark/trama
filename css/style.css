@@ -350,7 +350,7 @@ nav a.on,
   max-height: 1080px;
   padding: 88px 0 0;
   box-sizing: border-box;
-  background: #917261;
+  background: var(--ink);
   isolation: isolate;
 }
 
@@ -361,7 +361,7 @@ nav a.on,
   height: auto;
   z-index: -1;
   margin: 0;
-  background: #917261;
+  background: var(--ink);
 }
 
 .hero .ph img {
@@ -373,8 +373,8 @@ nav a.on,
   content: '';
   position: absolute;
   inset: 0;
-  /* Sfumatura color caramello, come lo sfondo di Chi siamo. */
-  background: linear-gradient(90deg, rgba(145, 114, 97, .75) 0%, rgba(145, 114, 97, .6) 25%, rgba(145, 114, 97, .2) 50%, rgba(145, 114, 97, 0) 75%);
+  /* Velo nero come le foto delle Collezioni (nero all'80% che sfuma verso metà). */
+  background: linear-gradient(90deg, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, .35) 50%, rgba(0, 0, 0, 0) 100%);
   pointer-events: none;
 }
 
@@ -411,10 +411,10 @@ nav a.on,
 }
 
 .hero .btn {
-  /* Blu scuro; al passaggio si riempie di bordeaux dal basso come gli altri pulsanti. */
-  background-color: var(--brand);
+  /* Rosso del logo con scritta bianca; al passaggio si riempie di blu scuro dal basso. */
+  background-color: #aa372e;
   color: #fff;
-  border-color: var(--brand);
+  border-color: #aa372e;
   margin-top: .5rem;
 }
 
@@ -450,6 +450,11 @@ nav a.on,
   object-fit: cover;
 }
 
+/* Le tre foto che scorrono sono in bianco e nero (anche lo sfondo della foto Orione). */
+.hero .hero-slide {
+  filter: grayscale(1);
+}
+
 /* Modello Orione nello slideshow della home: la foto (4:3) sta a destra a tutta altezza,
    con l'album intero; il bordo sinistro sfuma nei colori del muro e del ripiano. */
 .hero .hs-orione {
@@ -480,9 +485,9 @@ nav a.on,
   align-items: center;
   gap: 12px;
   z-index: 3;
-  padding: .4rem .8rem;
-  background: #10243d65;
-  border-radius: 30px;
+  /* Solo pallini e «Pausa», senza la capsula grigia dietro (proposta 01). */
+  padding: 0;
+  background: none;
 }
 
 .hero-dot {
@@ -1388,9 +1393,18 @@ label.check input {
   box-shadow: 0 18px 40px #051D3418;
 }
 
+.map {
+  position: relative;
+}
+
+/* La mappa è più alta del riquadro e spostata in su: la scheda bianca di Google con
+   indirizzo e «Apri in Maps» (in alto a sinistra) resta fuori dalla parte visibile. */
 .map iframe {
+  position: absolute;
+  top: -180px;
+  left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100% + 180px);
   border: 0;
   display: block;
   filter: none;
@@ -2947,7 +2961,7 @@ label.check a {
   }
 
   .hero .ph::after {
-    background: linear-gradient(180deg, rgba(145, 114, 97, .2) 0%, rgba(145, 114, 97, .38) 45%, rgba(145, 114, 97, .75) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .35) 50%, rgba(0, 0, 0, .8) 100%);
   }
 
   .hero .ph img {
@@ -3106,6 +3120,26 @@ label.check a {
   background-size: 100% 100% !important;
   border-color: #aa372e !important;
   color: #fff !important;
+}
+
+/* Pulsante della foto di apertura e pulsanti dell'Area download: rossi come il logo,
+   al passaggio si riempiono di blu scuro. */
+.download-card .btn {
+  background-color: #aa372e;
+  border-color: #aa372e;
+  color: #fff;
+}
+
+.hero .btn,
+.download-card .btn {
+  background-image: linear-gradient(var(--brand), var(--brand)) !important;
+}
+
+.hero .btn:hover,
+.hero .btn:focus-visible,
+.download-card .btn:hover,
+.download-card .btn:focus-visible {
+  border-color: var(--brand) !important;
 }
 
 /* Il pulsantino bianco sull'avviso rosso si riempie di blu scuro. */

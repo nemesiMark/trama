@@ -604,3 +604,34 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    informazioni siamo a vostra completa disposizione, potete contattarci
                    tramite mail, cellulare e social. Oppure compilando l’apposito form qui
                    in basso.» al posto di «Olimp oggi è presente…».
+1.88 (31/10/2026)  Home, Dove siamo (proposta 05): la mappa è in bianco e nero e si colora
+                   passandoci sopra col mouse, come le Collezioni (su telefono e tablet
+                   resta a colori). Impaginazione invariata. Aggiornato css/style.css?v=80
+                   in tutte le pagine.
+1.89 (31/10/2026)  Home, Dove siamo: nascosta la scheda bianca di Google in alto a sinistra
+                   della mappa (indirizzo e «Apri in Maps»). La mappa è 180 px più alta del
+                   riquadro e spostata in su, così la scheda resta fuori dalla parte
+                   visibile; il segnaposto resta nel riquadro. Aggiornato css/style.css?v=81
+                   in tutte le pagine.
+1.90 (31/10/2026)  Home, foto di apertura: le tre foto che scorrono sono in bianco e nero;
+                   al posto della sfumatura caramello c'è lo stesso velo nero delle foto
+                   delle Collezioni (nero all'80% che sfuma; su computer da sinistra, su
+                   telefono dal basso). Fondo dietro le foto di nuovo blu notte. Aggiornato
+                   css/style.css?v=82 in tutte le pagine.
+1.91 (31/10/2026)  Home, foto di apertura: pulsante «Scopri le collezioni» con i colori
+                   invertiti, sfondo bianco e scritta blu scuro; al passaggio resta il
+                   riempimento bordeaux dal basso. Aggiornato css/style.css?v=83 in tutte
+                   le pagine.
+1.92 (31/10/2026)  Home, foto di apertura: pulsante «Scopri le collezioni» rosso come il logo
+                   (#aa372e) con scritta bianca; al passaggio del mouse si riempie di blu
+                   scuro dal basso. Aggiornato css/style.css?v=84 in tutte le pagine.
+1.93 (31/10/2026)  Home, Dove siamo: la mappa torna a colori (annullato il bianco e nero
+                   della 1.88); resta nascosta la scheda bianca di Google (1.89).
+                   Aggiornato css/style.css?v=85 in tutte le pagine.
+1.94 (31/10/2026)  Area download: pulsanti «Scarica il catalogo» e «Scarica la guida» rossi
+                   come il logo (#aa372e) con scritta bianca; al passaggio del mouse si
+                   riempiono di blu scuro dal basso, come «Scopri le collezioni».
+                   Aggiornato css/style.css?v=86 in tutte le pagine.
+1.95 (31/10/2026)  Home, foto di apertura: tolta la capsula grigia dietro i pallini e
+                   «Pausa» (proposta 01), restano solo pallini e scritta bianchi.
+                   Aggiornato css/style.css?v=87 in tutte le pagine.
