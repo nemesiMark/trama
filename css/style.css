@@ -2220,8 +2220,7 @@ footer .footer-socials svg {
   justify-content: space-between;
   gap: 1.5rem;
   padding: 2.5rem;
-  /* Stesso caramello dello sfondo di Chi siamo, scritte bianche. */
-  background: #917261;
+  background: var(--brand);
   color: #fff;
 }
 
@@ -2229,7 +2228,7 @@ footer .footer-socials svg {
   font-size: .58rem;
   letter-spacing: .17em;
   line-height: 1.7;
-  color: #fff;
+  color: var(--ice);
 }
 
 .graphics-caption > p {

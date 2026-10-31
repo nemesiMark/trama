@@ -595,3 +595,12 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    home (foto in bianco e nero con sfumatura nera in basso; al passaggio la
                    striscia si allarga, la foto si colora e compare la frase). Usate le foto
                    della cartella images/collezioni. Nessuna modifica al CSS.
+1.85 (31/10/2026)  Riquadro «Ogni dettaglio, la vostra firma.» (home e pagina Grafica &
+                   Stampa) di nuovo blu scuro come prima della 1.78. Aggiornato
+                   css/style.css?v=79 in tutte le pagine.
+1.86 (31/10/2026)  Home, sezione Contatti: la scritta sopra il titolo «05 / Un confronto tra
+                   professionisti» diventa «05 / Contattaci».
+1.87 (31/10/2026)  Home, sezione Contatti: nuovo testo introduttivo «Per maggiori
+                   informazioni siamo a vostra completa disposizione, potete contattarci
+                   tramite mail, cellulare e social. Oppure compilando l’apposito form qui
+                   in basso.» al posto di «Olimp oggi è presente…».
