@@ -752,3 +752,64 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    quanto il titolo «La fotografia prende forma.» (arriva fino alla fine
                    di «forma.»), con la scritta al centro; resta rosso e al passaggio si
                    riempie di blu scuro. Aggiornato css/style.css?v=117 in tutte le pagine.
+2.23 (02/11/2026)  Menu «Collezioni» su computer (proposta 11 modificata): passando sopra
+                   «Collezioni» si apre una banda larga quanto lo schermo con effetto vetro
+                   trasparente e le quattro foto (Album matrimoniali, bambini, comunione,
+                   eventi) con il nome scritto dentro la foto su velo nero; al passaggio la
+                   foto si ingrandisce appena e il nome si sottolinea di rosso. Tolto da
+                   computer l'elenco delle linee matrimoniali (restano nella pagina Album
+                   matrimoniali). Su tablet e telefono il menu resta il solito elenco.
+                   Foto ridotte per il menu in images/comune/menu/. La sfocatura della barra
+                   in alto è stata spostata su un livello a parte (aspetto invariato) perché
+                   il vetro della banda funzioni. Aggiornato css/style.css?v=118 in tutte le
+                   pagine.
+2.24 (02/11/2026)  Menu «Servizi» e «Prodotti» su computer come «Collezioni»: banda larga
+                   quanto lo schermo con effetto vetro e le foto con il nome dentro.
+                   Servizi: Sezione sposi e Sezione fotografi (due foto larghe, inquadrate
+                   sui volti). Prodotti: Fotolibro professionale, Album tradizionale
+                   professionale, Prodotti per il tuo studio fotografico, Custodie per
+                   album. Foto prese dalle pagine Servizi e Prodotti, ridotte in
+                   images/comune/menu/. Su tablet e telefono resta il solito elenco.
+                   Aggiornato css/style.css?v=120 in tutte le pagine.
+2.25 (02/11/2026)  Nuova foto «Album eventi» (album aperto con foto di compleanno) nella
+                   home, nella pagina Collezioni e nella banda del menu Collezioni:
+                   images/index/album-eventi-compleanno.jpg,
+                   images/collezioni/album-eventi-compleanno.jpg e
+                   images/comune/menu/eventi-compleanno.jpg. Le vecchie foto spostate in
+                   images/non-usate/ (albumEventi-index-vecchia.jpg,
+                   albumEventi-collezioni-vecchia.jpg, eventi-menu-vecchia.jpg).
+2.26 (02/11/2026)  Nuova foto del fotografo con videocamera al posto di fotografa.jpg nella
+                   pagina Servizi, nella pagina Sezione fotografi (anche og:image) e nella
+                   banda del menu Servizi: images/servizi/fotografo-videocamera.jpg,
+                   images/sezione-fotografi/fotografo-videocamera.jpg e
+                   images/comune/menu/fotografo-videocamera.jpg; testo alternativo
+                   aggiornato. Foto verticale inquadrata sul viso nei riquadri orizzontali.
+                   Le vecchie foto spostate in images/non-usate/. Aggiornato
+                   css/style.css?v=121 in tutte le pagine.
+2.27 (02/11/2026)  Sezione sposi: nuova foto degli sposi che si baciano in un campo al
+                   posto di sposi-ritratto.jpg (anche og:image):
+                   images/sezione-sposi/sposi-bacio-campo.jpg, ridotta a 1600 px; testo
+                   alternativo aggiornato. La vecchia spostata in
+                   images/non-usate/sposi-ritratto-vecchia.jpg.
+2.28 (02/11/2026)  Banda del menu Servizi: nuova foto degli sposi nel campo anche qui
+                   (images/comune/menu/sposi-bacio-campo.jpg; la vecchia in
+                   images/non-usate/sposi-menu-vecchia.jpg). Le due foto di Servizi non
+                   sono più larghe e basse (si vedevano tagliate): ora hanno la stessa
+                   misura delle foto di Prodotti e Collezioni e stanno al centro della
+                   banda. Aggiornato css/style.css?v=122 in tutte le pagine.
+2.29 (02/11/2026)  Sezione fotografi: la foto del fotografo (verticale) ora sta in un
+                   riquadro verticale e si vede quasi intera, con cappello, viso e
+                   videocamera, invece di essere tagliata e ingrandita. Aggiornato
+                   css/style.css?v=123 in tutte le pagine.
+2.30 (02/11/2026)  Banda del menu Servizi: ogni riquadro ha la forma della sua foto, con
+                   la stessa altezza delle altre bande (sposi orizzontale, fotografo
+                   verticale), così entrambe le foto si vedono quasi intere senza effetto
+                   zoom. Aggiornato css/style.css?v=124 in tutte le pagine.
+2.31 (02/11/2026)  Banda del menu Servizi: i due riquadri (Sezione sposi e Sezione
+                   fotografi) ora hanno la stessa dimensione (forma 5:4, stessa altezza
+                   delle altre bande), con le foto inquadrate su sposi e fotografo.
+                   Aggiornato css/style.css?v=125 in tutte le pagine.
+2.32 (02/11/2026)  Sezione fotografi: foto del fotografo di nuovo della misura di prima
+                   (larga come le altre foto accanto al testo, appena più alta), inquadrata
+                   in modo da tenerne il più possibile: cappello, viso e videocamera.
+                   Aggiornato css/style.css?v=126 in tutte le pagine.

@@ -127,12 +127,22 @@ header {
   inset: 0 0 auto;
   z-index: 50;
   background: rgba(255, 255, 255, .35);
-  -webkit-backdrop-filter: saturate(1.4) blur(12px);
-  backdrop-filter: saturate(1.4) blur(12px);
   border-bottom: 1px solid rgba(16, 36, 61, .08);
   box-shadow: 0 4px 18px #10243d0f;
   color: var(--ink);
   transition: box-shadow .3s;
+}
+
+/* La sfocatura della barra sta su un livello a parte: così la banda Collezioni sotto la barra
+   può avere il suo effetto vetro (una sfocatura dentro l'altra non funzionerebbe). */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  -webkit-backdrop-filter: saturate(1.4) blur(12px);
+  backdrop-filter: saturate(1.4) blur(12px);
+  pointer-events: none;
 }
 
 header.solid {
@@ -3007,6 +3017,15 @@ label.check a {
   margin: 0;
 }
 
+/* Foto verticale accanto al testo (es. Sezione fotografi): misura quasi come le altre, appena più alta, inquadrata dal cappello alla videocamera */
+.page-intro .ph.ph-vert {
+  aspect-ratio: 4/3.4;
+}
+
+.page-intro .ph.ph-vert img {
+  object-position: 50% 22%;
+}
+
 .service-section .page-intro {
   margin-top: 1.5rem;
   margin-bottom: 0;
@@ -3146,6 +3165,139 @@ label.check a {
   .dd > ul::before,
   .dd > ul > li {
     transition: none !important;
+  }
+}
+
+/* Foto verticale del fotografo nei riquadri orizzontali: si vede tutto il viso col cappello */
+img[src*="fotografo-videocamera"] {
+  object-position: 50% 12%;
+}
+
+/* ======================================================
+   BANDE DEL MENU (computer): al passaggio su «Servizi», «Prodotti» o «Collezioni» si apre
+   una banda larga quanto lo schermo, effetto vetro, con le foto e il nome dentro.
+   Su tablet e telefono resta il solito elenco.
+   ====================================================== */
+
+.mega {
+  display: none;
+}
+
+@media (min-width: 1101px) {
+  nav > ul > li.has-mega {
+    position: static;
+  }
+
+  .has-mega > ul {
+    display: none !important;
+  }
+
+  .mega {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 2rem 0 2.4rem;
+    background: rgba(255, 255, 255, .25);
+    -webkit-backdrop-filter: blur(22px) saturate(1.1);
+    backdrop-filter: blur(22px) saturate(1.1);
+    border-top: 2px solid #aa372e;
+    box-shadow: 0 24px 50px rgba(5, 29, 52, .18);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity .3s ease, transform .3s ease, visibility 0s .3s;
+  }
+
+  .has-mega:hover > .mega,
+  .has-mega.open > .mega,
+  .has-mega:focus-within > .mega {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: opacity .3s ease, transform .3s ease, visibility 0s;
+  }
+
+  .mega-in {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Servizi ha due voci: stessa altezza delle altre bande, due riquadri uguali con
+     stessa forma (5:4) per tutte e due, inquadrate su sposi e fotografo */
+  .mega-2 .mega-in {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .mega-2 .mega-card {
+    flex: none;
+    aspect-ratio: 5 / 4;
+  }
+
+  .mega-card img[src*="sposi-bacio-campo"] {
+    object-position: 62% 50%;
+  }
+
+  .mega-card img[src*="fotografo-videocamera"] {
+    object-position: 50% 30%;
+  }
+
+  nav .mega-card {
+    position: relative;
+    display: block;
+    height: clamp(190px, 16.5vw, 240px);
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+    background: #111;
+  }
+
+  .mega-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 35%;
+    transition: transform .6s ease;
+  }
+
+  /* velo nero in basso, come le foto delle collezioni in home */
+  .mega-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .35) 45%, rgba(0, 0, 0, 0) 75%);
+  }
+
+  .mega-card span {
+    position: absolute;
+    z-index: 1;
+    left: 1.3rem;
+    right: 1.3rem;
+    bottom: 1.1rem;
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -.01em;
+  }
+
+  .mega-card:hover img,
+  .mega-card:focus-visible img {
+    transform: scale(1.05);
+  }
+
+  .mega-card:hover span,
+  .mega-card:focus-visible span {
+    text-decoration: underline;
+    text-decoration-color: #aa372e;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
   }
 }
 
