@@ -813,3 +813,15 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    (larga come le altre foto accanto al testo, appena più alta), inquadrata
                    in modo da tenerne il più possibile: cappello, viso e videocamera.
                    Aggiornato css/style.css?v=126 in tutte le pagine.
+2.33 (02/11/2026)  Home, sezione Dove siamo, solo su schermi piccoli (telefono e tablet):
+                   più spazio tra il titolo «Dove siamo» e la frase «La nostra sede si trova
+                   a Canicattì», che prima erano quasi attaccati. Su computer invariato.
+                   Aggiornato css/style.css?v=127 in tutte le pagine.
+2.34 (02/11/2026)  Menu su telefono e tablet più chiaro: voci principali a tutta larghezza
+                   separate da righe sottili; accanto a Servizi, Prodotti, Collezioni e
+                   Album matrimoniali un + rosso che diventa − quando il sottomenu è
+                   aperto (e la voce aperta diventa rossa); primo livello rientrato con una
+                   riga grigia a sinistra; le linee degli album matrimoniali in un riquadro
+                   chiaro con riga rossa, più piccole e grigie; tolto il blocco rosso pieno
+                   sulla voce aperta. La pagina in cui ci si trova è segnata in rosso. Su
+                   computer invariato. Aggiornato css/style.css?v=128 in tutte le pagine.

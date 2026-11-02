@@ -2784,6 +2784,113 @@ footer {
 }
 
 /* ======================================================
+   MENU SU TELEFONO E TABLET: voci a tutta larghezza separate da righe,
+   + / − per aprire i sottomenu, livelli rientrati e distinti
+   ====================================================== */
+
+@media (max-width: 1100px) {
+  nav {
+    padding: .5rem 1.5rem 1.5rem;
+  }
+
+  nav > ul {
+    gap: 0;
+    align-items: stretch;
+  }
+
+  nav > ul > li {
+    border-bottom: 1px solid var(--line);
+  }
+
+  nav > ul > li > a:not(.logo) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border: 0;
+    transform: none !important;
+    font-size: 1.05rem;
+  }
+
+  /* + accanto alle voci con sottomenu, diventa − quando è aperto */
+  nav .dd > a::after {
+    content: '+';
+    position: static;
+    transform: none;
+    font-size: 1.35rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #aa372e;
+    margin-left: 1rem;
+  }
+
+  nav .dd.open > a::after {
+    content: '−';
+  }
+
+  nav .dd.open > a {
+    color: #aa372e;
+  }
+
+  /* primo livello: Album matrimoniali, bambini… */
+  nav .dd > ul {
+    padding: 0 0 .8rem;
+    gap: 0;
+  }
+
+  nav .dd > ul a,
+  nav .dd > ul a:hover,
+  nav .dd > ul a:focus-visible,
+  nav .dd > ul a.on,
+  nav .dd .sub-dd:hover > a,
+  nav .dd .sub-dd:focus-within > a {
+    background: none;
+  }
+
+  nav .dd > ul a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75rem 0 .75rem 1rem;
+    border-left: 2px solid var(--line);
+    font-size: .82rem;
+    letter-spacing: .08em;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+
+  nav .dd > ul a.on,
+  nav .dd > ul a:active {
+    color: #aa372e;
+    border-left-color: #aa372e;
+  }
+
+  nav .dd .sub-dd > a {
+    padding-right: 0;
+  }
+
+  /* secondo livello: le linee degli album matrimoniali, in un riquadro chiaro */
+  nav .dd .sub-dd > ul {
+    margin: .2rem 0 .6rem 1rem;
+    padding: .3rem 0;
+    background: var(--paper);
+    border-left: 2px solid #aa372e;
+  }
+
+  nav .dd .sub-dd > ul a {
+    border-left: 0;
+    padding: .6rem 1rem;
+    font-size: .74rem;
+    letter-spacing: .06em;
+    color: var(--mute);
+  }
+
+  nav .dd .sub-dd > ul a.on {
+    color: #aa372e;
+  }
+}
+
+/* ======================================================
    FINESTRA DI CONFERMA / MODALE DI RINGRAZIAMENTO
    ====================================================== */
 
@@ -3506,6 +3613,11 @@ img[src*="fotografo-videocamera"] {
   .location > div:first-child {
     display: block;
     margin-bottom: 2rem;
+  }
+
+  /* spazio tra il titolo «Dove siamo» e la frase sotto */
+  .location .sec-head + p {
+    margin-top: 1.4rem;
   }
 
   .map {
