@@ -22,7 +22,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: 80px;
   overflow-x: hidden;
 }
 
@@ -143,7 +143,7 @@ header.solid {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 88px;
+  height: 68px;
 }
 
 .logo {
@@ -158,7 +158,7 @@ header.solid {
 header .logo img {
   display: block;
   width: auto;
-  height: 84px;
+  height: 58px;
   max-width: 150px;
   object-fit: contain;
 }
@@ -348,7 +348,7 @@ nav a.on,
   min-height: 740px;
   height: 100svh;
   max-height: 1080px;
-  padding: 88px 0 0;
+  padding: 68px 0 0;
   box-sizing: border-box;
   background: var(--ink);
   isolation: isolate;
@@ -410,7 +410,14 @@ nav a.on,
   font-size: 1rem;
 }
 
+/* Il blocco di testo è largo quanto il titolo, così il tasto arriva fino alla fine di «forma.» */
+.hero .txt {
+  width: fit-content;
+  max-width: min(624px, calc(100% - 7rem));
+}
+
 .hero .btn {
+  align-self: stretch;
   /* Rosso del logo con scritta bianca; al passaggio si riempie di blu scuro dal basso. */
   background-color: #aa372e;
   color: #fff;
@@ -973,7 +980,7 @@ label.check input {
    chiaro del sito, percorso sopra e titolo blu scuro, barra verticale bordeaux del logo
    a sinistra del testo. La barra è disegnata con ::before allineata al bordo del testo. */
 .page-hero {
-  padding: 7.6rem 0 2rem;
+  padding: 6.35rem 0 2rem;
   margin-bottom: 3.25rem;
   /* Stesso grigio-azzurro chiaro dei riquadri dell'Area download. */
   background: var(--paper);
@@ -1542,6 +1549,261 @@ label.check input {
 .location .more {
   grid-column: 2;
   justify-self: start;
+}
+
+/* ======================================================
+   GRAFICA & STAMPA (proposta 02 + schede della 16): foto grande con il titolo
+   in basso a destra, testo sotto, le quattro fasi a schede.
+   ====================================================== */
+
+.gs-hero {
+  position: relative;
+  min-height: 380px;
+  margin: 0;
+}
+
+.gs-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, .78), rgba(0, 0, 0, 0) 60%);
+  pointer-events: none;
+}
+
+.gs-title {
+  position: absolute;
+  right: 3rem;
+  bottom: 3rem;
+  z-index: 1;
+  text-align: right;
+  color: #fff;
+}
+
+.gs-title .eyebrow {
+  display: block;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.gs-title h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  line-height: 1;
+  letter-spacing: -.05em;
+}
+
+.gs-intro {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.gs-intro .graphics-lead {
+  font-size: clamp(1.7rem, 2.6vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -.035em;
+  color: var(--ink);
+  margin: 0;
+  max-width: none;
+}
+
+/* trattino rosso tra le due frasi */
+.gs-intro .graphics-lead::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin: 1.8rem auto;
+  background: #aa372e;
+}
+
+.gs-intro > p:last-child {
+  margin: 0 auto;
+  max-width: 640px;
+  font-size: clamp(1.05rem, 1.25vw, 1.2rem);
+  line-height: 1.7;
+  color: var(--mute);
+}
+
+.gs-hero {
+  margin-bottom: 3.5rem;
+}
+
+.gs-tablist {
+  display: flex;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2.5rem;
+}
+
+.gs-tablist button {
+  flex: 1;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: .6rem;
+  padding: 1.1rem 1rem;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  background: none;
+  color: var(--mute);
+  font: 700 .95rem 'Manrope', Arial, sans-serif;
+  cursor: pointer;
+  transition: color .25s, border-color .25s;
+}
+
+.gs-tablist button span {
+  font-size: .7rem;
+  letter-spacing: .1em;
+  color: #aa372e;
+}
+
+.gs-tablist button:hover {
+  color: var(--ink);
+}
+
+.gs-tablist button[aria-selected="true"] {
+  color: var(--ink);
+}
+
+/* Linea rossa sotto la scheda attiva: piena, oppure si riempie durante il passaggio automatico */
+.gs-tablist button {
+  position: relative;
+}
+
+.gs-tablist button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 3px;
+  background: #aa372e;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.gs-tablist button[aria-selected="true"]::after {
+  transform: scaleX(1);
+}
+
+.gs-tablist.gs-auto button[aria-selected="true"]::after {
+  animation: gsbar 8s linear forwards;
+}
+
+.gs-tablist.gs-auto:not(.gs-vis) button::after {
+  animation-play-state: paused;
+}
+
+@keyframes gsbar {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.gs-panel {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  animation: gsin .45s ease;
+}
+
+.gs-panel[hidden] {
+  display: none;
+}
+
+.gs-panel .ph {
+  aspect-ratio: 16 / 10;
+  margin: 0;
+}
+
+/* Sviluppo RAW: riquadro con le proporzioni esatte della foto, così non viene tagliata */
+#gs-p2 .ph {
+  aspect-ratio: 1280 / 695;
+}
+
+/* Selezione degli scatti: proporzioni esatte della foto */
+#gs-p1 .ph {
+  aspect-ratio: 1424 / 745;
+}
+
+/* Fotoritocco: proporzioni esatte della foto */
+#gs-p3 .ph {
+  aspect-ratio: 1024 / 508;
+}
+
+/* Testo a sinistra della foto, più grande e leggibile */
+.gs-panel .graphics-number {
+  font-size: .85rem;
+  margin-bottom: 1.2rem;
+}
+
+.gs-panel h3 {
+  margin: 0 0 1.2rem;
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  letter-spacing: -.04em;
+}
+
+.gs-panel p {
+  margin: 0;
+  max-width: 44ch;
+  font-size: clamp(1.08rem, 1.3vw, 1.25rem);
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+@keyframes gsin {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (max-width: 800px) {
+  .gs-hero {
+    min-height: 300px;
+  }
+
+  .gs-title {
+    right: 1.4rem;
+    bottom: 1.6rem;
+    left: 1.4rem;
+  }
+
+  .gs-intro {
+    margin: 0 auto 2rem;
+  }
+
+  .gs-intro .graphics-lead::after {
+    margin: 1.3rem auto;
+  }
+
+  .gs-hero {
+    margin-bottom: 2.5rem;
+  }
+
+  /* Schede: si scorrono in orizzontale se non stanno nella larghezza */
+  .gs-tablist {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .gs-tablist button {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .gs-panel {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  /* su telefono la foto torna sopra il testo */}
+
+@media (prefers-reduced-motion: reduce) {
+  .gs-panel {
+    animation: none;
+  }
 }
 
 /* ======================================================
@@ -2215,7 +2477,7 @@ footer .footer-socials svg {
 }
 
 .inner .graphics-editorial {
-  padding-top: 10rem;
+  padding-top: 8.75rem;
 }
 
 .graphics-heading {
@@ -2461,10 +2723,10 @@ footer {
   nav {
     display: none;
     position: fixed;
-    top: 88px;
+    top: 68px;
     left: 0;
     right: 0;
-    max-height: calc(100vh - 88px);
+    max-height: calc(100vh - 68px);
     overflow-y: auto;
     background: #fff;
     padding: 1rem 3.5rem 1.5rem;
@@ -2908,7 +3170,7 @@ label.check a {
   }
 
   .bar-logo img {
-    height: 64px;
+    height: 50px;
     width: auto;
   }
 
@@ -2960,7 +3222,7 @@ label.check a {
   }
 
   .page-hero {
-    padding: 6.6rem 0 1.5rem;
+    padding: 5.35rem 0 1.5rem;
     margin-bottom: 2rem;
   }
 
@@ -2999,7 +3261,8 @@ label.check a {
   }
 
   .hero .txt {
-    width: auto;
+    width: fit-content;
+    max-width: calc(100% - 2.5rem);
     margin: 0 1.25rem;
     padding: 3rem 0 6.5rem;
     gap: 1.2rem;
@@ -3103,7 +3366,7 @@ label.check a {
   }
 
   .inner .graphics-editorial {
-    padding-top: 7.5rem;
+    padding-top: 6.25rem;
   }
 
   .graphics-heading {

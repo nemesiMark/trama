@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Jost:wght@500&amp;display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=100">
+    <link rel="stylesheet" href="css/style.css?v=117">
     <link rel="icon" type="image/svg+xml" href="images/comune/logo-olimp.svg">
     <script>document.documentElement.classList.add("js")</script>
   <script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('fx-pre');setTimeout(function(){document.documentElement.classList.remove('fx-pre')},2500)}</script>
@@ -65,60 +65,57 @@
         </div>
     </header>
     <main>
-        <section class="graphics-editorial">
+        <section class="graphics-editorial gs-page">
             <div class="wrap">
-                <div class="graphics-heading">
-                    <div><span class="eyebrow">Olimp / Produzione</span>
-                        <h1>Grafica <span>&amp;</span><br>Stampa</h1>
-                    </div>
-                    <div class="graphics-intro">
-                        <p class="graphics-lead">Creiamo album fotografici originali e raffinati, utilizzando i migliori
-                            materiali e tutta la nostra esperienza da artigiani.</p>
-                        <p>La nostra cura è rivolta anche alla progettazione grafica delle foto degli album, perché ogni
-                            singolo dettaglio dei nostri prodotti per noi è importante.</p>
-                    </div>
+                <div class="gs-intro">
+                    <p class="graphics-lead">Creiamo album fotografici originali e raffinati, utilizzando i migliori
+                        materiali e tutta la nostra esperienza da artigiani.</p>
+                    <p>La nostra cura è rivolta anche alla progettazione grafica delle foto degli album, perché ogni
+                        singolo dettaglio dei nostri prodotti per noi è importante.</p>
                 </div>
-                <div class="graphics-visual">
-                    <figure class="ph no-zoom"><img src="images/grafica-stampa/colore.jpg"
-                            alt="Campionario colore e lente per il controllo della stampa" loading="lazy"></figure>
-                    <div class="graphics-caption"><span>DALLO SCATTO ALL’ALBUM</span>
-                        <p>Ogni dettaglio,<br>la vostra firma.</p><span>SELEZIONE · COLORE · IMPAGINAZIONE</span>
+                <figure class="gs-hero ph no-zoom"><img src="images/grafica-stampa/colore.jpg"
+                        alt="Campionario colore e lente per il controllo della stampa">
+                    <figcaption class="gs-title"><span class="eyebrow">Olimp / Produzione</span>
+                        <h1>Grafica &amp; Stampa</h1>
+                    </figcaption>
+                </figure>
+                <div class="gs-tabs">
+                    <div class="gs-tablist" role="tablist" aria-label="Le fasi del nostro lavoro">
+                        <button type="button" role="tab" id="gs-t1" aria-controls="gs-p1" aria-selected="true"><span>01</span>Selezione degli scatti</button>
+                        <button type="button" role="tab" id="gs-t2" aria-controls="gs-p2" aria-selected="false" tabindex="-1"><span>02</span>Sviluppo RAW</button>
+                        <button type="button" role="tab" id="gs-t3" aria-controls="gs-p3" aria-selected="false" tabindex="-1"><span>03</span>Fotoritocco</button>
+                        <button type="button" role="tab" id="gs-t4" aria-controls="gs-p4" aria-selected="false" tabindex="-1"><span>04</span>Impaginazione</button>
                     </div>
-                </div>
-                <div class="graphics-steps graphics-rows">
-                    <article>
-                        <div><span class="graphics-number">01</span>
-                            <h3>Selezione degli scatti</h3>
-                            <p>Ci occupiamo di selezionare dai vostri scatti i file da impaginare, scegliendo le foto
-                                che meglio raccontano l’emozione del matrimonio.</p>
-                        </div>
-                        <figure class="ph no-zoom"><img src="images/grafica-stampa/selezione.jpg" alt="Selezione degli scatti" loading="lazy">
-                        </figure>
-                    </article>
-                    <article>
-                        <div><span class="graphics-number">02</span>
-                            <h3>Sviluppo RAW</h3>
-                            <p>Elaboriamo le immagini direttamente da file raw, preservando la veridicità e l’eleganza
-                                delle vostre immagini.</p>
-                        </div>
-                        <figure class="ph no-zoom"><img src="images/grafica-stampa/sviluppoRaw.jpg" alt="Sviluppo RAW" loading="lazy"></figure>
-                    </article>
-                    <article>
-                        <div><span class="graphics-number">03</span>
-                            <h3>Fotoritocco</h3>
-                            <p>Grazie al fotoritocco, restituiamo alle foto la loro bellezza senza tempo.</p>
-                        </div>
-                        <figure class="ph no-zoom"><img src="images/grafica-stampa/fotoritocco.jpg" alt="Fotoritocco" loading="lazy"></figure>
-                    </article>
-                    <article>
-                        <div><span class="graphics-number">04</span>
-                            <h3>Impaginazione</h3>
-                            <p>Ci occupiamo infine dell’impaginazione dell’album, realizzando su carta un racconto unico
-                                e suggestivo del matrimonio dei vostri sposi.</p>
-                        </div>
-                        <figure class="ph no-zoom"><img src="images/grafica-stampa/impaginazione.jpg" alt="Impaginazione" loading="lazy">
-                        </figure>
-                    </article>
+                    <div class="gs-panels">
+                        <article class="gs-panel" id="gs-p1" role="tabpanel" aria-labelledby="gs-t1">
+                            <figure class="ph no-zoom"><img src="images/grafica-stampa/selezione.jpg?v=2" alt="Selezione degli scatti" loading="lazy"></figure>
+                            <div><span class="graphics-number">01</span>
+                                <h3>Selezione degli scatti</h3>
+                                <p>Ci occupiamo di selezionare dai vostri scatti i file da impaginare, scegliendo le foto che meglio raccontano l’emozione del matrimonio.</p>
+                            </div>
+                        </article>
+                        <article class="gs-panel" id="gs-p2" role="tabpanel" aria-labelledby="gs-t2" hidden>
+                            <figure class="ph no-zoom"><img src="images/grafica-stampa/sviluppoRaw.jpg" alt="Sviluppo RAW" loading="lazy"></figure>
+                            <div><span class="graphics-number">02</span>
+                                <h3>Sviluppo RAW</h3>
+                                <p>Elaboriamo le immagini direttamente da file raw, preservando la veridicità e l’eleganza delle vostre immagini.</p>
+                            </div>
+                        </article>
+                        <article class="gs-panel" id="gs-p3" role="tabpanel" aria-labelledby="gs-t3" hidden>
+                            <figure class="ph no-zoom"><img src="images/grafica-stampa/fotoritocco.jpg?v=2" alt="Fotoritocco" loading="lazy"></figure>
+                            <div><span class="graphics-number">03</span>
+                                <h3>Fotoritocco</h3>
+                                <p>Grazie al fotoritocco, restituiamo alle foto la loro bellezza senza tempo.</p>
+                            </div>
+                        </article>
+                        <article class="gs-panel" id="gs-p4" role="tabpanel" aria-labelledby="gs-t4" hidden>
+                            <figure class="ph no-zoom"><img src="images/grafica-stampa/impaginazione.jpg" alt="Impaginazione" loading="lazy"></figure>
+                            <div><span class="graphics-number">04</span>
+                                <h3>Impaginazione</h3>
+                                <p>Ci occupiamo infine dell’impaginazione dell’album, realizzando su carta un racconto unico e suggestivo del matrimonio dei vostri sposi.</p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
@@ -145,7 +142,7 @@
         </div>
     </footer>
     <script src="js/cookie.js?v=10"></script>
-    <script src="js/script.js?v=28"></script>
+    <script src="js/script.js?v=32"></script>
 </body>
 
 </html>

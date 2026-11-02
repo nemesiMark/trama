@@ -23,7 +23,7 @@ var sel='main h1, main h2, main h3, main .eyebrow, main p, main figure, main li,
 /* Riquadri (schede, card, formati): salgono per primi, poi il loro contenuto elemento per elemento. */
 var boxSel='main article, main .card, main .download-card, main .sec-head';
 /* La foto della home (immagini che scorrono) resta ferma: si vede subito, senza sfondo blu. */
-var skip=function(e){return e.closest('.hero-slideshow,.hero-slides,.hero-controls')};
+var skip=function(e){return e.closest('.hero-slideshow,.hero-slides,.hero-controls,.gs-panels')};
 var boxes=[].slice.call(document.querySelectorAll(boxSel)).filter(function(e){return !skip(e)&&!e.parentElement.closest(boxSel)});
 var items=[].slice.call(document.querySelectorAll(sel)).filter(function(e){return !e.parentElement.closest(sel)&&!skip(e)});
 var els=boxes.concat(items).sort(function(a,b){return a===b?0:(a.compareDocumentPosition(b)&4?-1:1)});
@@ -190,9 +190,9 @@ function show(n){index=n;slides.forEach(function(s,i){var active=i===n;s.classLi
 function stop(){clearInterval(timer);timer=null}
 function start(){stop();if(!paused&&!document.hidden)timer=setInterval(function(){show((index+1)%slides.length)},5000)}
 function label(){pause.textContent=paused?'Riprendi':'Pausa';pause.setAttribute('aria-label',paused?'Avvia rotazione immagini':'Ferma rotazione immagini')}
-dots.forEach(function(dot,i){dot.addEventListener('click',function(){show(i);start()})});
+dots.forEach(function(dot,i){dot.addEventListener('click',function(){show(i);if(!reduced.matches){paused=false;label()}start()})});
 pause.addEventListener('click',function(){paused=!paused;label();start()});
-hero.addEventListener('focusin',stop);hero.addEventListener('focusout',function(e){if(!hero.contains(e.relatedTarget))start()});
+hero.addEventListener('focusin',function(e){var t=e.target;if(t.matches&&t.matches(':focus-visible')&&!t.classList.contains('hero-dot'))stop()});hero.addEventListener('focusout',function(e){if(!hero.contains(e.relatedTarget))start()});
 document.addEventListener('visibilitychange',start);
 reduced.addEventListener('change',function(e){paused=e.matches;label();start()});
 label();start();
@@ -218,3 +218,12 @@ document.addEventListener('keydown', function (e) {
     e.preventDefault();
   }
 });
+
+/* Grafica & Stampa: le quattro fasi a schede (clic o frecce della tastiera). */
+(function(){
+var list=document.querySelector('.gs-tablist');if(!list)return;
+var tabs=[].slice.call(list.querySelectorAll('[role="tab"]'));
+function sel(i,focus){tabs.forEach(function(t,j){var on=j===i;t.setAttribute('aria-selected',String(on));t.tabIndex=on?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!on});if(focus)tabs[i].focus()}
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){list.classList.add('gs-auto');if('IntersectionObserver'in window){new IntersectionObserver(function(e){list.classList.toggle('gs-vis',e[0].isIntersecting)},{rootMargin:'0px 0px -20% 0px'}).observe(list.parentNode)}else{list.classList.add('gs-vis')}list.addEventListener('animationend',function(e){if(e.animationName!=='gsbar')return;var i=tabs.indexOf(e.target),n=(i+1)%tabs.length;sel(n);var b=tabs[n];list.scrollTo({left:b.offsetLeft-list.offsetLeft-20,behavior:'smooth'})})}
+tabs.forEach(function(t,i){t.addEventListener('click',function(){sel(i);if(list.classList.contains('gs-auto')){list.classList.remove('gs-auto');void list.offsetWidth;list.classList.add('gs-auto')}});t.addEventListener('keydown',function(e){var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(k){e.preventDefault();sel((i+k+tabs.length)%tabs.length,true)}})});
+})();
