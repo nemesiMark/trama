@@ -825,3 +825,12 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    chiaro con riga rossa, più piccole e grigie; tolto il blocco rosso pieno
                    sulla voce aperta. La pagina in cui ci si trova è segnata in rosso. Su
                    computer invariato. Aggiornato css/style.css?v=128 in tutte le pagine.
+2.35 (02/11/2026)  Menu su telefono: toccando + su «Album matrimoniali» la scritta spariva
+                   (diventava bianca su fondo bianco); ora resta visibile in rosso, come
+                   le altre voci aperte. Aggiornato css/style.css?v=129 in tutte le pagine.
+2.36 (02/11/2026)  Home, foto di apertura su telefono: la prima foto (album aperto) ora è
+                   inquadrata sulla coppia che salta, con tutti e due gli sposi visibili;
+                   la terza (modello Orione) sta in alto con l'album quasi intero e la
+                   coppia sotto il pontile ben visibile sopra il testo, e sfuma in basso
+                   nel colore del ripiano. Su computer invariato. Aggiornato
+                   css/style.css?v=131 in tutte le pagine.

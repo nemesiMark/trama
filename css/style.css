@@ -2869,6 +2869,21 @@ footer {
     padding-right: 0;
   }
 
+  /* Album matrimoniali aperto (o toccato): scritta rossa, mai bianca su fondo bianco */
+  nav .dd .sub-dd > a:hover,
+  nav .dd .sub-dd > a:focus-visible,
+  nav .dd .sub-dd:hover > a,
+  nav .dd .sub-dd:focus-within > a,
+  nav .dd .sub-dd.open > a {
+    color: #aa372e;
+    border-left-color: #aa372e;
+  }
+
+  nav .dd > ul a:hover,
+  nav .dd > ul a:focus-visible {
+    color: #aa372e;
+  }
+
   /* secondo livello: le linee degli album matrimoniali, in un riquadro chiaro */
   nav .dd .sub-dd > ul {
     margin: .2rem 0 .6rem 1rem;
@@ -3536,15 +3551,27 @@ img[src*="fotografo-videocamera"] {
     transform: none;
   }
 
-  /* Su telefono la foto Orione riempie tutto il riquadro come le altre. */
+  /* Su telefono la foto Orione sta in alto, con l'album quasi intero e la coppia
+     sotto il pontile ben visibile; in basso sfuma nel colore del ripiano. */
   .hero .hero-slide.hs-orione img {
-    top: 0;
+    top: 68px;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 48%;
     aspect-ratio: auto;
-    -webkit-mask-image: none;
-    mask-image: none;
+    object-fit: cover;
+    object-position: 50% 55%;
+    -webkit-mask-image: linear-gradient(180deg, #000 80%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 80%, transparent 100%);
+  }
+
+  .hero .hs-orione {
+    background: #b9ab9d;
+  }
+
+  /* Prima foto (album aperto): inquadrata sulla coppia che salta */
+  .hero .hero-slide:first-child img {
+    object-position: 76% 50%;
   }
 
   .hero-controls {
