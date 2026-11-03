@@ -906,3 +906,15 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    (si vedono anche le mani e la videocamera), larga al massimo 440px così
                    non diventa troppo alta. Solo in questa pagina. Aggiornato
                    css/style.css?v=148 in tutte le pagine.
+2.51 (03/11/2026)  Home su computer: in cima alla pagina la barra non ha sfondo, sfocatura né
+                   ombra; voci bianche con un'ombra scura marcata per leggersi sulla foto
+                   (proposta 02, ombra più forte), logo invariato. Appena si scende torna la
+                   barra di sempre con il testo blu scuro (dissolvenza di 0,4 secondi).
+                   Le altre pagine e il telefono restano come prima. L'effetto implosione
+                   delle voci all'apertura (2.44) resta com'era. Al passaggio del cursore
+                   (e col menu aperto) voce, triangolino e sottolineatura diventano rossi
+                   come nel resto del sito. Aggiornato css/style.css?v=151 in tutte le pagine.
+2.52 (03/11/2026)  Barra su computer, in tutte le pagine: quando il cursore è dentro il menu
+                   a tendina di Servizi, Prodotti o Collezioni, la voce in alto resta rossa,
+                   sottolineata e ingrandita come al passaggio. Aggiornato
+                   css/style.css?v=152 in tutte le pagine.

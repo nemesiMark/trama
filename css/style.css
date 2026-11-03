@@ -4114,6 +4114,16 @@ nav .mega-card:focus-visible::before {
     transition: transform .3s ease;
   }
 
+  /* Finché il cursore è nel menu a tendina, la voce resta rossa, sottolineata e ingrandita
+     come quando ci si passa sopra */
+  nav > ul > li.has-mega:hover > a,
+  nav > ul > li.has-mega.open > a,
+  nav > ul > li.has-mega:focus-within > a {
+    color: #aa372e;
+    border-bottom-color: #aa372e;
+    transform: scale(1.14);
+  }
+
   nav > ul > li.has-mega:hover > a::after,
   nav > ul > li.has-mega.open > a::after,
   nav > ul > li.has-mega:focus-within > a::after {
@@ -4166,4 +4176,50 @@ nav .mega-card:focus-visible::before {
   border-color: var(--c, #aa372e);
   color: var(--c, #aa372e);
   transform: translateY(-2px);
+}
+
+/* ======================================================
+   HOME: BARRA SENZA SFONDO IN CIMA ALLA PAGINA
+   ====================================================== */
+/* Solo su computer e solo nella home: finché la pagina è in cima la barra non ha sfondo,
+   sfocatura né ombra, e le voci sono bianche con un'ombra scura per leggersi sulla foto.
+   Appena si scende (lo script mette la classe "solid") torna la barra di sempre. */
+@media (min-width: 1101px) {
+  .home-page header {
+    transition: background-color .4s ease, border-color .4s ease, box-shadow .4s ease;
+  }
+
+  .home-page header::before {
+    transition: opacity .4s ease;
+  }
+
+  .home-page header:not(.solid) {
+    background-color: transparent;
+    border-bottom-color: transparent;
+    box-shadow: none;
+  }
+
+  .home-page header:not(.solid)::before {
+    opacity: 0;
+  }
+
+  /* solo dopo l'animazione d'apertura delle voci, per non cambiarne i tempi */
+  html:not(.nav-imp) .home-page header nav > ul > li > a:not(.logo) {
+    transition: color .4s ease, text-shadow .4s ease, border-color .25s, transform .25s;
+  }
+
+  .home-page header:not(.solid) nav > ul > li > a:not(.logo) {
+    color: #fff;
+    text-shadow: 0 1px 14px rgba(0, 0, 0, .8), 0 0 4px rgba(0, 0, 0, .6);
+  }
+
+  /* al passaggio (e col menu aperto) la voce diventa rossa come nel resto del sito */
+  .home-page header:not(.solid) nav > ul > li > a:not(.logo):hover,
+  .home-page header:not(.solid) nav > ul > li > a:not(.logo).on,
+  .home-page header:not(.solid) nav > ul > li.has-mega:hover > a,
+  .home-page header:not(.solid) nav > ul > li.has-mega.open > a,
+  .home-page header:not(.solid) nav > ul > li.has-mega:focus-within > a {
+    color: #aa372e;
+    border-bottom-color: #aa372e;
+  }
 }
