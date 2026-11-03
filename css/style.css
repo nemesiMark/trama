@@ -4223,3 +4223,31 @@ nav .mega-card:focus-visible::before {
     border-bottom-color: #aa372e;
   }
 }
+
+/* ======================================================
+   VISORE DELLE FOTO: CAMBIO FOTO CON MESSA A FUOCO
+   ====================================================== */
+/* Passando a un'altra foto, la nuova compare sfocata e si mette a fuoco (proposta 04). */
+.lb img.lb-focus {
+  animation: lbFocus .7s ease;
+}
+
+@keyframes lbFocus {
+  from {
+    opacity: 0;
+    filter: blur(14px);
+    transform: scale(1.03);
+  }
+
+  to {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lb img.lb-focus {
+    animation: none;
+  }
+}

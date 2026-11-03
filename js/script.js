@@ -166,11 +166,11 @@ else{cap.style.left=r.left+'px';cap.style.top=(r.bottom+14)+'px';cap.style.maxWi
 var lim=lb.classList.contains('has-strip')?strip.getBoundingClientRect().top:innerHeight,over=r.bottom+14+cap.offsetHeight+12-lim;
 if(over>1&&r.height-over>120){im.style.maxHeight=Math.floor(r.height-over)+'px';requestAnimationFrame(placeCap);return}}
 cap.style.visibility='visible'}
-im.addEventListener('load',placeCap);window.addEventListener('resize',function(){im.style.maxHeight='';placeCap()});
+im.addEventListener('load',placeCap);im.addEventListener('animationend',function(){im.classList.remove('lb-focus')});window.addEventListener('resize',function(){im.style.maxHeight='';placeCap()});
 function nameOf(el){var f=el.closest('figure'),c=f&&f.querySelector('figcaption, h3');if(c)return c.textContent.trim();var m=(el.alt||'').match(/^(Modello .+?) dell[ae] /);return m?m[1]:''}
 if(imgs.length<2){lb.querySelector('.lb-p').style.display=lb.querySelector('.lb-n').style.display='none'}
 function show(i,d){for(var k=0;k<imgs.length;k++){cur=(i+imgs.length)%imgs.length;if(imgs[cur].style.display!=='none')break;i=cur+(d||1)}
-im.style.maxHeight='';im.src=imgs[cur].src.replace(/w=\d+/,'w=1800');im.alt=imgs[cur].alt;var n=nameOf(imgs[cur]);capName.textContent=n;capName.style.display=n?'':'none';if(im.complete)requestAnimationFrame(placeCap);markThumb()}
+im.style.maxHeight='';if(lb.classList.contains('on')){im.classList.remove('lb-focus');void im.offsetWidth;im.classList.add('lb-focus');clearTimeout(im._ft);im._ft=setTimeout(function(){im.classList.remove('lb-focus')},1000)}im.src=imgs[cur].src.replace(/w=\d+/,'w=1800');im.alt=imgs[cur].alt;var n=nameOf(imgs[cur]);capName.textContent=n;capName.style.display=n?'':'none';if(im.complete)requestAnimationFrame(placeCap);markThumb()}
 function open(i){last=document.activeElement;show(i,1);lb.classList.add('on');document.body.style.overflow='hidden';x.focus();requestAnimationFrame(function(){placeCap();markThumb(true)})}
 function close(){lb.classList.remove('on');document.body.style.overflow='';im.removeAttribute('src');if(last&&last.focus)last.focus()}
 imgs.forEach(function(el,i){

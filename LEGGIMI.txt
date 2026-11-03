@@ -918,3 +918,9 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    a tendina di Servizi, Prodotti o Collezioni, la voce in alto resta rossa,
                    sottolineata e ingrandita come al passaggio. Aggiornato
                    css/style.css?v=152 in tutte le pagine.
+2.53 (03/11/2026)  Visore delle foto (tutte le gallerie): passando a un'altra foto con
+                   frecce, miniature o tastiera, la nuova compare sfocata e si mette a fuoco
+                   in 0,7 secondi (proposta 04). All'apertura del visore nessun cambiamento;
+                   niente effetto per chi ha chiesto meno animazioni. Per sicurezza dopo un
+                   secondo la foto è comunque nitida. Aggiornato css/style.css?v=153 e
+                   js/script.js?v=34 in tutte le pagine.
