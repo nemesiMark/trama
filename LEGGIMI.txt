@@ -878,3 +878,8 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    torna normale. Niente effetto su telefono/tablet né per chi ha chiesto
                    meno animazioni al proprio dispositivo. Le altre pagine sono invariate.
                    Aggiornato css/style.css?v=143 in tutte le pagine.
+2.45 (03/11/2026)  Barra su computer, in tutte le pagine: dopo Servizi, Prodotti e Collezioni
+                   c'è un triangolino pieno (proposta 02) per far capire che c'è un menu a
+                   tendina; quando il menu si apre il triangolino si capovolge. Su telefono
+                   e tablet resta il + / − già presente. Aggiornato css/style.css?v=144 in
+                   tutte le pagine.

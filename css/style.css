@@ -4095,3 +4095,29 @@ nav .mega-card:focus-visible::before {
     transition: transform 1.1s cubic-bezier(.3, 1.4, .4, 1) var(--d), opacity .5s ease var(--d), filter .8s ease var(--d);
   }
 }
+
+/* ======================================================
+   SEGNALE DEI MENU A TENDINA NELLA BARRA (proposta 02)
+   ====================================================== */
+/* Su computer: triangolino pieno dopo Servizi, Prodotti e Collezioni, che si capovolge
+   quando il menu è aperto. Su telefono e tablet resta il + / −. */
+@media (min-width: 1101px) {
+  nav > ul > li.has-mega > a::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .45rem;
+    vertical-align: .18em;
+    border-left: 4.5px solid transparent;
+    border-right: 4.5px solid transparent;
+    border-top: 5.5px solid currentColor;
+    transition: transform .3s ease;
+  }
+
+  nav > ul > li.has-mega:hover > a::after,
+  nav > ul > li.has-mega.open > a::after,
+  nav > ul > li.has-mega:focus-within > a::after {
+    transform: rotate(180deg);
+  }
+}
