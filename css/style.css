@@ -4153,9 +4153,18 @@ nav .mega-card:focus-visible::before {
   height: 26px;
 }
 
+/* Colori originali dei social (proposta 02): icona e nome colorati */
+.contact-social-cards a:nth-child(1) { --c: #1877F2; }
+.contact-social-cards a:nth-child(2) { --c: #E4405F; }
+.contact-social-cards a:nth-child(3) { --c: #25D366; }
+
+.contact-info .contact-social-cards a {
+  color: var(--c, var(--ink));
+}
+
 .contact-info .contact-social-cards a:hover,
 .contact-info .contact-social-cards a:focus-visible {
-  border-color: #aa372e;
-  color: #aa372e;
+  border-color: var(--c, #aa372e);
+  color: var(--c, #aa372e);
   transform: translateY(-2px);
 }

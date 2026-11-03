@@ -888,3 +888,7 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    nome (proposta 08, senza scritta d'invito). Al passaggio del cursore bordo
                    e testo diventano rossi e il riquadro sale un po'. Le icone del piè di
                    pagina restano. Aggiornato css/style.css?v=145 in tutte le pagine.
+2.47 (03/11/2026)  Home, sezione Contatti, riquadri dei social: icona e nome nei colori
+                   originali (Facebook blu, Instagram rosa, WhatsApp verde; proposta 02).
+                   Al passaggio del cursore anche il bordo prende il colore del social.
+                   Aggiornato css/style.css?v=146 in tutte le pagine.
