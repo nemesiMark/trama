@@ -4121,3 +4121,41 @@ nav .mega-card:focus-visible::before {
     transform: rotate(180deg);
   }
 }
+
+/* ======================================================
+   CONTATTI: RIQUADRI DEI SOCIAL SOTTO TELEFONO (proposta 08)
+   ====================================================== */
+.contact-social-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .7rem;
+  margin-top: .35rem;
+}
+
+.contact-info .contact-social-cards a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  padding: 1rem .5rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-size: .9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: border-color .3s, color .3s, transform .3s;
+}
+
+.contact-social-cards svg {
+  width: 26px;
+  height: 26px;
+}
+
+.contact-info .contact-social-cards a:hover,
+.contact-info .contact-social-cards a:focus-visible {
+  border-color: #aa372e;
+  color: #aa372e;
+  transform: translateY(-2px);
+}

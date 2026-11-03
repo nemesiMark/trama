@@ -883,3 +883,8 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    tendina; quando il menu si apre il triangolino si capovolge. Su telefono
                    e tablet resta il + / − già presente. Aggiornato css/style.css?v=144 in
                    tutte le pagine.
+2.46 (03/11/2026)  Home, sezione Contatti: sotto Telefono c'è una nuova riga "Social" con tre
+                   riquadri bianchi affiancati (Facebook, Instagram, WhatsApp) con icona e
+                   nome (proposta 08, senza scritta d'invito). Al passaggio del cursore bordo
+                   e testo diventano rossi e il riquadro sale un po'. Le icone del piè di
+                   pagina restano. Aggiornato css/style.css?v=145 in tutte le pagine.
