@@ -428,7 +428,7 @@ nav a.on,
 
 .hero .btn {
   align-self: stretch;
-  /* Rosso del logo con scritta bianca; al passaggio si riempie di blu scuro dal basso. */
+  /* Rosso del logo con scritta bianca; al passaggio diventa bianco con scritta rossa. */
   background-color: #aa372e;
   color: #fff;
   border-color: #aa372e;
@@ -2339,6 +2339,12 @@ footer .footer-socials svg {
   margin-bottom: 1rem;
 }
 
+/* Servizi: schede Sezione sposi e Sezione fotografi quadrate,
+   così la foto verticale del fotografo si vede di più */
+.servizi-sezioni .card .ph {
+  aspect-ratio: 1/1;
+}
+
 .collections-grid .card .ph h3 {
   position: absolute;
   left: 0;
@@ -3722,7 +3728,7 @@ img[src*="fotografo-videocamera"] {
 }
 
 /* Pulsante della foto di apertura e pulsanti dell'Area download: rossi come il logo,
-   al passaggio si riempiono di blu scuro. */
+   al passaggio diventano bianchi con scritta rossa. */
 .download-card .btn {
   background-color: #aa372e;
   border-color: #aa372e;
@@ -3730,25 +3736,73 @@ img[src*="fotografo-videocamera"] {
 }
 
 .hero .btn,
+.download-card .btn,
+.ck-note-btn {
+  background-image: none !important;
+  transition: background-color .35s ease, color .35s ease, border-color .35s ease !important;
+}
+
+/* Al passaggio il tasto diventa bianco con bordo e scritta rossi (proposta 02). */
+.hero .btn:hover,
+.hero .btn:focus-visible,
+.download-card .btn:hover,
+.download-card .btn:focus-visible {
+  background-color: #fff !important;
+  border-color: #aa372e !important;
+  color: #aa372e !important;
+}
+
+/* Freccia dopo la scritta che compare scorrendo e leggero ingrandimento del tasto. */
+.hero .btn,
 .download-card .btn {
-  background-image: linear-gradient(var(--brand), var(--brand)) !important;
+  transition: background-color .35s ease, color .35s ease, border-color .35s ease, transform .35s ease !important;
+}
+
+.hero .btn::after,
+.download-card .btn::after {
+  content: '\2192' !important;
+  display: inline-block !important;
+  max-width: 0;
+  margin-left: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-6px);
+  font-size: 1.05em;
+  line-height: 1;
+  transition: max-width .35s ease, margin-left .35s ease, opacity .3s ease, transform .35s ease;
 }
 
 .hero .btn:hover,
 .hero .btn:focus-visible,
 .download-card .btn:hover,
 .download-card .btn:focus-visible {
-  border-color: var(--brand) !important;
+  transform: scale(1.04);
 }
 
-/* Il pulsantino bianco sull'avviso rosso si riempie di blu scuro. */
-.ck-note-btn {
-  background-image: linear-gradient(var(--ink, #051D34), var(--ink, #051D34)) !important;
+.hero .btn:hover::after,
+.hero .btn:focus-visible::after,
+.download-card .btn:hover::after,
+.download-card .btn:focus-visible::after {
+  max-width: 1.5em;
+  margin-left: .6em;
+  opacity: 1;
+  transform: none;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .hero .btn:hover,
+  .hero .btn:focus-visible,
+  .download-card .btn:hover,
+  .download-card .btn:focus-visible {
+    transform: none;
+  }
+}
+
+/* Il pulsantino bianco sull'avviso rosso: si svuota e resta il bordo bianco. */
 .ck-note-btn:hover,
 .ck-note-btn:focus-visible {
-  background-size: 100% 100% !important;
+  background-color: transparent !important;
+  box-shadow: inset 0 0 0 1px #fff;
   color: #fff !important;
 }
 
@@ -3888,4 +3942,92 @@ img[src*="fotografo-videocamera"] {
     opacity: 1;
     white-space: normal;
   }
+}
+
+/* ======================================================
+   RIQUADRI CON FOTO: TESTO AL PASSAGGIO E BORDO ROSSO
+   ====================================================== */
+
+/* Schede con testo (Servizi, Prodotti, Album matrimoniali): titolo e testo stanno
+   dentro la foto, in basso. Con il mouse il testo è nascosto e compare quando ci si
+   passa sopra; su telefono e tablet il passaggio non c'è, quindi resta sempre visibile. */
+.collections-grid .card .ph .card-cap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  padding: 4.5rem 1.6rem 1.4rem;
+  background: linear-gradient(to top, rgba(5, 29, 52, .85), rgba(5, 29, 52, .5) 55%, rgba(5, 29, 52, 0));
+  text-shadow: 0 1px 12px rgba(5, 29, 52, .5);
+  pointer-events: none;
+}
+
+.collections-grid .card .ph .card-cap h3 {
+  position: static;
+  padding: 0;
+  background: none;
+}
+
+.collections-grid .card .ph .card-cap p {
+  max-width: 34rem;
+  margin: .5rem 0 0;
+  color: #fff;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+@media (hover: hover) {
+  .collections-grid .card .ph .card-cap p {
+    max-height: 0;
+    margin-top: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height .4s ease, margin-top .4s ease, opacity .3s ease;
+  }
+
+  .collections-grid .card:hover .ph .card-cap p,
+  .collections-grid .card:focus-within .ph .card-cap p {
+    max-height: 6rem;
+    margin-top: .5rem;
+    opacity: 1;
+    transition: max-height .4s ease, margin-top .4s ease, opacity .4s ease .1s;
+  }
+}
+
+@media (max-width: 800px) {
+  .collections-grid .card .ph .card-cap {
+    padding: 3.5rem 1.2rem 1.1rem;
+  }
+
+  .collections-grid .card .ph .card-cap h3 {
+    padding: 0;
+  }
+
+  .collections-grid .card .ph .card-cap p {
+    font-size: .85rem;
+  }
+}
+
+/* Foto cliccabili: col cursore sopra compare un bordo rosso attorno al riquadro */
+.ph:not(.no-zoom)::after,
+.strip::after,
+nav .mega-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  box-shadow: inset 0 0 0 3px #aa372e;
+  opacity: 0;
+  transition: opacity .3s ease;
+  pointer-events: none;
+}
+
+.ph:not(.no-zoom):hover::after,
+a:focus-visible .ph:not(.no-zoom)::after,
+.strip:hover::after,
+.strip:focus-within::after,
+nav .mega-card:hover::before,
+nav .mega-card:focus-visible::before {
+  opacity: 1;
 }

@@ -834,3 +834,30 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    coppia sotto il pontile ben visibile sopra il testo, e sfuma in basso
                    nel colore del ripiano. Su computer invariato. Aggiornato
                    css/style.css?v=131 in tutte le pagine.
+2.37 (03/11/2026)  Servizi, scheda "Sezione sposi": messa la stessa foto del sottomenu
+                   (sposi che si baciano nel campo, images/servizi/sposi-bacio-campo.jpg)
+                   al posto della foto degli sposi in giardino, anche nell'anteprima per
+                   i social. La foto vecchia è in images/non-usate/sposi-esterno-servizi-vecchia.jpg.
+2.38 (03/11/2026)  Servizi, schede "Sezione sposi" e "Sezione fotografi": ora sono quadrate
+                   invece che orizzontali, così la foto verticale del fotografo si vede di
+                   più (videocamera e mani comprese); gli sposi restano ben inquadrati.
+                   Aggiornato css/style.css?v=132 in tutte le pagine.
+2.39 (03/11/2026)  Schede con foto e testo (Servizi, Prodotti, Album matrimoniali): il testo
+                   non sta più sotto la foto; ora è dentro la foto, sotto il titolo, e con
+                   il mouse compare solo passando sopra la scheda (il titolo sale per fargli
+                   posto). Su telefono e tablet, dove il passaggio del mouse non c'è, il
+                   testo resta sempre visibile dentro la foto.
+                   Tutte le foto cliccabili (schede, strisce della home, foto che si
+                   ingrandiscono, riquadri dei menu) mostrano un bordo rosso col cursore
+                   sopra. Aggiornato css/style.css?v=133 in tutte le pagine.
+2.40 (03/11/2026)  Tasti rossi: al passaggio del cursore non si riempiono più di blu ma
+                   diventano bianchi con bordo e scritta rossi (proposta 02): "Scopri le
+                   collezioni" nella home e tasti dell'Area download. Il tasto bianco
+                   "Gestisci cookie" sull'avviso rosso del modulo contatti al passaggio si
+                   svuota e resta il bordo bianco.
+                   Aggiornato css/style.css?v=137 in tutte le pagine.
+2.41 (03/11/2026)  Tasti rossi ("Scopri le collezioni" nella home e tasti dell'Area
+                   download): al passaggio del cursore compare una freccia dopo la scritta
+                   e il tasto si ingrandisce leggermente. Chi ha chiesto meno animazioni
+                   al proprio dispositivo vede la freccia ma non l'ingrandimento.
+                   Aggiornato css/style.css?v=138 in tutte le pagine.
