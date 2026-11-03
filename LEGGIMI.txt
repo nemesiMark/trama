@@ -924,3 +924,62 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    niente effetto per chi ha chiesto meno animazioni. Per sicurezza dopo un
                    secondo la foto è comunque nitida. Aggiornato css/style.css?v=153 e
                    js/script.js?v=34 in tutte le pagine.
+2.54 (03/11/2026)  Nuova foto per l'album tradizionale (album aperto con foto di sposi in
+                   bianco e nero su tavolo di legno), rinominata album-tradizionale-sposi.jpg:
+                   - menu Prodotti, riquadro "Album tradizionale professionale", in tutte le
+                     pagine (copia ridotta in images/comune/menu/);
+                   - Prodotti, scheda "Album tradizionale professionale";
+                   - Album tradizionale professionale, foto principale accanto al testo e
+                     anteprima per i social.
+                   Foto vecchie in images/non-usate/ (tradizionale-menu-vecchia.jpg,
+                   album-foto-angolini-prodotti-vecchia.jpg,
+                   album-foto-angolini-tradizionale-vecchia.jpg).
+                   Poi sostituita con una versione con le pagine bianche e la copertina in
+                   pelle marrone (stesso nome file); la prima versione, con le pagine color
+                   crema, è in images/non-usate/album-tradizionale-sposi-pagine-crema-vecchia.jpg.
+2.55 (03/11/2026)  Nuova foto per le custodie (cofanetto effetto legno con scritta "The
+                   Wedding"), rinominata cofanetto-legno-the-wedding.jpg, al posto della foto
+                   del pacco col nastro rosso:
+                   - menu Prodotti, riquadro "Custodie per album", in tutte le pagine (copia
+                     ridotta in images/comune/menu/);
+                   - Prodotti, scheda "Custodie per album";
+                   - Custodie per album, riquadro "Cofanetti" della galleria.
+                   La foto principale di Custodie per album (confezioni regalo) è invariata.
+                   Foto vecchie in images/non-usate/ (custodie-menu-vecchia.jpg,
+                   confezione-nastro-prodotti-vecchia.jpg, confezione-nastro-custodie-vecchia.jpg).
+2.56 (03/11/2026)  Nuova foto per il fotolibro (fotolibro aperto con foto di una coppia in
+                   spiaggia), rinominata fotolibro-coppia-spiaggia.jpg e ridotta da 6000 a
+                   1600 pixel, al posto della foto dell'album sfogliato:
+                   - menu Prodotti, riquadro "Fotolibro professionale", in tutte le pagine
+                     (copia ridotta in images/comune/menu/);
+                   - Prodotti, scheda "Fotolibro professionale" e anteprima per i social;
+                   - Fotolibro professionale, foto principale accanto al testo e anteprima
+                     per i social.
+                   Foto vecchie in images/non-usate/ (fotolibro-menu-vecchia.jpg,
+                   album-sfogliato-prodotti-vecchia.jpg, album-sfogliato-fotolibro-vecchia.jpg).
+2.57 (03/11/2026)  Nuova foto per Album eventi (album aperto con la foto di una festa di 18
+                   anni e scritta "happy birthday"), rinominata album-eventi-diciottesimo.jpg,
+                   al posto della foto del compleanno del bambino:
+                   - menu Collezioni, riquadro "Album eventi", in tutte le pagine (copia
+                     ridotta in images/comune/menu/);
+                   - strisce "Album eventi" della home e di Collezioni, inquadrate sulla parte
+                     destra della foto (dove c'è la festa).
+                   La foto principale della pagina Album eventi (sala-fiori.jpg) è invariata.
+                   Foto vecchie in images/non-usate/ (eventi-compleanno-menu-vecchia.jpg,
+                   album-eventi-compleanno-index-vecchia.jpg,
+                   album-eventi-compleanno-collezioni-vecchia.jpg).
+                   Aggiornato css/style.css?v=154 in tutte le pagine.
+2.58 (03/11/2026)  Album bambini, Album comunione e Album eventi: la foto principale accanto
+                   al testo (e l'anteprima per i social) è ora la stessa del riquadro nel
+                   menu Collezioni:
+                   - Album bambini: album-bambini-sfogliato.jpg, inquadrata sul volto del
+                     bambino (prima neonato-dorme.jpg, ora in images/non-usate/neonato-dorme-vecchia.jpg);
+                   - Album comunione: album-comunione-collage.jpg (la foto del bambino in
+                     preghiera resta nella galleria della pagina);
+                   - Album eventi: album-eventi-diciottesimo.jpg, inquadrata sulla festa
+                     (prima sala-fiori.jpg, ora in images/non-usate/sala-fiori-vecchia.jpg).
+                   Aggiornato css/style.css?v=155 in tutte le pagine.
+2.59 (03/11/2026)  Custodie per album: la foto principale accanto al testo (e l'anteprima per
+                   i social) è ora la stessa del riquadro nel menu Prodotti, il cofanetto
+                   effetto legno "The Wedding" (cofanetto-legno-the-wedding.jpg). La foto
+                   delle confezioni regalo è in images/non-usate/confezioni-custodie-vecchia.jpg.

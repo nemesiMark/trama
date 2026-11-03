@@ -3876,6 +3876,22 @@ img[src*="fotografo-videocamera"] {
   transform: scale(1.04);
 }
 
+/* Pagine Album bambini ed Album eventi: foto principale inquadrata sul soggetto
+   (il volto del bambino in basso a sinistra, la festa sulla pagina destra). */
+.page-intro .ph img[src*="album-bambini-sfogliato"] {
+  object-position: 20% 85%;
+}
+
+.page-intro .ph img[src*="album-eventi-diciottesimo"] {
+  object-position: 75% 50%;
+}
+
+/* Album eventi (home e Collezioni): la foto della festa sta sulla pagina destra dell'album,
+   quindi nelle strisce strette si inquadra la parte destra. */
+.strip img[src*="album-eventi-diciottesimo"] {
+  object-position: 78% 50%;
+}
+
 /* Album bambini (home e Collezioni): foto ingrandita e spostata verso l'alto a destra,
    così il volto del bambino in basso a sinistra si vede meglio. */
 .strip img[src*="albumBambini"] {
