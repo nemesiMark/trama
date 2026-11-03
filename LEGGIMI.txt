@@ -892,3 +892,17 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    originali (Facebook blu, Instagram rosa, WhatsApp verde; proposta 02).
                    Al passaggio del cursore anche il bordo prende il colore del social.
                    Aggiornato css/style.css?v=146 in tutte le pagine.
+2.48 (03/11/2026)  Home, modulo contatti: tolta la scritta «Servizio riservato a
+                   professionisti e aziende con partita IVA.» sotto il tasto Invia richiesta.
+                   Tolto «con partita IVA» anche dalle descrizioni della home per Google, per
+                   l'anteprima sui social e dalla scheda azienda per i motori di ricerca.
+                   Aggiornato css/style.css?v=147 in tutte le pagine.
+2.49 (03/11/2026)  «Sud Italia» sostituito con «Italia» («in tutta Italia») in tutto il sito:
+                   testo di Sezione fotografi e di Servizi (introduzione e scheda Sezione
+                   fotografi), descrizioni per Google e per l'anteprima sui social della home
+                   e di Sezione fotografi, zona servita nella scheda azienda per i motori di
+                   ricerca.
+2.50 (03/11/2026)  Sezione fotografi: la foto accanto al testo ora è per lungo e intera
+                   (si vedono anche le mani e la videocamera), larga al massimo 440px così
+                   non diventa troppo alta. Solo in questa pagina. Aggiornato
+                   css/style.css?v=148 in tutte le pagine.

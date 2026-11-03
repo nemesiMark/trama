@@ -904,12 +904,7 @@ label.check input {
   max-width: none;
 }
 
-/* Scritta «Servizio riservato…» subito sotto il pulsante e poco spazio prima del piè di pagina. */
-#contact-form .note {
-  margin: -.9rem 0 0;
-  line-height: 1.5;
-}
-
+/* Poco spazio prima del piè di pagina. */
 #contatti {
   padding-bottom: 3rem;
 }
@@ -3145,13 +3140,17 @@ label.check a {
   margin: 0;
 }
 
-/* Foto verticale accanto al testo (es. Sezione fotografi): misura quasi come le altre, appena più alta, inquadrata dal cappello alla videocamera */
+/* Foto verticale accanto al testo (Sezione fotografi): intera, per lungo, così si vedono
+   anche le mani e la videocamera; più stretta della colonna per non diventare troppo alta. */
 .page-intro .ph.ph-vert {
-  aspect-ratio: 4/3.4;
+  aspect-ratio: 2/3;
+  width: 100%;
+  max-width: 440px;
+  justify-self: center;
 }
 
 .page-intro .ph.ph-vert img {
-  object-position: 50% 22%;
+  object-position: 50% 50%;
 }
 
 .service-section .page-intro {
