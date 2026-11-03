@@ -861,3 +861,20 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    e il tasto si ingrandisce leggermente. Chi ha chiesto meno animazioni
                    al proprio dispositivo vede la freccia ma non l'ingrandimento.
                    Aggiornato css/style.css?v=138 in tutte le pagine.
+2.42 (03/11/2026)  Menu Collezioni su computer, riquadro "Album bambini": foto un po'
+                   ingrandita e spostata verso l'alto a destra, così si vede bene il volto
+                   del bambino in basso a sinistra. Gli altri riquadri sono invariati.
+                   Aggiornato css/style.css?v=139 in tutte le pagine.
+2.43 (03/11/2026)  Home e Collezioni, striscia "Album bambini": foto ingrandita e spostata
+                   verso l'alto a destra come nel menu, così si vede bene il volto del
+                   bambino in basso a sinistra. Su telefono e tablet, dove la striscia è
+                   bassa e larga, la foto è ingrandita di più per tenere il volto sopra la
+                   scritta. Aggiornato css/style.css?v=142 in tutte le pagine.
+2.44 (03/11/2026)  Home, apertura della pagina su computer: le voci della barra arrivano dal
+                   basso e dai lati con un effetto "implosione", a coppie dall'esterno verso
+                   il centro (1 Grafica & Stampa e Area download, 2 Servizi e Contatti,
+                   3 Prodotti e Dove, 4 Collezioni e Chi siamo) e per ultimo il logo, che
+                   sale dritto con un piccolo rimbalzo. Durata circa 2 secondi; poi la barra
+                   torna normale. Niente effetto su telefono/tablet né per chi ha chiesto
+                   meno animazioni al proprio dispositivo. Le altre pagine sono invariate.
+                   Aggiornato css/style.css?v=143 in tutte le pagine.
