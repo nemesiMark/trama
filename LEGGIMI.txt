@@ -1052,3 +1052,16 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    images/comune/menu/album-matrimoniali-curve.jpg). Le foto di prima sono in
                    images/non-usate/ (matrimoniali-menu-vecchia.jpg,
                    album-matrimoniali-copertina-vecchia.jpg).
+2.69 (09/11/2026)  Album comunione: nuova foto del modello Emma (sfondo scuro) al posto della
+                   precedente, nella galleria, come foto principale, nell'anteprima per i
+                   social e nel riquadro del menu Collezioni (stessi nomi di file:
+                   modello-emma.jpg e menu/album-comunione-emma.jpg). La foto di prima è in
+                   images/non-usate/modello-emma-vecchia.jpg.
+2.70 (09/11/2026)  Home e Collezioni: le quattro strisce delle collezioni usano ora le stesse
+                   foto del menu: modello Curve (matrimoniali), modello Soffietto (bambini),
+                   modello Emma (comunione) e l'album eventi del diciottesimo; scritti anche
+                   i testi alternativi. Le vecchie foto (fineart, albumBambini,
+                   primaComunione) sono in images/non-usate/ (index-... e collezioni-...-
+                   vecchia.jpg); tolte le regole CSS che inquadravano albumBambini.
+                   Aggiornato css/style.css?v=159.
+                   Inquadratura delle nuove foto nelle strisce spostata sui soggetti.
