@@ -1103,3 +1103,6 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    file). Le foto di prima sono in images/non-usate/ (...-emma-vecchia-2.jpg).
                    Inquadratura della striscia centrata sull'album. Aggiornato
                    css/style.css?v=161.
+2.74 (09/11/2026)  Prodotti per il tuo studio fotografico: tolto il riquadro «Porta DVD» (ora
+                   sei riquadri su due file da tre) e tolta la parola «porta DVD» dalla frase
+                   introduttiva e dalle descrizioni per Google e social.
