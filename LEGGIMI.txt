@@ -1106,3 +1106,12 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
 2.74 (09/11/2026)  Prodotti per il tuo studio fotografico: tolto il riquadro «Porta DVD» (ora
                    sei riquadri su due file da tre) e tolta la parola «porta DVD» dalla frase
                    introduttiva e dalle descrizioni per Google e social.
+2.75 (09/11/2026)  Home su telefono: le tre foto di apertura non riempiono più tutto lo schermo
+                   (erano ingrandite di circa 2,5 volte e si vedevano sgranate e tagliate):
+                   ora stanno in alto, larghe quanto lo schermo e alte metà, con l'album
+                   intero e in basso sfumano nel nero sotto il testo; nessuno spostamento né
+                   effetto al passaggio. Su computer non cambia niente. Aggiornato
+                   css/style.css?v=162.
+                   Nota per le prove: Chrome senza finestra non scende sotto ~600 px di
+                   larghezza; per vedere la pagina come su iPhone va caricata in un iframe
+                   largo 390 px.

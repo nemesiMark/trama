@@ -3604,35 +3604,51 @@ img[src*="fotografo-videocamera"] {
     transform: none;
   }
 
-  /* Su telefono la foto Orione resta inquadrata sull'album. */
-  .hero .hero-slide.hs-orione img {
-    object-position: 63% 50%;
+  /* Su telefono le tre foto stanno in alto, larghe quanto lo schermo e poco ingrandite
+     (così restano nitide), e in basso sfumano nel nero sotto il testo. Nessuno spostamento
+     e nessun effetto al passaggio. */
+  .hero .hero-slide,
+  .hero .hs-orione {
+    background: #161616;
+  }
+
+  .hero .hero-slide img,
+  .hero .hero-slide.hs-orione img,
+  .hero .hero-slide.hs-nozze img,
+  .hero .hero-slide.hs-leggio img,
+  .hero .ph.no-zoom:hover .hero-slide img,
+  .hero .ph.no-zoom:hover .hero-slide.hs-orione img,
+  .hero .ph.no-zoom:hover .hero-slide.hs-nozze img {
+    top: 68px;
+    bottom: auto;
+    left: 0;
+    right: auto;
+    width: 100%;
+    height: 48%;
+    object-fit: cover;
     transform: none;
+    -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 70%, transparent 100%);
   }
 
-  .hero .ph.no-zoom:hover .hero-slide.hs-orione img {
-    transform: none;
-  }
-
-  .hero .hs-orione::before,
-  .hero .hs-orione::after {
-    display: none;
-  }
-
-  /* Su telefono l'album di nozze è inquadrato sugli sposi. */
   .hero .hero-slide.hs-nozze img,
   .hero .ph.no-zoom:hover .hero-slide.hs-nozze img {
     object-position: 88% 50%;
-    transform: none;
   }
 
+  .hero .hero-slide.hs-leggio img {
+    object-position: 100% 40%;
+  }
+
+  .hero .hero-slide.hs-orione img,
+  .hero .ph.no-zoom:hover .hero-slide.hs-orione img {
+    object-position: 86% 50%;
+  }
+
+  .hero .hs-orione::before,
+  .hero .hs-orione::after,
   .hero .hs-nozze::before {
     display: none;
-  }
-
-  /* Su telefono l'album sul leggio resta al centro dell'inquadratura. */
-  .hero .hero-slide.hs-leggio img {
-    object-position: 88% 50%;
   }
 
   .hero-controls {
