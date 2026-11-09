@@ -983,3 +983,72 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    i social) è ora la stessa del riquadro nel menu Prodotti, il cofanetto
                    effetto legno "The Wedding" (cofanetto-legno-the-wedding.jpg). La foto
                    delle confezioni regalo è in images/non-usate/confezioni-custodie-vecchia.jpg.
+2.60 (09/11/2026)  Linea Cuoio Fiorentino: messe le foto vere dei 4 album (modello-volute,
+                   modello-cornice-rilievo, modello-greca, modello-cinturino.jpg, nomi
+                   descrittivi) nella galleria «Gli album della linea» con didascalia; la
+                   foto principale accanto al testo, l'anteprima per i social e il riquadro
+                   in Album matrimoniali (cuoio-fiorentino-volute.jpg) sono ora l'album con
+                   le volute. Le vecchie foto illustrative sono in images/non-usate/
+                   (fiorentino-...-vecchia.jpg); originali in Desktop/olimp-originali-linea-cuoio-fiorentino.
+                   Le foto dei modelli (e quella del riquadro) si vedono intere su fondo
+                   bianco, senza ritaglio. Aggiornato css/style.css?v=156 in tutte le pagine.
+2.61 (09/11/2026)  Album comunione: la galleria (ora «I modelli») mostra le foto vere dei 7
+                   album con il nome sotto (modello-baby-deluxe, -fascia-rosa,
+                   -azzurro-medaglia, -pergamena-cornice-legno, -pergamena-rose,
+                   -pergamena-libro, -calice-pane.jpg; nomi descrittivi tranne Baby Deluxe)
+                   al posto delle 3 foto di esempio, spostate in images/non-usate/
+                   (comunione-...-vecchia.jpg). Originali in Desktop/olimp-originali-album-comunione.
+2.62 (09/11/2026)  Album bambini: la galleria «Le fotografie» diventa la sezione «Linea Deluxe»
+                   (prima delle tre linee) con le foto vere degli 8 album e il nome sotto
+                   (deluxe-nuvole, -targa-legno, -plex-fiori, -ghirlanda, -cicogna,
+                   -bianco-strass, -fucsia-piedini, -baby-foto.jpg; nomi descrittivi). Le 6
+                   foto di esempio sono in images/non-usate/ (bambini-...-vecchia.jpg).
+                   Originali in Desktop/olimp-originali-album-bambini.
+2.63 (09/11/2026)  Album bambini: aggiunta sotto la Linea Deluxe la sezione «Linea Baby» con le
+                   foto vere dei 13 album e il nome sotto (baby-bandierine, -orsetto-stelle,
+                   -mongolfiera, -orsetto-rosa, -cornice-foto, -due-finestre, -finestra-suede,
+                   -finestra-sagomata, -cuori-azzurri, -cuori-rosa, -palloncino, -quattro-foto,
+                   -fiocco.jpg; nomi descrittivi). Originali in Desktop/olimp-originali-album-bambini.
+2.64 (09/11/2026)  Album bambini divisa in tre linee, come Album matrimoniali: la pagina ora
+                   mostra, sotto il testo, tre riquadri «Le nostre linee» (Linea Deluxe,
+                   Linea Baby, Linea New Born) che portano alle tre pagine nuove
+                   album-bambini-deluxe.html, album-bambini-baby.html e
+                   album-bambini-new-born.html, fatte come le pagine delle linee matrimoniali
+                   (testo, foto principale, galleria «Gli album della linea»). Foto spostate
+                   in images/album-bambini-deluxe/, -baby/ e -new-born/ (modello-...jpg);
+                   foto dei riquadri in images/album-bambini/linea-*.jpg. Linea New Born con
+                   le 2 foto nuove. Nel menu Collezioni «Album bambini» ha ora il sottomenu
+                   con le tre linee, in tutte le pagine. I testi delle tre pagine sono
+                   provvisori, scritti guardando le foto. Aggiornato css/style.css?v=157.
+                   Le tre pagine nuove sono aggiunte anche in sitemap.xml.
+2.65 (09/11/2026)  Corretti i nomi dei modelli con quelli veri del cliente (presi dai file
+                   originali in Downloads/myairbridge-S38vTvYGSUj): rinominate le foto,
+                   le didascalie e i testi alternativi.
+                   Cuoio Fiorentino: Ambra, Ares, Greca, Scrigno (riquadro in Album
+                   matrimoniali: cuoio-fiorentino-ambra.jpg).
+                   Comunione: Emma, Bonnie, Clyde, 948, Carpetta Comunione 3, Carpetta
+                   Comunione Cresima 4, Carpetta Comunione Cresima 5.
+                   Linea Deluxe: Nuvola, Adele, Parigi Baby, Alberto, Vittorio, Loris, Alice,
+                   Dylan. Linea Baby: Tommy, Sam, Wooden Mongolfiera, Wooden Orsetto, Alex,
+                   Marc, Frame Baby, Ronald, Eliseo, Iole, Baby Mask 1, 2 e 3.
+                   Linea New Born: Soffietto (2 foto). I nomi scritti nelle versioni
+                   2.60-2.64 sono quindi superati.
+2.66 (09/11/2026)  Album comunione: la foto principale accanto al testo (e l'anteprima per i
+                   social) e la foto del riquadro «Album comunione» nel menu Collezioni sono
+                   ora il modello Emma (modello-emma.jpg; nel menu
+                   images/comune/menu/album-comunione-emma.jpg). Le foto di prima sono in
+                   images/non-usate/ (album-comunione-collage-vecchia.jpg,
+                   comunione-menu-vecchia.jpg).
+2.67 (09/11/2026)  Album bambini: la foto principale accanto al testo (e l'anteprima per i
+                   social) e la foto del riquadro «Album bambini» nel menu Collezioni sono
+                   ora il modello Soffietto della Linea New Born, la stessa del riquadro
+                   della linea (nel menu images/comune/menu/album-bambini-soffietto.jpg).
+                   Le foto di prima sono in images/non-usate/ (album-bambini-sfogliato-
+                   vecchia.jpg, bambini-menu-vecchia.jpg); tolte le regole CSS che le
+                   inquadravano. Aggiornato css/style.css?v=158.
+2.68 (09/11/2026)  Album matrimoniali: la foto del riquadro «Album matrimoniali» nel menu
+                   Collezioni (in tutte le pagine) e l'anteprima per i social della pagina
+                   sono ora il modello Curve della Linea Fashion (nel menu
+                   images/comune/menu/album-matrimoniali-curve.jpg). Le foto di prima sono in
+                   images/non-usate/ (matrimoniali-menu-vecchia.jpg,
+                   album-matrimoniali-copertina-vecchia.jpg).

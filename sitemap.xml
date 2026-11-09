@@ -73,6 +73,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://DOMINIO-DEL-SITO/album-bambini-deluxe.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://DOMINIO-DEL-SITO/album-bambini-baby.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://DOMINIO-DEL-SITO/album-bambini-new-born.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://DOMINIO-DEL-SITO/album-comunione.html</loc>
     <priority>0.8</priority>
   </url>

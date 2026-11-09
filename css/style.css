@@ -3393,16 +3393,6 @@ img[src*="fotografo-videocamera"] {
     transition: transform .6s ease;
   }
 
-  /* Album bambini: foto ingrandita e spostata verso l'alto a destra,
-     così il volto del bambino in basso a sinistra entra nel riquadro */
-  .mega-card img[src*="menu/bambini"] {
-    inset: auto auto 0 0;
-    width: 135%;
-    height: 135%;
-    object-position: 0 100%;
-    transform-origin: 0 100%;
-  }
-
   /* velo nero in basso, come le foto delle collezioni in home */
   .mega-card::after {
     content: "";
@@ -3876,12 +3866,7 @@ img[src*="fotografo-videocamera"] {
   transform: scale(1.04);
 }
 
-/* Pagine Album bambini ed Album eventi: foto principale inquadrata sul soggetto
-   (il volto del bambino in basso a sinistra, la festa sulla pagina destra). */
-.page-intro .ph img[src*="album-bambini-sfogliato"] {
-  object-position: 20% 85%;
-}
-
+/* Pagina Album eventi: foto principale inquadrata sulla festa, sulla pagina destra. */
 .page-intro .ph img[src*="album-eventi-diciottesimo"] {
   object-position: 75% 50%;
 }
@@ -4265,5 +4250,27 @@ nav .mega-card:focus-visible::before {
 @media (prefers-reduced-motion: reduce) {
   .lb img.lb-focus {
     animation: none;
+  }
+}
+
+/* Linea Cuoio Fiorentino: album fotografati su fondo bianco, mostrati interi senza ritaglio */
+.ph img[src*="linea-cuoio-fiorentino/modello-"],
+.ph img[src*="cuoio-fiorentino-ambra"] {
+  object-fit: contain;
+  background: #fff;
+}
+
+.gallery .ph img[src*="linea-cuoio-fiorentino/modello-"] {
+  padding: 1rem 0 3.6rem;
+}
+
+.card .ph img[src*="cuoio-fiorentino-ambra"] {
+  padding: 1rem 0 5.5rem;
+}
+
+/* Album bambini: le tre linee affiancate su schermi larghi */
+@media (min-width: 801px) {
+  .collections-grid.tre-linee {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
