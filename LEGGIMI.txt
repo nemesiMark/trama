@@ -1065,3 +1065,41 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    vecchia.jpg); tolte le regole CSS che inquadravano albumBambini.
                    Aggiornato css/style.css?v=159.
                    Inquadratura delle nuove foto nelle strisce spostata sui soggetti.
+2.71 (09/11/2026)  Home, foto di apertura:
+                   - la prima foto è ora l'album di nozze «Elisa & Andrea» su un piedistallo
+                     specchiato, a tutto schermo (images/index/album-nozze-elisa-andrea.jpg,
+                     da "Album di nozze Elisa & Andrea.png" nei Download). Su computer
+                     l'album è spostato un po' a destra senza ingrandire la foto (a sinistra
+                     la stessa foto specchiata) e resta fermo al passaggio del mouse; su
+                     telefono è inquadrata sugli sposi. La vecchia foto dell'album
+                     tradizionale è in images/non-usate/index-tradizionale-vecchia.jpg.
+                   - la seconda foto è ora l'album matrimoniale in camoscio grigio sul leggio
+                     in legno, a tutto schermo (images/index/album-leggio.jpg, da
+                     Gemini_Generated_Image_7uk3sz7uk3sz7uk3.jpeg), inquadrata un po' più in
+                     alto così su computer l'album appare leggermente più in basso. Provata
+                     prima la foto
+                     verticale del cliente (NIC_1138.jpg), ora in
+                     images/non-usate/index-album-leggio-verticale-vecchia.jpg. La vecchia
+                     foto dell'album aperto è in images/non-usate/index-album1-vecchia.jpg.
+                   Aggiornato css/style.css?v=160.
+2.72 (09/11/2026)  Home, foto di apertura: la terza foto che scorre è ora l'album Orione in
+                   piedi su un tavolo in legno, foto larga a tutto schermo
+                   (images/index/album-orione-tavolo.jpg, da "Album fotografico su tavolo in
+                   legno.png" nei Download); su computer l'album è
+                   spostato leggermente a destra e in basso senza ingrandire la foto; le
+                   strisce rimaste libere a sinistra e in alto sono riempite dalla stessa
+                   foto specchiata. Al
+                   passaggio del mouse la foto resta ferma (nessun effetto).
+                   Tolte le regole CSS
+                   che mettevano la vecchia foto Orione a destra con lo sfondo a sfumatura.
+                   Le foto scartate sono in images/non-usate/ (index-modello-orione-vecchia.jpg
+                   e index-album-orione-tavolo-vecchia.jpg, versione 4:3 provata prima). Solo
+                   la home: la pagina della Linea Trendy non cambia.
+2.73 (09/11/2026)  Modello Emma: nuova foto (album color sabbia davanti al legno scuro, da
+                   "Album ricordo della Prima Comunione.png"; copia in
+                   Desktop/olimp-originali-album-comunione/) ovunque compariva: foto
+                   principale e galleria di Album comunione, anteprima per i social, riquadro
+                   del menu Collezioni, strisce della home e di Collezioni (stessi nomi di
+                   file). Le foto di prima sono in images/non-usate/ (...-emma-vecchia-2.jpg).
+                   Inquadratura della striscia centrata sull'album. Aggiornato
+                   css/style.css?v=161.

@@ -472,26 +472,74 @@ nav a.on,
   filter: grayscale(1);
 }
 
-/* Modello Orione nello slideshow della home: la foto (4:3) sta a destra a tutta altezza,
-   con l'album intero; il bordo sinistro sfuma nei colori del muro e del ripiano. */
-.hero .hs-orione {
-  background: linear-gradient(180deg, #c4c0bd 0%, #bcb5b1 68%, #ab9d8f 72%, #b9a897 100%);
+/* Modello Orione sul tavolo nello slideshow della home: foto larga a tutto schermo,
+   inquadrata sull'album che sta a destra. */
+.hero .hero-slide.hs-orione img {
+  object-position: 70% 0%;
+  /* Album spostato un po' a destra e un po' in basso senza ingrandire la foto. */
+  transform: translate(5%, 4%);
+  transition: none;
 }
 
-.hero .hero-slide.hs-orione img {
-  top: auto;
-  bottom: 0;
-  left: auto;
-  right: 0;
-  width: auto;
-  max-width: none;
-  height: 86%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 22%), linear-gradient(180deg, transparent 0, #000 14%);
-  -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(90deg, transparent 0, #000 22%), linear-gradient(180deg, transparent 0, #000 14%);
-  mask-composite: intersect;
+/* Al passaggio del mouse la foto resta ferma (nessun effetto). */
+.hero .ph.no-zoom:hover .hero-slide.hs-orione img {
+  transform: translate(5%, 4%);
+}
+
+.hero .hs-orione {
+  overflow: hidden;
+  /* colore del muro nell'angolo in alto a sinistra della foto */
+  background: #b3aa9c;
+}
+
+/* I vuoti che restano a sinistra e in alto sono riempiti dalla stessa foto specchiata:
+   i bordi combaciano. */
+.hero .hs-orione::before,
+.hero .hs-orione::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url(../images/index/album-orione-tavolo.jpg) 70% 0% / cover no-repeat;
+}
+
+.hero .hs-orione::before {
+  transform: translate(-94.9%, 4%) scaleX(-1);
+}
+
+.hero .hs-orione::after {
+  transform: translate(5%, -95.8%) scaleY(-1);
+}
+
+/* Album sul leggio nello slideshow della home: foto orizzontale a tutto schermo,
+   inquadrata sull'album che sta a destra. */
+.hero .hero-slide.hs-leggio img {
+  /* Inquadratura un po' più in alto nella foto: l'album appare leggermente più in basso. */
+  object-position: 75% 25%;
+}
+
+/* Album di nozze Elisa & Andrea nello slideshow della home: foto larga a tutto schermo,
+   inquadrata sull'album che sta a destra. */
+.hero .hero-slide.hs-nozze img {
+  object-position: 75% 50%;
+  /* Album spostato un po' a destra senza ingrandire la foto, come per Orione. */
+  transform: translateX(5%);
+  transition: none;
+}
+
+.hero .ph.no-zoom:hover .hero-slide.hs-nozze img {
+  transform: translateX(5%);
+}
+
+.hero .hs-nozze {
+  overflow: hidden;
+}
+
+.hero .hs-nozze::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url(../images/index/album-nozze-elisa-andrea.jpg) 75% 50% / cover no-repeat;
+  transform: translateX(-95%) scaleX(-1);
 }
 
 .hero-controls {
@@ -3556,27 +3604,35 @@ img[src*="fotografo-videocamera"] {
     transform: none;
   }
 
-  /* Su telefono la foto Orione sta in alto, con l'album quasi intero e la coppia
-     sotto il pontile ben visibile; in basso sfuma nel colore del ripiano. */
+  /* Su telefono la foto Orione resta inquadrata sull'album. */
   .hero .hero-slide.hs-orione img {
-    top: 68px;
-    left: 0;
-    width: 100%;
-    height: 48%;
-    aspect-ratio: auto;
-    object-fit: cover;
-    object-position: 50% 55%;
-    -webkit-mask-image: linear-gradient(180deg, #000 80%, transparent 100%);
-    mask-image: linear-gradient(180deg, #000 80%, transparent 100%);
+    object-position: 63% 50%;
+    transform: none;
   }
 
-  .hero .hs-orione {
-    background: #b9ab9d;
+  .hero .ph.no-zoom:hover .hero-slide.hs-orione img {
+    transform: none;
   }
 
-  /* Prima foto (album aperto): inquadrata sulla coppia che salta */
-  .hero .hero-slide:first-child img {
-    object-position: 76% 50%;
+  .hero .hs-orione::before,
+  .hero .hs-orione::after {
+    display: none;
+  }
+
+  /* Su telefono l'album di nozze è inquadrato sugli sposi. */
+  .hero .hero-slide.hs-nozze img,
+  .hero .ph.no-zoom:hover .hero-slide.hs-nozze img {
+    object-position: 88% 50%;
+    transform: none;
+  }
+
+  .hero .hs-nozze::before {
+    display: none;
+  }
+
+  /* Su telefono l'album sul leggio resta al centro dell'inquadratura. */
+  .hero .hero-slide.hs-leggio img {
+    object-position: 88% 50%;
   }
 
   .hero-controls {
@@ -3887,7 +3943,7 @@ img[src*="fotografo-videocamera"] {
 }
 
 .strip img[src*="album-comunione-emma"] {
-  object-position: 58% 50%;
+  object-position: 50% 50%;
 }
 
 /* Con il mouse: foto in bianco e nero che si colorano al passaggio
