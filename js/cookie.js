@@ -1,5 +1,5 @@
-/* Olimp – gestione cookie (banner + blocco Google Maps finché non c'è il consenso).
-   Il sito usa solo cookie tecnici; i cookie di terze parti arrivano dalla mappa Google Maps. */
+/* Olimp – gestione cookie (banner + blocco della mappa finché non c'è il consenso).
+   Il sito usa solo cookie tecnici; la mappa animata (js/mappa.js) contatta servizi esterni solo dopo il consenso. */
 (function(){
   var KEY='olimp_cookie_consent_v1';
 
@@ -44,7 +44,12 @@
     return out;
   }
 
+  /* mappa animata della home (js/mappa.js) */
+  function animBoxes(){return Array.prototype.slice.call(document.querySelectorAll('.map-anim'))}
+
   function showMaps(){
+    animBoxes().forEach(function(b){var ph=b.querySelector('.ck-map-ph');if(ph)ph.remove()});
+    if(window.olimpMappa)window.olimpMappa();
     mapFrames().forEach(function(f){
       var ph=f.parentNode.querySelector('.ck-map-ph');if(ph)ph.remove();
       f.style.display='';
@@ -52,7 +57,15 @@
     });
   }
 
+  function placeholder(){
+    var d=document.createElement('div');d.className='ck-map-ph';
+    d.innerHTML='<p>Per mostrare la mappa il sito deve collegarsi a servizi esterni di mappe satellitari. Puoi caricarla solo se vuoi.</p><button type="button" class="ck-btn">Accetta e mostra la mappa</button>';
+    d.querySelector('button').addEventListener('click',function(){choose(true)});
+    return d;
+  }
+
   function hideMaps(){
+    animBoxes().forEach(function(b){if(!b.querySelector('.ck-map-ph')&&!b.getAttribute('data-ready'))b.appendChild(placeholder())});
     mapFrames().forEach(function(f){
       f.removeAttribute('src');f.style.display='none';
       if(f.parentNode.querySelector('.ck-map-ph'))return;
@@ -88,7 +101,7 @@
     if(old){old.querySelector('h2').textContent=t+'.';flash(old);return}
     var b=document.createElement('div');
     b.id='ck-banner';b.setAttribute('role','region');b.setAttribute('aria-label','Cookie');
-    b.innerHTML='<div class="ck-in"><div class="ck-txt"><h2></h2> Usiamo solo cookie tecnici; la mappa di Google Maps si carica solo se accetti. <a href="privacy.html">Privacy e cookie</a></div><div class="ck-row"><button type="button" class="ck-btn" data-ck="no">Rifiuta</button><button type="button" class="ck-btn" data-ck="yes">Accetta</button></div></div>';
+    b.innerHTML='<div class="ck-in"><div class="ck-txt"><h2></h2> Usiamo solo cookie tecnici; la mappa si carica solo se accetti. <a href="privacy.html">Privacy e cookie</a></div><div class="ck-row"><button type="button" class="ck-btn" data-ck="no">Rifiuta</button><button type="button" class="ck-btn" data-ck="yes">Accetta</button></div></div>';
     b.querySelector('h2').textContent=t+'.';
     b.querySelector('[data-ck=no]').addEventListener('click',function(){choose(false)});
     b.querySelector('[data-ck=yes]').addEventListener('click',function(){choose(true)});

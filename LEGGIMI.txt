@@ -1115,3 +1115,39 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    Nota per le prove: Chrome senza finestra non scende sotto ~600 px di
                    larghezza; per vedere la pagina come su iPhone va caricata in un iframe
                    largo 390 px.
+
+2.76 (10/11/2026)  Home, sezione «Dove siamo»: al posto della mappa di Google c'è una mappa
+                   animata (js/mappa.js). Si parte dalla Terra vista dallo spazio e si
+                   scende in verticale fino alla sede, su foto satellitari a colori (Esri);
+                   verso la fine compaiono il contorno del comune di Canicattì
+                   (OpenStreetMap) e il suo nome; all'arrivo il segnaposto «Olimp» e la
+                   scritta «Viale della Vittoria». Pulsante «Rivedi» per ripartire; alla
+                   fine la mappa si può muovere (Ctrl/⌘ + rotellina o due dita per
+                   ingrandire). Su telefono l'arrivo è un po' più largo e i crediti restano
+                   chiusi. Con «riduci movimento» si vede subito l'arrivo.
+                   La libreria delle mappe (MapLibre 5.6.0) è dentro il sito:
+                   js/maplibre-gl-5.6.0.js e css/maplibre-gl-5.6.0.css; si carica solo
+                   quando la sezione si avvicina.
+                   Come prima, la mappa parte solo dopo il consenso ai cookie: senza
+                   consenso c'è il riquadro «Accetta e mostra la mappa». Aggiornati i testi
+                   del banner e della pagina Privacy (Esri e OpenFreeMap al posto di Google
+                   Maps). Il segnaposto è a metà di Viale della Vittoria (il civico 111
+                   non è sulle mappe libere): per spostarlo si cambia SEDE in js/mappa.js.
+                   Aggiornati css/style.css?v=163, js/cookie.js?v=11, js/mappa.js?v=1.
+
+2.77 (10/11/2026)  Mappa di «Dove siamo»: la scritta «Olimp» sul segnaposto è più grande
+                   (18 px, in grassetto), su fondo bordeaux del sito con bordo bianco e
+                   ombra, così si legge bene sul satellite; il pallino che lampeggia resta.
+                   Premendo la scritta si apre la sede in Google Maps in una nuova scheda.
+                   Aggiornati css/style.css?v=164 e js/mappa.js?v=2.
+
+2.78 (10/11/2026)  Mappa di «Dove siamo»: il pallino del segnaposto e l'anello che lampeggia
+                   sono bordeaux come la scritta; la scritta «Olimp» è più grande (22 px).
+                   Aggiornato css/style.css?v=165.
+
+2.79 (10/11/2026)  Mappa di «Dove siamo» più fluida: mentre ci si avvicina alla sezione il
+                   sito precarica le foto satellitari attorno alla sede a ogni livello della
+                   discesa (circa 220 immagini, al massimo 4 secondi di attesa), così
+                   durante il volo arrivano dalla memoria del browser; più immagini tenute
+                   in memoria e dissolvenza più morbida quando compaiono. Aggiornato
+                   js/mappa.js?v=3. Tolta la pagina di prova prova-dove-siamo.html.
