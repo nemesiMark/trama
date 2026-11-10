@@ -1188,3 +1188,12 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    del sito (#aa372e) al posto del rosa: bordo e alone della scritta
                    «OLIMP», punta, pallino (con un leggero alone) e anello che lampeggia.
                    Aggiornato css/style.css?v=169.
+
+2.85 (10/11/2026)  Mappa di «Dove siamo»: la provincia di Agrigento è arancione neon (#ff7a1a)
+                   al posto del rosa. Tolta la pagina di prova dei 10 design
+                   (prova-dove-siamo-design.html). Aggiornato js/mappa.js?v=9.
+
+2.86 (10/11/2026)  Mappa di «Dove siamo»: l'area di Canicattì è nel rosso del sito (#aa372e):
+                   velo, bordo e alone luminoso; il nome «CANICATTÌ» ha lettere chiare con
+                   alone rosso, così si legge sul satellite scuro. Aggiornato
+                   js/mappa.js?v=10.
