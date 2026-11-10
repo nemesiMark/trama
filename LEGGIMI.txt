@@ -1151,3 +1151,40 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    durante il volo arrivano dalla memoria del browser; più immagini tenute
                    in memoria e dissolvenza più morbida quando compaiono. Aggiornato
                    js/mappa.js?v=3. Tolta la pagina di prova prova-dove-siamo.html.
+
+2.80 (10/11/2026)  Mappa di «Dove siamo»: la scritta «Viale della Vittoria» ora è centrata
+                   sulla strada (punto preso dalla linea del viale su OpenStreetMap, 60 m a
+                   sinistra della sede, inclinata come la strada). Allontanando lo zoom
+                   dopo l'arrivo i testi spariscono al contrario di come compaiono: prima
+                   svanisce il nome del viale, poi ricompaiono contorno e nome di
+                   Canicattì; da lontano la scritta «Olimp» svanisce e resta il pallino
+                   rosso che lampeggia, così non copre il nome della città.
+                   Aggiornati css/style.css?v=166 e js/mappa.js?v=5.
+
+2.81 (10/11/2026)  Mappa di «Dove siamo»: tolta la scritta «Viale della Vittoria». Allontanando
+                   lo zoom (sotto il livello 14) svanisce tutto il segnaposto, pallino
+                   compreso, e si vedono contorno e nome di Canicattì; riavvicinandosi
+                   ricompare. Aggiornati css/style.css?v=167 e js/mappa.js?v=6.
+
+2.82 (10/11/2026)  Mappa di «Dove siamo»: scendendo si evidenziano una dopo l'altra Europa
+                   (azzurro), Italia (verde), Sicilia (arancio), provincia di Agrigento
+                   (viola) e Canicattì (bianco), ognuna con velo colorato, bordo e nome;
+                   ogni area compare al suo livello di zoom e svanisce quando arriva la
+                   successiva, e allontanando lo zoom ricompaiono al contrario. Confini
+                   semplificati e salvati in js/mappa.js: Europa da Natural Earth;
+                   Italia, Sicilia e provincia da OpenStreetMap, ritagliate sulla costa di
+                   Natural Earth per togliere le acque territoriali. Aggiornato
+                   js/mappa.js?v=7.
+
+2.83 (10/11/2026)  Mappa di «Dove siamo» in stile «neon» (scelto tra 10 prove): fondo notte
+                   con filo sottile intorno, satellite un po' scurito e meno saturo, aree
+                   con contorno luminoso del loro colore e velo leggero (Europa azzurro,
+                   Italia verde, Sicilia oro, provincia di Agrigento rosa, Canicattì
+                   bianco), nomi in maiuscolo dello stesso colore. Segnaposto rosa
+                   luminoso: scritta «OLIMP» su fondo scuro con bordo e alone rosa, pallino
+                   e anello rosa. Aggiornati css/style.css?v=168 e js/mappa.js?v=8.
+
+2.84 (10/11/2026)  Mappa di «Dove siamo»: il segnaposto resta in stile «neon» ma con il rosso
+                   del sito (#aa372e) al posto del rosa: bordo e alone della scritta
+                   «OLIMP», punta, pallino (con un leggero alone) e anello che lampeggia.
+                   Aggiornato css/style.css?v=169.

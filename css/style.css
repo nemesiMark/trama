@@ -1465,22 +1465,11 @@ label.check input {
   position: relative;
 }
 
-/* Mappa animata (js/mappa.js): dallo spazio fino alla sede. Fondo blu notte con stelle dietro al globo. */
+/* Mappa animata (js/mappa.js): dallo spazio fino alla sede, in stile «neon». */
 .map-anim {
-  background:
-    radial-gradient(1px 1px at 12% 18%, #fff 50%, transparent 51%),
-    radial-gradient(1px 1px at 27% 72%, #fff 50%, transparent 51%),
-    radial-gradient(1.5px 1.5px at 41% 33%, #fff 50%, transparent 51%),
-    radial-gradient(1px 1px at 58% 12%, #cfe0ff 50%, transparent 51%),
-    radial-gradient(1px 1px at 66% 84%, #fff 50%, transparent 51%),
-    radial-gradient(1.5px 1.5px at 79% 44%, #fff 50%, transparent 51%),
-    radial-gradient(1px 1px at 88% 22%, #fff 50%, transparent 51%),
-    radial-gradient(1px 1px at 93% 67%, #cfe0ff 50%, transparent 51%),
-    radial-gradient(1px 1px at 6% 56%, #fff 50%, transparent 51%),
-    radial-gradient(1px 1px at 34% 91%, #fff 50%, transparent 51%),
-    radial-gradient(1px 1px at 51% 58%, #fff 50%, transparent 51%),
-    radial-gradient(1px 1px at 72% 6%, #fff 50%, transparent 51%),
-    radial-gradient(ellipse at 50% 120%, #10284a 0%, #050b16 60%, #02050b 100%);
+  /* stile «neon»: fondo notte, filo sottile intorno */
+  background: #03060c;
+  box-shadow: 0 0 0 1px #1f2a3a, 0 20px 60px rgba(0, 0, 0, .4);
 }
 
 .map-anim .map-canvas {
@@ -1519,7 +1508,7 @@ label.check input {
 .map-pin.is-on .map-pin-in { opacity: 1; }
 .map-pin .dot {
   position: absolute; inset: 0; border-radius: 50%; background: #aa372e;
-  border: 3px solid #fff; box-shadow: 0 2px 8px rgba(0, 0, 0, .4);
+  border: 3px solid #fff; box-shadow: 0 0 12px #aa372e, 0 2px 8px rgba(0, 0, 0, .4);
 }
 .map-pin .ring {
   position: absolute; inset: -14px; border-radius: 50%; border: 3px solid #aa372e; opacity: 0;
@@ -1527,19 +1516,22 @@ label.check input {
 }
 .map-pin .label {
   position: absolute; left: 50%; bottom: 34px; transform: translateX(-50%); white-space: nowrap;
-  background: #aa372e; color: #fff; font: 800 22px "Manrope", Arial, sans-serif; letter-spacing: .05em;
-  padding: 10px 22px; border-radius: 10px; border: 2px solid #fff; text-decoration: none;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, .45); cursor: pointer; transition: background-color .25s;
+  background: #0a0f1a; color: #fff; font: 800 18px "Manrope", Arial, sans-serif; letter-spacing: .18em; text-transform: uppercase;
+  padding: 10px 22px; border-radius: 10px; border: 2px solid #aa372e; text-decoration: none;
+  box-shadow: 0 0 18px #aa372e, 0 0 40px rgba(170, 55, 46, .55); cursor: pointer; transition: background-color .25s;
 }
-.map-pin .label:hover, .map-pin .label:focus-visible { background: #8e2c25; }
+.map-pin .label:hover, .map-pin .label:focus-visible { background: #2a0d0b; }
 .map-pin .label:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
-/* punta sotto la scritta: bordo bianco e interno bordeaux */
+/* punta sotto la scritta: bordo rosso e interno scuro */
 .map-pin .label::before, .map-pin .label::after {
   content: ''; position: absolute; left: 50%; top: 100%; border: solid transparent;
 }
-.map-pin .label::before { margin-left: -9px; border-width: 9px; border-top-color: #fff; }
-.map-pin .label::after { margin-left: -7px; border-width: 7px; border-top-color: #aa372e; }
-.map-pin .label:hover::after, .map-pin .label:focus-visible::after { border-top-color: #8e2c25; }
+.map-pin .label::before { margin-left: -9px; border-width: 9px; border-top-color: #aa372e; }
+.map-pin .label::after { margin-left: -7px; border-width: 7px; border-top-color: #0a0f1a; }
+.map-pin .label:hover::after, .map-pin .label:focus-visible::after { border-top-color: #2a0d0b; }
+/* da lontano tutto il segnaposto svanisce (js/mappa.js) */
+.map-pin.is-far .map-pin-in { opacity: 0; }
+.map-pin.is-far .label { pointer-events: none; }
 /* la scritta si può premere solo quando è comparsa */
 .map-pin:not(.is-on) .label { pointer-events: none; }
 @keyframes mapRing { 0% { transform: scale(.4); opacity: .9; } 100% { transform: scale(1.4); opacity: 0; } }
