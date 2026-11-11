@@ -1197,3 +1197,9 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    velo, bordo e alone luminoso; il nome «CANICATTÌ» ha lettere chiare con
                    alone rosso, così si legge sul satellite scuro. Aggiornato
                    js/mappa.js?v=10.
+
+2.87 (11/11/2026)  Mappa di «Dove siamo»: tolta l'evidenziazione dell'Europa, la discesa
+                   inizia a evidenziare dall'Italia. Italia, Sicilia e provincia di Agrigento
+                   sono ora nello stesso rosso neon del sito (#aa372e) usato per Canicattì:
+                   velo, bordo e alone luminoso rossi, nomi con lettere chiare e alone
+                   rosso. Aggiornato js/mappa.js?v=11.
