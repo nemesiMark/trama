@@ -1203,3 +1203,41 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    sono ora nello stesso rosso neon del sito (#aa372e) usato per Canicattì:
                    velo, bordo e alone luminoso rossi, nomi con lettere chiare e alone
                    rosso. Aggiornato js/mappa.js?v=11.
+
+2.88 (11/11/2026)  Home, le tre foto di apertura sugli schermi larghi e bassi (monitor da 27",
+                   finestra a tutta larghezza, anche i comuni 1920 pixel): prima la foto
+                   riempiva la larghezza e veniva tagliata sopra e sotto, così l'album restava
+                   mozzato. Ora ogni foto si vede intera, alta quanto la sezione e appoggiata a
+                   destra; il vuoto a sinistra, sotto il velo scuro del testo, è riempito dalla
+                   stessa foto (specchiata per l'album di nozze, con il bordo allungato e sfumato
+                   per leggio e Orione). Su portatile e telefono non cambia nulla. Aggiornato
+                   css/style.css?v=170 in tutte le pagine.
+
+2.89 (11/11/2026)  Home, foto del leggio e di Orione sugli schermi larghi: tolto il bordo della
+                   foto allungato e sfumato sul lato sinistro; ora a sinistra la foto sfuma nel
+                   nero, come il fondo scuro dell'album di nozze. Aggiornato
+                   css/style.css?v=171 in tutte le pagine.
+
+2.90 (11/11/2026)  Home, foto del leggio sugli schermi larghi: l'album sta più verso il centro,
+                   senza fasce nere a destra. La foto originale finisce subito dopo la base di
+                   legno, quindi è stata creata una versione allargata a destra
+                   (images/index/album-leggio-largo.jpg, 1453x864: muro e tavolo ricostruiti,
+                   base di legno chiusa, leggera ombra) usata solo sugli schermi larghi; a
+                   sinistra sfuma nel nero. Su portatile e telefono resta la foto di prima.
+                   Aggiornato css/style.css?v=172 in tutte le pagine.
+
+2.91 (11/11/2026)  Home, foto del leggio sui portatili (13"-15", schermi fino a 1800 px di
+                   larghezza): l'album è un po' più a destra e più in basso, così si stacca
+                   dalla scritta; la foto è appena più grande (108%) per non lasciare vuoti in
+                   alto. Sui monitor grandi resta com'era. Aggiornato css/style.css?v=173 in
+                   tutte le pagine.
+
+2.92 (11/11/2026)  Home, foto del leggio sui portatili (fino a 1800 px): album spostato ancora
+                   leggermente a destra. Aggiornato css/style.css?v=174 in tutte le pagine.
+
+2.93 (11/11/2026)  Home, foto del leggio: corretto il simbolo «&» del monogramma inciso sulla
+                   copertina (prima sembrava una «8»/«ß»): cancellato e ridisegnato sottile
+                   come la A e la D, così si legge «A & D». Corretta sia
+                   images/index/album-leggio.jpg sia la versione allargata
+                   images/index/album-leggio-largo.jpg (entrambe ?v=2). Aggiornato
+                   css/style.css?v=175 in tutte le pagine.

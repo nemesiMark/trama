@@ -542,6 +542,102 @@ nav a.on,
   transform: translateX(-95%) scaleX(-1);
 }
 
+/* Schermi larghi e bassi (monitor grandi, finestra a tutta larghezza): la foto riempiendo la
+   larghezza verrebbe tagliata sopra e sotto e l'album resterebbe mozzato. Qui ogni foto si vede
+   intera, alta quanto la sezione e appoggiata a destra; il vuoto a sinistra (sotto il velo scuro
+   del testo) è riempito dalla stessa foto specchiata per l'album di nozze (fondo scuro), mentre
+   per leggio e Orione la foto sfuma nel nero. */
+.hero .hero-slides {
+  container-type: size;
+}
+
+@container (min-aspect-ratio: 185/100) {
+  .hero .hero-slide.hs-nozze,
+  .hero .hero-slide.hs-orione {
+    --r: 1.7768;
+  }
+
+  .hero .hero-slide.hs-nozze,
+  .hero .hero-slide.hs-orione,
+  .hero .hero-slide.hs-leggio {
+    overflow: hidden;
+    background: #161616;
+  }
+
+  .hero .hero-slide.hs-nozze img,
+  .hero .hero-slide.hs-orione img,
+  .hero .ph.no-zoom:hover .hero-slide.hs-nozze img,
+  .hero .ph.no-zoom:hover .hero-slide.hs-orione img {
+    left: auto;
+    right: 0;
+    width: calc(100cqh * var(--r));
+    height: 100%;
+    transform: none;
+  }
+
+  .hero .hs-nozze::before {
+    content: '';
+    position: absolute;
+    inset: 0 calc(100cqh * var(--r)) 0 auto;
+    width: calc(100cqh * var(--r));
+    background: url(../images/index/album-nozze-elisa-andrea.jpg) center / 100% 100% no-repeat;
+    transform: scaleX(-1);
+  }
+
+  /* Orione: a sinistra la foto sfuma nel nero. */
+  .hero .hero-slide.hs-orione {
+    background: #000;
+  }
+
+  .hero .hs-orione::before,
+  .hero .hs-orione::after {
+    display: none;
+  }
+
+  .hero .hero-slide.hs-orione img,
+  .hero .ph.no-zoom:hover .hero-slide.hs-orione img {
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 40%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 40%);
+  }
+}
+
+/* Leggio: la foto originale finisce subito dopo la base di legno, quindi per gli schermi larghi
+   c'è una versione allargata a destra (muro e tavolo ricostruiti, base chiusa) così l'album sta
+   più verso il centro; a sinistra sfuma nel nero. */
+@container (min-aspect-ratio: 17/10) {
+  .hero .hero-slide.hs-leggio {
+    overflow: hidden;
+    background: #000;
+  }
+
+  .hero .hero-slide.hs-leggio img {
+    opacity: 0;
+  }
+
+  .hero .hs-leggio::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: calc(100cqh * 1.6817);
+    background: url(../images/index/album-leggio-largo.jpg?v=2) center / 100% 100% no-repeat;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 40%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 40%);
+  }
+}
+
+/* Portatili (13"-15", fino a 1800 px di larghezza): album del leggio un po' più a destra e più
+   in basso, così si stacca dalla scritta. La foto è appena più grande (108%) per non lasciare
+   vuoti in alto. */
+@media (max-width: 1800px) {
+  @container (min-aspect-ratio: 17/10) {
+    .hero .hs-leggio::before {
+      inset: auto calc(100cqh * 1.6817 * 1.08 * -0.09) -6% auto;
+      width: calc(100cqh * 1.6817 * 1.08);
+      height: 108%;
+    }
+  }
+}
+
 .hero-controls {
   position: absolute;
   right: max(1.5rem, calc((100vw - 1248px) / 2));
