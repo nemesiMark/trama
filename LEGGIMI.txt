@@ -1246,3 +1246,8 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    l'indirizzo completo più in piccolo su due righe («Viale della Vittoria,
                    111» e «92024 Canicattì (AG)»); tutta l'etichetta continua ad aprire Google
                    Maps. Aggiornati js/mappa.js?v=12 e css/style.css?v=176 in tutte le pagine.
+
+2.95 (12/11/2026)  Collezioni: tolto un «</div>» di troppo nel codice e corretta la foto
+                   dell'anteprima per i social (og:image), che puntava a
+                   images/collezioni/fineart.jpg non più esistente: ora usa
+                   images/collezioni/album-matrimoniali-curve.jpg. Nessun cambiamento visibile.
