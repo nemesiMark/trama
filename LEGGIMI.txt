@@ -112,9 +112,6 @@ DA COMPLETARE
 - Foto reali dei riquadri prodotto, da salvare in images/ con questi nomi:
   album-eventi.html                      eventi-1.jpg ... eventi-6.jpg
   linea-cuoio-fiorentino.html            cuoio-fiorentino-1.jpg ... cuoio-fiorentino-6.jpg
-  album-tradizionale-professionale.html  tradizionale-album.jpg, tradizionale-blocchi-colorati.jpg,
-                                         tradizionale-velina.jpg, tradizionale-blocco-bianco.jpg,
-                                         tradizionale-velina-gsk.jpg
   custodie-per-album.html                custodie-valigia-classica.jpg, custodie-valigia-personalizzata.jpg,
                                          custodie-cofanetti.jpg, custodie-box.jpg, custodie-teca-plex.jpg,
                                          custodie-valigia-bambini.jpg, custodie-valigia-scrigno.jpg
@@ -1251,3 +1248,65 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    dell'anteprima per i social (og:image), che puntava a
                    images/collezioni/fineart.jpg non più esistente: ora usa
                    images/collezioni/album-matrimoniali-curve.jpg. Nessun cambiamento visibile.
+
+2.96 (12/11/2026)  Album tradizionale professionale, sezione «Su ordinazione»: tolti i due
+                   riquadri foto «Blocco bianco» e «Velina GSK liscia» sotto l'elenco. Le due
+                   foto provvisorie che mostravano sono ora in images/non-usate
+                   (album-spirale-tradizionale-vecchia.jpg, album-sfogliato-tradizionale-
+                   vecchia.jpg); tolti dall'elenco delle foto da ricevere
+                   tradizionale-blocco-bianco.jpg e tradizionale-velina-gsk.jpg.
+
+2.97 (12/11/2026)  Album tradizionale professionale, sezione «Colori e fogli»: tolti i due
+                   riquadri foto «Blocchi colorati» e «Velina pergamena goffrata». Le due foto
+                   provvisorie che mostravano sono ora in images/non-usate
+                   (album-bianco-nero-tradizionale-vecchia.jpg, album-vintage-collezione-
+                   tradizionale-vecchia.jpg); tolti dall'elenco delle foto da ricevere
+                   tradizionale-blocchi-colorati.jpg e tradizionale-velina.jpg (e
+                   tradizionale-album.jpg, già non più usata): la pagina non aspetta più foto.
+
+2.98 (12/11/2026)  Album tradizionale professionale, sezione «Colori e fogli»: sotto la frase
+                   sui colori ci sono quattro riquadri, uno per colore dei fogli, con il nome
+                   sotto (Avorio, Avorio nuvolato, Nero, Blu); l'avorio nuvolato ha un leggero
+                   effetto a nuvole. Su telefono restano tutti e quattro sulla stessa riga.
+                   Le tinte sono indicative: si possono sostituire con le foto dei campioni
+                   veri. Aggiornato css/style.css?v=177 in tutte le pagine.
+
+2.99 (12/11/2026)  Album tradizionale professionale, sezione «Su ordinazione»: la frase
+                   iniziale ora dice «Su ordinazione è possibile:» (tolto «particolare»).
+
+3.00 (12/11/2026)  Nuova foto per l'album tradizionale (album con copertina in pelle marrone
+                   aperto su un tavolo di legno, con tre foto grandi di sposi in bianco e
+                   nero), rinominata album-tradizionale-pelle-marrone.jpg (1264x843; copia da
+                   800 px per il menu):
+                   - menu Prodotti, riquadro "Album tradizionale professionale", in tutte le
+                     pagine (images/comune/menu/);
+                   - Prodotti, scheda "Album tradizionale professionale" (images/prodotti/);
+                   - Album tradizionale professionale, foto principale accanto al testo e
+                     anteprima per i social (images/album-tradizionale-professionale/).
+                   Aggiornate le descrizioni della foto (alt). Foto vecchie in images/non-usate/
+                   (album-tradizionale-sposi-pelle-scura-vecchia.jpg,
+                   album-tradizionale-sposi-menu-vecchia.jpg). Originale in
+                   Desktop/olimp-originali-album-tradizionale-professionale/ (lì anche una
+                   prima proposta scartata, con il tavolo più chiaro).
+
+3.01 (12/11/2026)  Nuova foto per il fotolibro professionale (fotolibro aperto su un piano in
+                   graniglia, con le foto di una coppia al mare), rinominata
+                   fotolibro-aperto-coppia-mare.jpg (1264x842; copia da 800 px per il menu):
+                   - menu Prodotti, riquadro "Fotolibro professionale", in tutte le pagine
+                     (images/comune/menu/);
+                   - Prodotti, scheda "Fotolibro professionale" e anteprima per i social della
+                     pagina (images/prodotti/);
+                   - Fotolibro professionale, foto principale accanto al testo e anteprima per
+                     i social (images/fotolibro-professionale/).
+                   Aggiornate le descrizioni della foto (alt), tolto «immagine illustrativa».
+                   Foto vecchie in images/non-usate/ (fotolibro-coppia-spiaggia-vecchia.jpg,
+                   fotolibro-coppia-spiaggia-menu-vecchia.jpg). Originale in
+                   Desktop/olimp-originali-fotolibro-professionale/.
+
+3.02 (12/11/2026)  Album tradizionale professionale: nuovo ordine delle sezioni finali, dopo
+                   «I formati» viene «Altri blocchi disponibili» e per ultima «Su ordinazione».
+
+3.03 (12/11/2026)  Album tradizionale professionale, «Altri blocchi disponibili»: il testo
+                   sotto il titolo occupa tutta la larghezza invece di andare a capo dopo circa
+                   60 caratteri (su MacBook e monitor sta su una riga sola; nelle finestre più
+                   strette va a capo da solo). Aggiornato css/style.css?v=178 in tutte le pagine.
