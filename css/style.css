@@ -1616,6 +1616,12 @@ label.check input {
   padding: 10px 22px; border-radius: 10px; border: 2px solid #aa372e; text-decoration: none;
   box-shadow: 0 0 18px #aa372e, 0 0 40px rgba(170, 55, 46, .55); cursor: pointer; transition: background-color .25s;
 }
+/* «OLIMP» e sotto, più piccolo, l'indirizzo completo */
+.map-pin .label { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.map-pin .label .ind {
+  margin-top: 5px; font: 500 12px/1.4 "Manrope", Arial, sans-serif; letter-spacing: .02em;
+  text-transform: none; color: #d5dce6;
+}
 .map-pin .label:hover, .map-pin .label:focus-visible { background: #2a0d0b; }
 .map-pin .label:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
 /* punta sotto la scritta: bordo rosso e interno scuro */

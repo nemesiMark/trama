@@ -154,7 +154,7 @@
 
     pin=document.createElement('div');
     pin.className='map-pin';
-    pin.innerHTML='<div class="map-pin-in"><div class="ring"></div><div class="dot"></div><a class="label" href="'+GMAPS+'" target="_blank" rel="noopener noreferrer" title="Apri in Google Maps">Olimp</a></div>';
+    pin.innerHTML='<div class="map-pin-in"><div class="ring"></div><div class="dot"></div><a class="label" href="'+GMAPS+'" target="_blank" rel="noopener noreferrer" title="Apri in Google Maps"><span class="nome">Olimp</span><span class="ind">Viale della Vittoria, 111<br>92024 Canicattì (AG)</span></a></div>';
     new maplibregl.Marker({element:pin,anchor:'center'}).setLngLat(SEDE).addTo(map);
     // Da lontano il segnaposto svanisce e lascia vedere il nome di Canicattì
     function lontano(){pin.classList.toggle('is-far',map.getZoom()<14)}

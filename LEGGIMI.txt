@@ -1241,3 +1241,8 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    images/index/album-leggio.jpg sia la versione allargata
                    images/index/album-leggio-largo.jpg (entrambe ?v=2). Aggiornato
                    css/style.css?v=175 in tutte le pagine.
+
+2.94 (12/11/2026)  Mappa di «Dove siamo»: nel segnaposto, sotto la scritta «OLIMP», c'è ora
+                   l'indirizzo completo più in piccolo su due righe («Viale della Vittoria,
+                   111» e «92024 Canicattì (AG)»); tutta l'etichetta continua ad aprire Google
+                   Maps. Aggiornati js/mappa.js?v=12 e css/style.css?v=176 in tutte le pagine.
