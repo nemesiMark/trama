@@ -1316,3 +1316,8 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    Prodotti per il tuo studio fotografico, Album eventi, Custodie per album)
                    comparivano vuote; ora mostrano anche loro l'immagine provvisoria, come i
                    riquadri della pagina. Aggiornato js/script.js?v=35 in tutte le pagine.
+
+3.05 (13/11/2026)  Tolte dalla Scrivania le cartelle olimp-originali-album-tradizionale-
+                   professionale e olimp-originali-fotolibro-professionale citate nelle versioni
+                   3.00 e 3.01 (contenevano solo le copie delle foto mandate in chat). Nessun
+                   cambiamento al sito.
