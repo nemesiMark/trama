@@ -1321,3 +1321,12 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    professionale e olimp-originali-fotolibro-professionale citate nelle versioni
                    3.00 e 3.01 (contenevano solo le copie delle foto mandate in chat). Nessun
                    cambiamento al sito.
+
+3.06 (13/11/2026)  Album tradizionale professionale: nuova foto (lo stesso album in pelle
+                   marrone con le tre foto degli sposi in bianco e nero, ora su legno chiaro),
+                   ritagliata in 4:3 e salvata come album-tradizionale-sposi-bianco-nero.jpg in
+                   images/album-tradizionale-professionale/, images/prodotti/ e (da 800 px)
+                   images/comune/menu/. Sostituita nella pagina, nell'anteprima per i social,
+                   nella scheda di Prodotti e nel menu di tutte le pagine. La foto precedente è
+                   in images/non-usate (album-tradizionale-pelle-marrone-vecchia.jpg e
+                   -menu-vecchia.jpg).
