@@ -1330,3 +1330,13 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    nella scheda di Prodotti e nel menu di tutte le pagine. La foto precedente è
                    in images/non-usate (album-tradizionale-pelle-marrone-vecchia.jpg e
                    -menu-vecchia.jpg).
+
+3.07 (13/11/2026)  Album eventi: nuova foto (album con copertina scura aperto su un tavolo di
+                   legno, con la foto di amici che brindano tra palloncini blu e oro) al posto
+                   di quella del diciottesimo, salvata come album-eventi-festa-palloncini.jpg in
+                   images/album-eventi/, images/index/, images/collezioni/ e (da 800 px)
+                   images/comune/menu/. Sostituita nella pagina, nell'anteprima per i social,
+                   nella striscia di Album eventi in home e in Collezioni e nel menu di tutte le
+                   pagine; aggiornate le descrizioni (alt) e le regole di inquadratura in
+                   css/style.css?v=179 (aggiornato in tutte le pagine). La foto precedente è in
+                   images/non-usate (album-eventi-diciottesimo-vecchia.jpg e -menu-vecchia.jpg).

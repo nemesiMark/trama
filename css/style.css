@@ -4160,13 +4160,13 @@ img[src*="fotografo-videocamera"] {
 }
 
 /* Pagina Album eventi: foto principale inquadrata sulla festa, sulla pagina destra. */
-.page-intro .ph img[src*="album-eventi-diciottesimo"] {
+.page-intro .ph img[src*="album-eventi-festa-palloncini"] {
   object-position: 75% 50%;
 }
 
 /* Album eventi (home e Collezioni): la foto della festa sta sulla pagina destra dell'album,
    quindi nelle strisce strette si inquadra la parte destra. */
-.strip img[src*="album-eventi-diciottesimo"] {
+.strip img[src*="album-eventi-festa-palloncini"] {
   object-position: 78% 50%;
 }
 
