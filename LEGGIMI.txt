@@ -1310,3 +1310,9 @@ Ogni modifica al sito viene annotata qui con numero di versione e descrizione.
                    sotto il titolo occupa tutta la larghezza invece di andare a capo dopo circa
                    60 caratteri (su MacBook e monitor sta su una riga sola; nelle finestre più
                    strette va a capo da solo). Aggiornato css/style.css?v=178 in tutte le pagine.
+
+3.04 (13/11/2026)  Foto a schermo intero: nella fascia delle miniature in basso le foto che
+                   non esistono ancora (quelle con l'immagine provvisoria in data-fallback, es.
+                   Prodotti per il tuo studio fotografico, Album eventi, Custodie per album)
+                   comparivano vuote; ora mostrano anche loro l'immagine provvisoria, come i
+                   riquadri della pagina. Aggiornato js/script.js?v=35 in tutte le pagine.
